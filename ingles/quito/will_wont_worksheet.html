@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will & Won't - Final Lesson Worksheet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 0;
+            margin: 0;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0;
+            background: white;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 0.95em;
+            opacity: 0.95;
+            margin: 3px 0;
+        }
+        
+        .content {
+            padding: 15px 20px;
+        }
+        
+        .activity {
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+            page-break-inside: avoid;
+        }
+        
+        .activity-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .activity-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-right: 12px;
+            box-shadow: 0 3px 8px rgba(102, 126, 234, 0.4);
+        }
+        
+        .activity-title {
+            flex: 1;
+        }
+        
+        .activity-title h2 {
+            color: #667eea;
+            font-size: 1.4em;
+            margin-bottom: 3px;
+        }
+        
+        .activity-title .time {
+            color: #999;
+            font-size: 0.85em;
+            font-weight: normal;
+        }
+        
+        .audio-link {
+            background: #f8f9fa;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .audio-icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        
+        .audio-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            word-break: break-all;
+            font-size: 0.9em;
+        }
+        
+        .video-link {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .video-icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        
+        .video-link a {
+            color: #f57c00;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        .instructions {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        
+        .instructions strong {
+            color: #2e7d32;
+        }
+        
+        .question-box {
+            background: #f5f5f5;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        
+        .question {
+            margin-bottom: 12px;
+            font-size: 0.9em;
+        }
+        
+        .question-number {
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        
+        .answer-line {
+            border-bottom: 1px dotted #999;
+            display: inline-block;
+            min-width: 200px;
+            margin-left: 5px;
+            padding: 2px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 0.85em;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px;
+            text-align: left;
+            font-size: 0.95em;
+        }
+        
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .writing-space {
+            border: 2px dashed #667eea;
+            border-radius: 8px;
+            padding: 12px;
+            min-height: 100px;
+            margin: 10px 0;
+            background: #fafafa;
+            font-size: 0.9em;
+        }
+        
+        .tip-box {
+            background: #fff9c4;
+            border-left: 4px solid #fbc02d;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            font-size: 0.85em;
+        }
+        
+        .tip-box strong {
+            color: #f57f17;
+        }
+        
+        .footer {
+            background: #f5f5f5;
+            padding: 12px;
+            text-align: center;
+            color: #666;
+            font-size: 0.8em;
+        }
+        
+        .checkbox-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.2);
+        }
+        
+        .warm-up {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .warm-up h2 {
+            color: white;
+            margin-bottom: 8px;
+            font-size: 1.3em;
+        }
+        
+        .warm-up p {
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .content {
+                padding: 10px 15px;
+            }
+            
+            .activity {
+                page-break-inside: avoid;
+                margin-bottom: 15px;
+            }
+            
+            .question-box h3 {
+                font-size: 1em;
+                margin-bottom: 8px;
+            }
+            
+            .writing-space {
+                min-height: 80px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+*You seem to be using an outdated version of Cursor. Please upgrade to the latest version by [downloading Cursor again from our website](https://www.cursor.com/). All your settings will be preserved.*
+        
+        <div class="content">
+            
+            <!-- WARM-UP -->
+            <div class="warm-up">
+                <h2>🔥 Warm-Up: Class Predictions (10 minutes)</h2>
+                <p style="margin-bottom: 15px;">Make predictions about your classmates using <strong>will</strong> or <strong>won't</strong>!</p>
+                <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px;">
+                    <p><strong>Example:</strong> "I think Maria will become a doctor." / "Pedro won't forget his homework today!"</p>
+                    <div style="margin-top: 15px;">
+                        <p>1. _________________________________________________________________</p>
+                        <p>2. _________________________________________________________________</p>
+                        <p>3. _________________________________________________________________</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ACTIVITY 1 -->
+            <div class="activity">
+                <div class="activity-header">
+                    <div class="activity-number">1</div>
+                    <div class="activity-title">
+                        <h2>Spontaneous Decisions</h2>
+                        <span class="time">⏱️ 20 minutes</span>
+                    </div>
+                </div>
+                
+                <div class="audio-link">
+                    <span class="audio-icon">🎧</span>
+                    <div>
+                        <strong>Audio 1:</strong> <a href="https://english-practice.net/wp-content/uploads/2021/10/Project-3-test-2-17-ex3.mp3" target="_blank">Six Dialogues - Spontaneous Decisions</a>
+                    </div>
+                </div>
+                
+                <div class="instructions">
+                    <strong>📝 Instructions:</strong> Listen to the audio and complete the activities below.
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Part A: First Listening - Complete the sentences</h3>
+                    
+                    <div class="question">
+                        <span class="question-number">1.</span> Do you fancy a snack? → Yes, please. I <span class="answer-line">________________</span> a sandwich.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">2.</span> Do you want to go swimming later? → Good idea. I <span class="answer-line">________________</span> you at the pool at 4:30.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">3.</span> The phone's ringing. It won't be for me. → Okay. I <span class="answer-line">________________</span> it.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">4.</span> We haven't got any milk. → All right. I <span class="answer-line">________________</span> some.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">5.</span> Have you got Maggie's telephone number? → Yes, I <span class="answer-line">________________</span> it to you.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">6.</span> It's Dad's birthday on Saturday. → Don't worry. I <span class="answer-line">________________</span> forget.
+                    </div>
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Part B: Identify the function</h3>
+                    <p style="margin-bottom: 15px;">Match each dialogue with its function:</p>
+                    
+                    <table>
+                        <tr>
+                            <th>Dialogue</th>
+                            <th>Function (Offer / Promise / Spontaneous Decision)</th>
+                        </tr>
+                        <tr>
+                            <td>1. I'll have a sandwich</td>
+                            <td>_______________________________</td>
+                        </tr>
+                        <tr>
+                            <td>2. I'll meet you at the pool</td>
+                            <td>_______________________________</td>
+                        </tr>
+                        <tr>
+                            <td>3. I'll answer it</td>
+                            <td>_______________________________</td>
+                        </tr>
+                        <tr>
+                            <td>4. I'll get some</td>
+                            <td>_______________________________</td>
+                        </tr>
+                        <tr>
+                            <td>5. I'll text it to you</td>
+                            <td>_______________________________</td>
+                        </tr>
+                        <tr>
+                            <td>6. I won't forget</td>
+                            <td>_______________________________</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Part C: Role Play Practice</h3>
+                    <div class="instructions">
+                        <strong>👥 Work in pairs:</strong> Practice the dialogues with your partner. Switch roles!
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ACTIVITY 2 -->
+            <div class="activity">
+                <div class="activity-header">
+                    <div class="activity-number">2</div>
+                    <div class="activity-title">
+                        <h2>Jason's Future Plans</h2>
+                        <span class="time">⏱️ 25 minutes</span>
+                    </div>
+                </div>
+                
+                <div class="audio-link">
+                    <span class="audio-icon">🎧</span>
+                    <div>
+                        <strong>Audio 2:</strong> <a href="https://english-practice.net/wp-content/uploads/2021/10/Project-3-test-2-18-ex1.mp3" target="_blank">Jason's Future Plans</a>
+                    </div>
+                </div>
+                
+                <div class="instructions">
+                    <strong>📝 Instructions:</strong> Listen to Jason talking about his future and complete the activities below.
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Part A: General Understanding</h3>
+                    
+                    <div class="question">
+                        <span class="question-number">1.</span> What does Jason want to be when he grows up? <span class="answer-line">_______________________</span>
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">2.</span> What is his favorite subject at school? <span class="answer-line">_______________________</span>
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">3.</span> When does he want to get married? <span class="answer-line">_______________________</span>
+                    </div>
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Part B: True or False?</h3>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox"> Jason thinks he'll go to university. <strong>TRUE / FALSE</strong>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox"> He'll learn to drive a car. <strong>TRUE / FALSE</strong>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox"> He wants to be rich and famous. <strong>TRUE / FALSE</strong>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox"> He wants to live in a small town. <strong>TRUE / FALSE</strong>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox"> He thinks people will live longer in the future. <strong>TRUE / FALSE</strong>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox"> He thinks people will live on other planets. <strong>TRUE / FALSE</strong>
+                    </div>
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Part C: Complete the sentences</h3>
+                    <p style="margin-bottom: 15px; color: #666;"><em>Write the complete verb form (will + verb or won't + verb)</em></p>
+                    
+                    <div class="question">
+                        <span class="question-number">1.</span> When I leave school, I think I <span class="answer-line">________________</span> to university.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">2.</span> I <span class="answer-line">________________</span> to fly a plane.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">3.</span> Later, I think I <span class="answer-line">________________</span> into space.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">4.</span> We <span class="answer-line">________________</span> probably <span class="answer-line">________________</span> electric cars.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">5.</span> We <span class="answer-line">________________</span> space stations on other planets.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">6.</span> But people <span class="answer-line">________________</span> there.
+                    </div>
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Part D: Writing - Your Future!</h3>
+                    <div class="instructions">
+                        <strong>✍️ Now it's your turn!</strong> Write about YOUR future plans. Use will/won't and follow Jason's structure.
+                    </div>
+                    
+                    <div class="tip-box">
+                        <strong>💡 Include:</strong> Your future job, studies, where you'll live, predictions about the world, personal goals
+                    </div>
+                    
+                    <div class="writing-space">
+                        <p style="color: #999; margin-bottom: 10px;">Write at least 80 words here:</p>
+                        <p>_____________________________________________________________________________</p>
+                        <p>_____________________________________________________________________________</p>
+                        <p>_____________________________________________________________________________</p>
+                        <p>_____________________________________________________________________________</p>
+                        <p>_____________________________________________________________________________</p>
+                        <p>_____________________________________________________________________________</p>
+                        <p>_____________________________________________________________________________</p>
+                        <p>_____________________________________________________________________________</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ACTIVITY 3 -->
+            <div class="activity">
+                <div class="activity-header">
+                    <div class="activity-number">3</div>
+                    <div class="activity-title">
+                        <h2>The Space Hotel Interview</h2>
+                        <span class="time">⏱️ 20 minutes</span>
+                    </div>
+                </div>
+                
+                <div class="audio-link">
+                    <span class="audio-icon">🎧</span>
+                    <div>
+                        <strong>Audio 3:</strong> <a href="https://english-practice.net/wp-content/uploads/2021/10/Project-3-test-2-15-ex5.mp3" target="_blank">Space Hotel Interview</a>
+                    </div>
+                </div>
+                
+                <div class="instructions">
+                    <strong>📝 Instructions:</strong> Listen to an interview about a futuristic space hotel and complete the activities below.
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Part A: Answer the questions</h3>
+                    
+                    <div class="question">
+                        <span class="question-number">1.</span> What will the hotel look like? <span class="answer-line">_________________________________</span>
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">2.</span> Will it be in the moon's orbit? <span class="answer-line">_________________________________</span>
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">3.</span> Where will it be? <span class="answer-line">_________________________________</span>
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">4.</span> How many bedrooms will there be? <span class="answer-line">_________________________________</span>
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">5.</span> How many restaurants will the hotel have? <span class="answer-line">_________________________________</span>
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">6.</span> Will it have a sports center for tennis? <span class="answer-line">_________________________________</span>
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">7.</span> Who will work in the space hotel? <span class="answer-line">_________________________________</span>
+                    </div>
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Part B: Complete the dialogue</h3>
+                    <p style="margin-bottom: 15px; color: #666;"><em>Write the complete verb form (will + verb or won't + verb)</em></p>
+                    
+                    <p><strong>Woman:</strong> What <span class="answer-line">________________</span> the hotel <span class="answer-line">________________</span> like?</p>
+                    <p><strong>Man:</strong> Well, it <span class="answer-line">________________</span> like a large bicycle wheel.</p>
+                    <br>
+                    <p><strong>Woman:</strong> <span class="answer-line">________________</span> it <span class="answer-line">________________</span> in the moon's orbit?</p>
+                    <p><strong>Man:</strong> No, it <span class="answer-line">________________</span>. The hotel <span class="answer-line">________________</span> in the Earth's orbit.</p>
+                    <br>
+                    <p><strong>Woman:</strong> How many rooms <span class="answer-line">________________</span> the hotel <span class="answer-line">________________</span>?</p>
+                    <p><strong>Man:</strong> There <span class="answer-line">________________</span> a hundred bedrooms.</p>
+                    <br>
+                    <p><strong>Woman:</strong> <span class="answer-line">________________</span> it <span class="answer-line">________________</span> a sports center?</p>
+                    <p><strong>Man:</strong> It <span class="answer-line">________________</span> possible to play tennis, but there <span class="answer-line">________________</span> running machines.</p>
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Part C: Creative Task - Design Your Future Hotel!</h3>
+                    <div class="instructions">
+                        <strong>🎨 Look at these space hotel designs and choose one (a, b, or c).</strong> Then answer the questions about YOUR futuristic hotel using will/won't:
+                    </div>
+                    
+                    <div style="text-align: center; margin: 20px 0; padding: 20px; background: #f9f9f9; border-radius: 10px;">
+                        <img src="space_hotels.png" alt="Space Hotel Designs" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                        <p style="margin-top: 15px; color: #666; font-size: 0.9em;"><strong>Which design do you choose?</strong> Circle: <strong>a</strong> / <strong>b</strong> / <strong>c</strong></p>
+                    </div>
+                    
+                    <div class="writing-space">
+                        <p><strong>1.</strong> What will your hotel look like? (Describe your chosen design)</p>
+                        <p>_____________________________________________________________________________</p>
+                        <br>
+                        <p><strong>2.</strong> Where will it be? (space, underwater, in the mountains, etc.)</p>
+                        <p>_____________________________________________________________________________</p>
+                        <br>
+                        <p><strong>3.</strong> What facilities will it have? (restaurants, cinema, pool, etc.)</p>
+                        <p>_____________________________________________________________________________</p>
+                        <br>
+                        <p><strong>4.</strong> What won't it have?</p>
+                        <p>_____________________________________________________________________________</p>
+                        <br>
+                        <p><strong>5.</strong> Who will work there?</p>
+                        <p>_____________________________________________________________________________</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ACTIVITY 4 -->
+            <div class="activity">
+                <div class="activity-header">
+                    <div class="activity-number">4</div>
+                    <div class="activity-title">
+                        <h2>Mars: When Will Humans Get There?</h2>
+                        <span class="time">⏱️ 15 minutes</span>
+                    </div>
+                </div>
+                
+                <div class="video-link">
+                    <span class="video-icon">🎬</span>
+                    <div>
+                        <strong>Video:</strong> <a href="https://www.youtube.com/watch?v=ticaLyuePjA&t=19s" target="_blank">Mars Exploration - The Economist</a>
+                    </div>
+                </div>
+                
+                <div class="instructions">
+                    <strong>📝 Instructions:</strong> Watch the video and complete the activities below.
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Part A: Main Ideas</h3>
+                    
+                    <div class="question">
+                        <span class="question-number">1.</span> Why do humans want to go to Mars?
+                        <div class="writing-space" style="min-height: 80px; margin-top: 10px;">
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">2.</span> When does NASA plan to send humans to Mars? <span class="answer-line">_______________________</span>
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">3.</span> When does SpaceX plan to send humans? <span class="answer-line">_______________________</span>
+                    </div>
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Part B: Predictions about Mars</h3>
+                    <p style="margin-bottom: 15px; color: #666;"><em>Complete these sentences based on the video. Write the complete verb form (will + verb or won't + verb)</em></p>
+                    
+                    <div class="question">
+                        <span class="question-number">1.</span> The journey to Mars <span class="answer-line">________________</span> around nine months.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">2.</span> The cost <span class="answer-line">________________</span> high.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">3.</span> Some people <span class="answer-line">________________</span> it.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">4.</span> Some people <span class="answer-line">________________</span> probably <span class="answer-line">________________</span> trying.
+                    </div>
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Part C: Discussion - Your Opinion</h3>
+                    <div class="instructions">
+                        <strong>💭 Think and discuss with a partner:</strong>
+                    </div>
+                    
+                    <div class="writing-space">
+                        <p><strong>1.</strong> Will humans live on Mars in the future? Why or why not?</p>
+                        <p>_____________________________________________________________________________</p>
+                        <p>_____________________________________________________________________________</p>
+                        <br>
+                        <p><strong>2.</strong> Would you like to travel to Mars? What will be the biggest challenges?</p>
+                        <p>_____________________________________________________________________________</p>
+                        <p>_____________________________________________________________________________</p>
+                        <br>
+                        <p><strong>3.</strong> Make 3 predictions about space exploration in the next 50 years:</p>
+                        <p>• _____________________________________________________________________________</p>
+                        <p>• _____________________________________________________________________________</p>
+                        <p>• _____________________________________________________________________________</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FINAL ACTIVITY -->
+            <div class="activity">
+                <div class="activity-header">
+                    <div class="activity-number">5</div>
+                    <div class="activity-title">
+                        <h2>Final Challenge: Integration Game</h2>
+                        <span class="time">⏱️ 10 minutes</span>
+                    </div>
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Part A: Classmate Predictions</h3>
+                    <div class="instructions">
+                        <strong>🎯 Game Rules:</strong> Walk around the class and make predictions about 5 different classmates' futures. Use will/won't!
+                    </div>
+                    
+                    <table>
+                        <tr>
+                            <th>Classmate's Name</th>
+                            <th>Your Prediction (will/won't)</th>
+                        </tr>
+                        <tr>
+                            <td>1. _________________</td>
+                            <td>_________________________________________________</td>
+                        </tr>
+                        <tr>
+                            <td>2. _________________</td>
+                            <td>_________________________________________________</td>
+                        </tr>
+                        <tr>
+                            <td>3. _________________</td>
+                            <td>_________________________________________________</td>
+                        </tr>
+                        <tr>
+                            <td>4. _________________</td>
+                            <td>_________________________________________________</td>
+                        </tr>
+                        <tr>
+                            <td>5. _________________</td>
+                            <td>_________________________________________________</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Part B: Quick Situations</h3>
+                    <div class="instructions">
+                        <strong>⚡ React quickly!</strong> Your teacher will give you situations. Respond with spontaneous decisions, offers, or promises using will/won't.
+                    </div>
+                    
+                    <div class="tip-box">
+                        <strong>Example situations:</strong><br>
+                        • "I'm thirsty!" → "I'll get you some water!"<br>
+                        • "Don't forget the homework!" → "Don't worry, I won't forget!"<br>
+                        • "Who wants to clean the board?" → "I'll do it!"
+                    </div>
+                    
+                    <div class="writing-space">
+                        <p><strong>Write 3 more situations and responses:</strong></p>
+                        <p>1. Situation: _______________________________________________________________</p>
+                        <p>   Response: _______________________________________________________________</p>
+                        <br>
+                        <p>2. Situation: _______________________________________________________________</p>
+                        <p>   Response: _______________________________________________________________</p>
+                        <br>
+                        <p>3. Situation: _______________________________________________________________</p>
+                        <p>   Response: _______________________________________________________________</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- REFLECTION -->
+            <div class="activity" style="border-left: 5px solid #4caf50;">
+                <div class="activity-header">
+                    <div class="activity-number" style="background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);">✓</div>
+                    <div class="activity-title">
+                        <h2 style="color: #4caf50;">Lesson Reflection</h2>
+                        <span class="time">⏱️ Before you leave...</span>
+                    </div>
+                </div>
+                
+                <div class="question-box">
+                    <h3 style="color: #4caf50; margin-bottom: 15px;">Self-Assessment</h3>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox"> I can use <strong>will</strong> for spontaneous decisions
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox"> I can use <strong>will</strong> for offers and promises
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox"> I can use <strong>will/won't</strong> for predictions
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox"> I can ask questions with <strong>will</strong>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox"> I understand when to use <strong>won't</strong>
+                    </div>
+                    
+                    <div class="writing-space" style="margin-top: 20px;">
+                        <p><strong>What was the most interesting thing you learned today?</strong></p>
+                        <p>_____________________________________________________________________________</p>
+                        <p>_____________________________________________________________________________</p>
+                        <br>
+                        <p><strong>What do you still need to practice?</strong></p>
+                        <p>_____________________________________________________________________________</p>
+                        <p>_____________________________________________________________________________</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="footer">
+            <p><strong>Great job today! 🌟</strong></p>
+            <p>Remember: Practice makes perfect. Keep making predictions and spontaneous decisions in English!</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">All audio materials: <a href="https://english-practice.net" target="_blank">english-practice.net</a> | Video: The Economist</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,57 +1,441 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>Actividades de Quinto Grado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miss Fer - Plataforma de Recursos Educativos</title>
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <style>
-      body {
-        background: #f7fafc;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-      }
-      .container {
-        background: white;
-        padding: 30px 50px;
-        border-radius: 15px;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.09);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      h1 {
-        font-size: 2.3em;
-        color: #6b46c1;
-        margin-bottom: 25px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        letter-spacing: 2px;
-      }
-      button {
-        padding: 10px 35px;
-        background: #667eea;
-        color: white;
-        border: none;
-        font-size: 1.1em;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.2s;
-      }
-      button:hover {
-        background: #5a67d8;
-      }
+        :root {
+            --color-black: #000000;
+            --color-dark-gray: #1a1a1a;
+            --color-gray: #4a4a4a;
+            --color-light-gray: #e0e0e0;
+            --color-white: #ffffff;
+            --color-rose-dark: #c2185b;
+            --color-rose-medium: #e91e63;
+            --color-rose-light: #f48fb1;
+            --color-rose-pale: #fce4ec;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--color-dark-gray) 0%, var(--color-black) 100%);
+            color: var(--color-white);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 2rem;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(233, 30, 99, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(244, 143, 177, 0.1) 0%, transparent 50%),
+                linear-gradient(135deg, var(--color-dark-gray) 0%, var(--color-black) 100%);
+        }
+
+        /* Animated Background Elements */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 30%, rgba(233, 30, 99, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(244, 143, 177, 0.08) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        /* Title Animation */
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--color-white) 0%, var(--color-rose-light) 50%, var(--color-rose-medium) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInDown 1s ease-out, glow 3s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(233, 30, 99, 0.3);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                filter: brightness(1);
+            }
+            50% {
+                filter: brightness(1.2);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--color-light-gray);
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Activities Container */
+        .activities-container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .activities-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem 0;
+        }
+
+        /* Activity Card Styles */
+        .activity-card {
+            background: linear-gradient(135deg, rgba(233, 30, 99, 0.1) 0%, rgba(194, 24, 91, 0.15) 100%);
+            border: 2px solid rgba(233, 30, 99, 0.3);
+            border-radius: 20px;
+            padding: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--color-white);
+            display: block;
+        }
+
+        .activity-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s;
+        }
+
+        .activity-card:hover::before {
+            left: 100%;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--color-rose-medium);
+            box-shadow: 0 12px 30px rgba(233, 30, 99, 0.4);
+            background: linear-gradient(135deg, rgba(233, 30, 99, 0.2) 0%, rgba(194, 24, 91, 0.25) 100%);
+        }
+
+        .activity-card:active {
+            transform: translateY(-4px) scale(1.01);
+        }
+
+        .activity-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            opacity: 0.9;
+        }
+
+        .activity-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--color-white);
+            line-height: 1.3;
+        }
+
+        .activity-description {
+            font-size: 0.95rem;
+            color: var(--color-light-gray);
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        .activity-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(233, 30, 99, 0.3);
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 0.8rem;
+            border: 1px solid rgba(233, 30, 99, 0.5);
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .activities-list {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 1.2rem;
+            }
+
+            .activity-card {
+                padding: 1.3rem;
+            }
+
+            .activity-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .activities-list {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .activity-card {
+                padding: 1.2rem;
+            }
+
+            .activity-title {
+                font-size: 1.1rem;
+            }
+
+            .activity-icon {
+                font-size: 2rem;
+            }
+        }
+
+        /* Decorative Elements */
+        .decorative-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            background: var(--color-rose-medium);
+            top: 10%;
+            left: 10%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .circle-2 {
+            width: 200px;
+            height: 200px;
+            background: var(--color-rose-light);
+            bottom: 15%;
+            right: 15%;
+            animation: float 10s ease-in-out infinite reverse;
+        }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Miss Fer</h1>
-      <a href="./will_wont_worksheet.html">Will/Wont Worksheet</button><br>
-      
-      
-      
-      
-    </div>
-  </body>
+</head>
+<body>
+    <section class="hero-section">
+        <!-- Decorative Circles -->
+        <div class="decorative-circle circle-1"></div>
+        <div class="decorative-circle circle-2"></div>
+
+        <div class="hero-content">
+            <h1 class="hero-title floating">5th grade activities</h1>
+            <p class="hero-subtitle">Open your instructor's activity</p>
+            
+            <div class="activities-container">
+                <div class="activities-list">
+                    <a href="./wil_wont_worksheet/will_wont_worksheet.html" class="activity-card">
+                        <span class="activity-icon">📝</span>
+                        <h3 class="activity-title">Will / Won't Worksheet</h3>
+                        <p class="activity-description">Práctica de futuro con will y won't</p>
+                        <span class="activity-badge">Gramática</span>
+                    </a>
+                    
+                    <a href="#" class="activity-card">
+                        <span class="activity-icon">📚</span>
+                        <h3 class="activity-title">Actividad 2</h3>
+                        <p class="activity-description">Descripción de la actividad</p>
+                        <span class="activity-badge">Vocabulario</span>
+                    </a>
+                    
+                    <a href="#" class="activity-card">
+                        <span class="activity-icon">🎯</span>
+                        <h3 class="activity-title">Actividad 3</h3>
+                        <p class="activity-description">Descripción de la actividad</p>
+                        <span class="activity-badge">Comprensión</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Smooth scroll and additional animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add ripple effect to activity cards
+            const activityCards = document.querySelectorAll('.activity-card');
+            
+            activityCards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    ripple.classList.add('ripple');
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+            // Parallax effect for decorative elements
+            window.addEventListener('mousemove', function(e) {
+                const circles = document.querySelectorAll('.decorative-circle');
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+                
+                circles.forEach((circle, index) => {
+                    const speed = (index + 1) * 0.5;
+                    const x = (mouseX - 0.5) * speed * 20;
+                    const y = (mouseY - 0.5) * speed * 20;
+                    circle.style.transform = `translate(${x}px, ${y}px)`;
+                });
+            });
+
+            // Stagger animation for activity cards on load
+            const activitiesList = document.querySelectorAll('.activity-card');
+            
+            activitiesList.forEach((card, index) => {
+                card.style.animationDelay = `${0.8 + index * 0.15}s`;
+                card.style.animation = 'fadeInUp 0.6s ease-out both';
+            });
+        });
+
+        // Add ripple effect styles dynamically
+        const style = document.createElement('style');
+        style.textContent = `
+            .activity-card {
+                position: relative;
+                overflow: hidden;
+            }
+            .ripple {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.6);
+                transform: scale(0);
+                animation: ripple-animation 0.6s ease-out;
+                pointer-events: none;
+            }
+            @keyframes ripple-animation {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
 </html>

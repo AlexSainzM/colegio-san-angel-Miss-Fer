@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Describing People - Worksheet</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .time-badge {
+            background: rgba(255,255,255,0.3);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.7em;
+            font-weight: 400;
+        }
+        
+        .exercise {
+            background: #f8f9ff;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+        }
+        
+        .exercise-title {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        
+        .instructions {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+        
+        .word-bank {
+            background: white;
+            border: 2px dashed #667eea;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .word-bank-title {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .words {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .word {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        .question {
+            margin-bottom: 25px;
+        }
+        
+        .question-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        
+        .answer-line {
+            border: none;
+            border-bottom: 2px solid #667eea;
+            width: 100%;
+            padding: 10px 5px;
+            font-size: 1em;
+            margin-top: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .answer-line:focus {
+            outline: none;
+            border-bottom: 3px solid #764ba2;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        tr:hover {
+            background: #f8f9ff;
+        }
+        
+        .matching-exercise {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .matching-column {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #667eea;
+        }
+        
+        .matching-item {
+            padding: 12px;
+            margin-bottom: 10px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .tip-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .tip-box strong {
+            color: #2196F3;
+        }
+        
+        .image-placeholder {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #f3e7ff 100%);
+            border: 3px solid #667eea;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px auto;
+            font-size: 0.9em;
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .footer {
+            background: #f8f9ff;
+            padding: 20px;
+            text-align: center;
+            color: #667eea;
+            font-weight: 500;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✨ Describing People ✨</h1>
+            <p>Practice Worksheet - A2 Level</p>
+        </div>
+        
+        <div class="content">
+            <!-- SECTION 1: USING "IS" -->
+            <div class="section">
+                <div class="section-title">
+                    <span>Part 1: Using "IS" for Descriptions</span>
+                    <span class="time-badge">⏱️ 10 minutes</span>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>💡 Remember:</strong> We use "is" to describe HEIGHT, AGE, and BODY BUILD.
+                    <br>Examples: She <strong>is</strong> tall. He <strong>is</strong> young. They <strong>are</strong> muscular.
+                </div>
+                
+                <!-- Exercise 1.1 -->
+                <div class="exercise">
+                    <div class="exercise-title">Exercise 1.1: Fill in the Blanks</div>
+                    <div class="instructions">
+                        📝 Complete the sentences using the correct form of "to be" (is/are) and the words from the word bank.
+                    </div>
+                    
+                    <div class="word-bank">
+                        <div class="word-bank-title">Word Bank:</div>
+                        <div class="words">
+                            <span class="word">tall</span>
+                            <span class="word">short</span>
+                            <span class="word">young</span>
+                            <span class="word">old</span>
+                            <span class="word">thin</span>
+                            <span class="word">muscular</span>
+                            <span class="word">medium height</span>
+                            <span class="word">in her thirties</span>
+                            <span class="word">athletic</span>
+                            <span class="word">of average build</span>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">1</span>
+                        My grandfather _____________ 85 years old. He _____________ quite _____________.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">2</span>
+                        Sarah _____________ a professional athlete. She _____________ very _____________ and _____________.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">3</span>
+                        The basketball player _____________ extremely _____________. He _____________ about 2 meters!
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">4</span>
+                        My sister _____________ _____________. She _____________ 32 years old.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">5</span>
+                        Tom and his brother _____________ both _____________. They _____________ not very tall or short.
+                    </div>
+                </div>
+                
+                <!-- Exercise 1.2 -->
+                <div class="exercise">
+                    <div class="exercise-title">Exercise 1.2: Correct the Mistakes</div>
+                    <div class="instructions">
+                        ❌ Find and correct the mistakes in these sentences. Some sentences may be correct!
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">1</span>
+                        My teacher has tall and young. ➜ <input type="text" class="answer-line">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">2</span>
+                        She is medium height and thin. ➜ <input type="text" class="answer-line">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">3</span>
+                        They are have muscular. ➜ <input type="text" class="answer-line">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">4</span>
+                        He is an adolescent and athletic. ➜ <input type="text" class="answer-line">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">5</span>
+                        My friends is in their twenties. ➜ <input type="text" class="answer-line">
+                    </div>
+                </div>
+                
+                <!-- Exercise 1.3 -->
+                <div class="exercise">
+                    <div class="exercise-title">Exercise 1.3: Describe Yourself!</div>
+                    <div class="instructions">
+                        ✍️ Write 3 sentences about yourself using "is/am" to describe your height, age, and body build.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">1</span>
+                        <input type="text" class="answer-line" placeholder="I am...">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">2</span>
+                        <input type="text" class="answer-line" placeholder="I am...">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">3</span>
+                        <input type="text" class="answer-line" placeholder="I am...">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SECTION 2: USING "HAS/HAS GOT" -->
+            <div class="section">
+                <div class="section-title">
+                    <span>Part 2: Using "HAS/HAS GOT" for Descriptions</span>
+                    <span class="time-badge">⏱️ 10 minutes</span>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>💡 Remember:</strong> We use "has/has got" to describe HAIR, FACIAL FEATURES, and SKIN.
+                    <br><strong>Hair order:</strong> Length + Type + Colour
+                    <br>Example: She <strong>has</strong> long, curly, brown hair.
+                </div>
+                
+                <!-- Exercise 2.1 -->
+                <div class="exercise">
+                    <div class="exercise-title">Exercise 2.1: Put the Words in Order</div>
+                    <div class="instructions">
+                        🔄 Rearrange the words to make correct sentences about hair. Remember the order!
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">1</span>
+                        has / blonde / she / straight / long / hair / .
+                        <input type="text" class="answer-line">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">2</span>
+                        got / he / brown / has / wavy / medium-length / hair / .
+                        <input type="text" class="answer-line">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">3</span>
+                        dark / has / curly / she / shoulder-length / hair / got / .
+                        <input type="text" class="answer-line">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">4</span>
+                        grey / short / my / has / straight / grandfather / hair / .
+                        <input type="text" class="answer-line">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">5</span>
+                        ginger / got / long / has / she / wavy / hair / .
+                        <input type="text" class="answer-line">
+                    </div>
+                </div>
+                
+                <!-- Exercise 2.2 -->
+                <div class="exercise">
+                    <div class="exercise-title">Exercise 2.2: Complete the Descriptions</div>
+                    <div class="instructions">
+                        📝 Fill in the blanks with "has" or "has got" and the appropriate words.
+                    </div>
+                    
+                    <div class="word-bank">
+                        <div class="word-bank-title">Word Bank:</div>
+                        <div class="words">
+                            <span class="word">beard</span>
+                            <span class="word">moustache</span>
+                            <span class="word">freckles</span>
+                            <span class="word">glasses</span>
+                            <span class="word">blue eyes</span>
+                            <span class="word">brown eyes</span>
+                            <span class="word">button nose</span>
+                            <span class="word">oval face</span>
+                            <span class="word">round face</span>
+                            <span class="word">fair skin</span>
+                            <span class="word">dark skin</span>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">1</span>
+                        My father _____________ a _____________ and a _____________. He looks very distinguished!
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">2</span>
+                        Emma _____________ _____________ all over her nose and cheeks. She also _____________ _____________.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">3</span>
+                        The model _____________ almond-shaped _____________ and an _____________.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">4</span>
+                        My baby sister _____________ a cute _____________ and a _____________.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">5</span>
+                        Carlos _____________ _____________ and doesn't need sunscreen very often.
+                    </div>
+                </div>
+                
+                <!-- Exercise 2.3 -->
+                <div class="exercise">
+                    <div class="exercise-title">Exercise 2.3: Describe a Family Member</div>
+                    <div class="instructions">
+                        👨‍👩‍👧‍👦 Choose a family member or friend and describe their hair and facial features using "has/has got". Write at least 4 sentences.
+                    </div>
+                    
+                    <div class="question">
+                        <strong>Person's name:</strong> <input type="text" class="answer-line" style="width: 300px;">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">1</span>
+                        <input type="text" class="answer-line">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">2</span>
+                        <input type="text" class="answer-line">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">3</span>
+                        <input type="text" class="answer-line">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">4</span>
+                        <input type="text" class="answer-line">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SECTION 3: INTEGRATED PRACTICE -->
+            <div class="section">
+                <div class="section-title">
+                    <span>Part 3: Putting It All Together</span>
+                    <span class="time-badge">⏱️ 15-20 minutes</span>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>💡 Remember:</strong> Use <strong>"IS"</strong> for height, age, and body build. Use <strong>"HAS/HAS GOT"</strong> for hair, facial features, and skin.
+                </div>
+                
+                <!-- Exercise 3.1 -->
+                <div class="exercise">
+                    <div class="exercise-title">Exercise 3.1: Choose the Correct Verb</div>
+                    <div class="instructions">
+                        ✅ Circle or underline the correct verb (is/are/has/has got) in each sentence.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">1</span>
+                        My best friend ( is / has ) tall and ( is / has got ) long blonde hair.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">2</span>
+                        The actor ( is / has ) in his fifties and ( is / has got ) grey hair.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">3</span>
+                        She ( is / has ) medium height and ( is / has got ) brown eyes.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">4</span>
+                        They ( are / have ) athletic and ( are / have got ) dark skin.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">5</span>
+                        My teacher ( is / has ) young and ( is / has got ) a beard.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">6</span>
+                        The children ( are / have ) small and ( are / have got ) freckles.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">7</span>
+                        He ( is / has ) muscular and ( is / has got ) short curly hair.
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">8</span>
+                        My grandmother ( is / has ) old and ( is / has got ) glasses.
+                    </div>
+                </div>
+                
+                <!-- Exercise 3.2 -->
+                <div class="exercise">
+                    <div class="exercise-title">Exercise 3.2: Complete Description</div>
+                    <div class="instructions">
+                        📝 Read the information and write a complete description using both "is" and "has/has got".
+                    </div>
+                    
+                    <div class="question">
+                        <strong>Person A:</strong> Maria / 28 years old / medium height / thin / long straight black hair / brown eyes / oval face
+                        <br><br>
+                        <textarea class="answer-line" style="height: 80px; width: 100%; border: 2px solid #667eea; border-radius: 8px; padding: 10px; font-family: 'Poppins', sans-serif;"></textarea>
+                    </div>
+                    
+                    <div class="question">
+                        <strong>Person B:</strong> James / in his forties / tall / athletic / short wavy brown hair / blue eyes / beard / glasses
+                        <br><br>
+                        <textarea class="answer-line" style="height: 80px; width: 100%; border: 2px solid #667eea; border-radius: 8px; padding: 10px; font-family: 'Poppins', sans-serif;"></textarea>
+                    </div>
+                </div>
+                
+                <!-- Exercise 3.3 -->
+                <div class="exercise">
+                    <div class="exercise-title">Exercise 3.3: Spot the Differences</div>
+                    <div class="instructions">
+                        🔍 Look at the two descriptions below. Write 5 sentences explaining the differences between Person A and Person B.
+                    </div>
+                    
+                    <table>
+                        <tr>
+                            <th>Person A</th>
+                            <th>Person B</th>
+                        </tr>
+                        <tr>
+                            <td>Tall, young, thin</td>
+                            <td>Short, old, of average build</td>
+                        </tr>
+                        <tr>
+                            <td>Long, straight, blonde hair</td>
+                            <td>Short, curly, grey hair</td>
+                        </tr>
+                        <tr>
+                            <td>Blue eyes, button nose</td>
+                            <td>Brown eyes, straight nose</td>
+                        </tr>
+                        <tr>
+                            <td>Oval face, fair skin</td>
+                            <td>Round face, brown skin</td>
+                        </tr>
+                        <tr>
+                            <td>No glasses, no beard</td>
+                            <td>Glasses, beard</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="question">
+                        <span class="question-number">1</span>
+                        <input type="text" class="answer-line">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">2</span>
+                        <input type="text" class="answer-line">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">3</span>
+                        <input type="text" class="answer-line">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">4</span>
+                        <input type="text" class="answer-line">
+                    </div>
+                    
+                    <div class="question">
+                        <span class="question-number">5</span>
+                        <input type="text" class="answer-line">
+                    </div>
+                </div>
+                
+                <!-- Exercise 3.4 -->
+                <div class="exercise">
+                    <div class="exercise-title">Exercise 3.4: Describe Your Ideal Celebrity Friend</div>
+                    <div class="instructions">
+                        ⭐ Imagine you could be friends with any celebrity. Describe what they look like using everything you've learned today. Write at least 6 sentences using both "is" and "has/has got".
+                    </div>
+                    
+                    <div class="question">
+                        <strong>Celebrity name:</strong> <input type="text" class="answer-line" style="width: 400px;">
+                    </div>
+                    
+                    <div class="question">
+                        <textarea class="answer-line" style="height: 150px; width: 100%; border: 2px solid #667eea; border-radius: 8px; padding: 10px; font-family: 'Poppins', sans-serif;" placeholder="Write your description here..."></textarea>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>🌟 Great job practicing! Remember: <strong>IS</strong> for height/age/build, <strong>HAS/HAS GOT</strong> for hair/features/skin 🌟</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 1 - English A2 | Present Perfect & Past Simple</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            display: none;
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            margin: 20px 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #764ba2;
+            margin: 30px 0 20px 0;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            color: #5a67d8;
+            margin: 25px 0 15px 0;
+        }
+
+        p, li {
+            font-size: 1.3em;
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+
+        .timer {
+            background: #fef3c7;
+            border: 3px solid #f59e0b;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #92400e;
+        }
+
+        .example-box {
+            background: #e0e7ff;
+            border-left: 6px solid #667eea;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            font-size: 1.2em;
+        }
+
+        .grammar-box {
+            background: #dbeafe;
+            border: 3px solid #3b82f6;
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 15px;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            padding: 30px;
+            background: #f3f4f6;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            right: 5%;
+            height: 4px;
+            background: #667eea;
+            z-index: 0;
+        }
+
+        .timeline-item {
+            text-align: center;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            z-index: 1;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .timeline-item h4 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .connector-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .connector-card {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border: 3px solid #f59e0b;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .connector-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .connector-card h4 {
+            color: #92400e;
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+
+        .exercise {
+            background: #f0fdf4;
+            border: 3px solid #10b981;
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 15px;
+        }
+
+        .exercise h3 {
+            color: #065f46;
+        }
+
+        .question {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 5px solid #10b981;
+        }
+
+        .project-example {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .project-example img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+        }
+
+        .rubric-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 1.1em;
+        }
+
+        .rubric-table th {
+            background: #667eea;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-size: 1.3em;
+        }
+
+        .rubric-table td {
+            border: 2px solid #e5e7eb;
+            padding: 20px;
+            background: #f9fafb;
+        }
+
+        .rubric-table tr:hover td {
+            background: #e0e7ff;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            gap: 20px;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.3em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(118, 75, 162, 0.5);
+        }
+
+        button:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 15px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+
+        .section-indicator {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: white;
+            font-weight: bold;
+        }
+
+        .template-download {
+            background: #dcfce7;
+            border: 3px dashed #10b981;
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .template-download button {
+            background: #10b981;
+            margin: 10px;
+        }
+
+        .template-download button:hover {
+            background: #059669;
+        }
+
+        .requirements-list {
+            background: #fef2f2;
+            border: 3px solid #ef4444;
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 15px;
+        }
+
+        .requirements-list li {
+            margin: 15px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .requirements-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .highlight {
+            background: #fef3c7;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #92400e;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+            
+            .timeline {
+                flex-direction: column;
+            }
+            
+            .timeline::before {
+                display: none;
+            }
+            
+            .timeline-item {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section-indicator" id="sectionIndicator">Sección 1 de 6</div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar" style="width: 16.67%"></div>
+        </div>
+
+        <!-- SECCIÓN 1: WARM-UP -->
+        <div class="section active" id="section1">
+            <h1>🌟 Warm-up: My Experiences</h1>
+            <div class="timer">⏱️ Time: 8 minutes</div>
+            
+            <h2>Let's Talk About Experiences!</h2>
+            <p>Today we're going to talk about things you <span class="highlight">have done</span> in your life using <strong>Present Perfect</strong>.</p>
+            
+            <div class="example-box">
+                <h3>Remember: Present Perfect Structure</h3>
+                <p style="font-size: 1.5em; text-align: center; margin: 20px 0;">
+                    <strong>Subject + HAVE/HAS + PAST PARTICIPLE</strong>
+                </p>
+                <p>✅ I <strong>have visited</strong> Cancún.</p>
+                <p>✅ She <strong>has tried</strong> sushi.</p>
+                <p>✅ We <strong>have learned</strong> English.</p>
+            </div>
+
+            <h3>🎯 Activity: Personal Reflection</h3>
+            <div class="exercise">
+                <h3>Individual Activity (8 minutes)</h3>
+                <p>Think about interesting experiences you have had in your life. Write complete sentences about 5 different experiences:</p>
+                <div class="question">
+                    <p><strong>1.</strong> I have ___________________________ (experience)</p>
+                    <p style="margin-left: 30px; font-size: 0.9em; color: #6b7280;">When? ___________________________ (specific time)</p>
+                    <p style="margin-left: 30px; font-size: 0.9em; color: #6b7280;">How did you feel? ___________________________</p>
+                </div>
+                <div class="question">
+                    <p><strong>2.</strong> I have ___________________________ (experience)</p>
+                    <p style="margin-left: 30px; font-size: 0.9em; color: #6b7280;">When? ___________________________ (specific time)</p>
+                    <p style="margin-left: 30px; font-size: 0.9em; color: #6b7280;">How did you feel? ___________________________</p>
+                </div>
+                <div class="question">
+                    <p><strong>3.</strong> I have ___________________________ (experience)</p>
+                    <p style="margin-left: 30px; font-size: 0.9em; color: #6b7280;">When? ___________________________ (specific time)</p>
+                    <p style="margin-left: 30px; font-size: 0.9em; color: #6b7280;">How did you feel? ___________________________</p>
+                </div>
+                <div class="question">
+                    <p><strong>4.</strong> I have ___________________________ (experience)</p>
+                    <p style="margin-left: 30px; font-size: 0.9em; color: #6b7280;">When? ___________________________ (specific time)</p>
+                    <p style="margin-left: 30px; font-size: 0.9em; color: #6b7280;">How did you feel? ___________________________</p>
+                </div>
+                <div class="question">
+                    <p><strong>5.</strong> I have ___________________________ (experience)</p>
+                    <p style="margin-left: 30px; font-size: 0.9em; color: #6b7280;">When? ___________________________ (specific time)</p>
+                    <p style="margin-left: 30px; font-size: 0.9em; color: #6b7280;">How did you feel? ___________________________</p>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button onclick="changeSection(1)" disabled>⬅️ Anterior</button>
+                <button onclick="changeSection(2)">Siguiente ➡️</button>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 2: GRAMMAR REVIEW - PRESENT PERFECT VS PAST SIMPLE -->
+        <div class="section" id="section2">
+            <h1>📚 Grammar Review</h1>
+            <div class="timer">⏱️ Time: 25 minutes</div>
+            
+            <h2>Part 1: Present Perfect vs. Past Simple</h2>
+            
+            <div class="grammar-box">
+                <h3>Visual Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Past Simple</h4>
+                        <p style="font-size: 1.3em; margin: 15px 0;">✅ <strong>Specific time in the past</strong></p>
+                        <p><em>"I visited Paris <span class="highlight">last year</span>."</em></p>
+                        <p><em>"She ate sushi <span class="highlight">yesterday</span>."</em></p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Present Perfect</h4>
+                        <p style="font-size: 1.3em; margin: 15px 0;">✅ <strong>Experience until now</strong></p>
+                        <p><em>"I <span class="highlight">have visited</span> Paris."</em></p>
+                        <p><em>"She <span class="highlight">has eaten</span> sushi."</em></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h3>🔑 Key Differences</h3>
+                <table style="width: 100%; margin: 20px 0;">
+                    <tr>
+                        <td style="padding: 15px; background: #dbeafe; border-radius: 10px; margin: 5px;">
+                            <p><strong>Present Perfect:</strong> Focus on the experience</p>
+                            <p style="color: #3b82f6; font-size: 1.2em; margin-top: 10px;">✅ "I have seen that movie."</p>
+                        </td>
+                        <td style="padding: 15px; background: #fef3c7; border-radius: 10px; margin: 5px;">
+                            <p><strong>Past Simple:</strong> Focus on when it happened</p>
+                            <p style="color: #f59e0b; font-size: 1.2em; margin-top: 10px;">✅ "I saw that movie last week."</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <h2>Part 2: More Practice with Present Perfect vs Past Simple</h2>
+            <div class="grammar-box">
+                <h3>Additional Examples to Master the Difference</h3>
+                <div style="margin: 25px 0;">
+                    <div class="example-box">
+                        <h4>💡 Remember the KEY question:</h4>
+                        <p style="font-size: 1.3em; color: #667eea;"><strong>When exactly?</strong></p>
+                        <p>✅ If you mention <span class="highlight">when</span> → use <strong>Past Simple</strong></p>
+                        <p>✅ If you DON'T mention when → use <strong>Present Perfect</strong></p>
+                    </div>
+                    
+                    <div class="example-box">
+                        <h4>Example Set 1: Travel</h4>
+                        <p>🔵 <strong>Present Perfect:</strong> "I <span class="highlight">have been to</span> Japan." <em>(Experience, no specific time)</em></p>
+                        <p>🟡 <strong>Past Simple:</strong> "I <span class="highlight">went to</span> Japan <strong>in 2019</strong>." <em>(Specific time)</em></p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Example Set 2: Food</h4>
+                        <p>🔵 <strong>Present Perfect:</strong> "She <span class="highlight">has tried</span> Mexican food." <em>(Experience)</em></p>
+                        <p>🟡 <strong>Past Simple:</strong> "She <span class="highlight">tried</span> tacos <strong>last weekend</strong>." <em>(Specific time)</em></p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Example Set 3: Learning</h4>
+                        <p>🔵 <strong>Present Perfect:</strong> "We <span class="highlight">have learned</span> a lot of English." <em>(Experience until now)</em></p>
+                        <p>🟡 <strong>Past Simple:</strong> "We <span class="highlight">learned</span> present perfect <strong>yesterday</strong>." <em>(Specific time)</em></p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Example Set 4: Movies</h4>
+                        <p>🔵 <strong>Present Perfect:</strong> "He <span class="highlight">has seen</span> that movie three times." <em>(Experience, focus on number)</em></p>
+                        <p>🟡 <strong>Past Simple:</strong> "He <span class="highlight">saw</span> that movie <strong>last night</strong>." <em>(Specific time)</em></p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Part 3: Narrative Connectors</h2>
+            <p>These words help us connect our ideas when telling stories about our experiences:</p>
+            <div class="connector-grid">
+                <div class="connector-card">
+                    <h4>First</h4>
+                    <p>Para comenzar una historia</p>
+                    <p><em>"First, I woke up early."</em></p>
+                </div>
+                <div class="connector-card">
+                    <h4>Then / After that</h4>
+                    <p>Para continuar la secuencia</p>
+                    <p><em>"Then, I had breakfast."</em></p>
+                </div>
+                <div class="connector-card">
+                    <h4>Finally</h4>
+                    <p>Para terminar la historia</p>
+                    <p><em>"Finally, I went to bed."</em></p>
+                </div>
+                <div class="connector-card">
+                    <h4>Because</h4>
+                    <p>Para dar razones</p>
+                    <p><em>"I was happy because..."</em></p>
+                </div>
+                <div class="connector-card">
+                    <h4>So</h4>
+                    <p>Para mostrar resultados</p>
+                    <p><em>"I was tired, so I rested."</em></p>
+                </div>
+                <div class="connector-card">
+                    <h4>But</h4>
+                    <p>Para contrastar ideas</p>
+                    <p><em>"I was tired, but I continued."</em></p>
+                </div>
+            </div>
+
+            <h2>Part 4: Complete Story Example</h2>
+            <div class="grammar-box">
+                <h3>Read this example that uses both tenses and connectors:</h3>
+                <div class="example-box" style="font-size: 1.2em; line-height: 2;">
+                    <p><strong style="color: #667eea;">I <span class="highlight">have traveled</span> to many places in Mexico.</strong> <em>(Present Perfect - experience)</em></p>
+                    <p><strong>First,</strong> I <span class="highlight">visited</span> Oaxaca <strong>in 2020</strong>. <em>(Past Simple - specific time)</em></p>
+                    <p><strong>Then,</strong> I <span class="highlight">went</span> to Chiapas <strong>last year</strong>. <em>(Past Simple - specific time)</em></p>
+                    <p>I <span class="highlight">loved</span> the nature <strong>because</strong> it was beautiful. <em>(Past Simple + connector)</em></p>
+                    <p><strong>After that,</strong> I <span class="highlight">explored</span> Yucatán. <em>(Past Simple + connector)</em></p>
+                    <p><strong style="color: #667eea;">I <span class="highlight">have learned</span> so much about Mexican culture.</strong> <em>(Present Perfect - experience until now)</em></p>
+                </div>
+                <div style="margin-top: 20px; padding: 20px; background: #fef3c7; border-radius: 10px;">
+                    <p><strong>Notice:</strong></p>
+                    <ul style="list-style: disc; margin-left: 30px;">
+                        <li>Present Perfect at the beginning and end (overall experiences)</li>
+                        <li>Past Simple for specific events with time markers</li>
+                        <li>Connectors to organize the story (First, Then, After that, Because)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button onclick="changeSection(1)">⬅️ Anterior</button>
+                <button onclick="changeSection(3)">Siguiente ➡️</button>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 3: PRÁCTICA GUIADA -->
+        <div class="section" id="section3">
+            <h1>✏️ Práctica Guiada</h1>
+            <div class="timer">⏱️ Time: 22 minutes</div>
+            
+            <h2>Let's Practice Together!</h2>
+            <p>Vamos a trabajar juntos para construir oraciones correctas usando las estructuras que acabamos de revisar.</p>
+
+            <div class="exercise">
+                <h3>Exercise 1: Complete the Sentences (Individual Practice)</h3>
+                <p>Choose between Present Perfect or Past Simple. Write your answers:</p>
+                
+                <div class="question">
+                    <p><strong>1.</strong> I _____________ (visit) Mexico City many times. <span style="color: #10b981;">(Experience)</span></p>
+                    <p style="margin-left: 30px; color: #6b7280;"></p>
+                </div>
+                
+                <div class="question">
+                    <p><strong>2.</strong> Last summer, I _____________ (go) to Guadalajara. <span style="color: #f59e0b;">(Specific time)</span></p>
+                    <p style="margin-left: 30px; color: #6b7280;"></p>
+                </div>
+                
+                <div class="question">
+                    <p><strong>3.</strong> She _____________ (eat) tacos al pastor before. <span style="color: #10b981;">(Experience)</span></p>
+                    <p style="margin-left: 30px; color: #6b7280;"></p>
+                </div>
+
+                <div class="question">
+                    <p><strong>4.</strong> We _____________ (watch) a movie yesterday. <span style="color: #f59e0b;">(Specific time)</span></p>
+                    <p style="margin-left: 30px; color: #6b7280;"></p>
+                </div>
+
+                <div class="question">
+                    <p><strong>5.</strong> They _____________ (study) English for two years. <span style="color: #10b981;">(Experience - duration)</span></p>
+                    <p style="margin-left: 30px; color: #6b7280;"></p>
+                </div>
+
+                <div class="question">
+                    <p><strong>6.</strong> He _____________ (buy) a new phone last month. <span style="color: #f59e0b;">(Specific time)</span></p>
+                    <p style="margin-left: 30px; color: #6b7280;"></p>
+                </div>
+
+                <div class="question">
+                    <p><strong>7.</strong> I _____________ (never/try) sushi. <span style="color: #10b981;">(Experience with never)</span></p>
+                    <p style="margin-left: 30px; color: #6b7280;"></p>
+                </div>
+
+                <div class="question">
+                    <p><strong>8.</strong> We _____________ (meet) our friends at the park two days ago. <span style="color: #f59e0b;">(Specific time)</span></p>
+                    <p style="margin-left: 30px; color: #6b7280;"></p>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 2: Correct or Incorrect? (Individual Analysis)</h3>
+                <p>Read each sentence. Mark with a ✅ if it's CORRECT or ❌ if it's INCORRECT . If incorrect, write the correction:</p>
+                
+                <div class="question">
+                    <p><strong>1.</strong> "I have seen that movie yesterday." ____</p>
+                    <p style="margin-left: 30px; color: #ef4444;"> </p>
+                </div>
+                
+                <div class="question">
+                    <p><strong>2.</strong> "She has lived in Monterrey for five years." ____</p>
+                    <p style="margin-left: 30px; color: #10b981;"></p>
+                </div>
+
+                <div class="question">
+                    <p><strong>3.</strong> "We went to the beach many times." ____</p>
+                    <p style="margin-left: 30px; color: #ef4444;"></p>
+                </div>
+
+                <div class="question">
+                    <p><strong>4.</strong> "He traveled to Europe last year." ____</p>
+                    <p style="margin-left: 30px; color: #10b981;"></p>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 3: Add Connectors (Individual Practice)</h3>
+                <p>Complete the story with the correct connectors: <strong>first, then, after that, finally, because, so, but</strong></p>
+                
+                <div class="question">
+                    <p><strong>My Weekend Adventure</strong></p>
+                    <p>_____________ (1), I woke up early on Saturday. I was excited _____________ (2) I had plans to visit the museum. _____________ (3), I had breakfast and got ready. I wanted to take the bus, _____________ (4) it was too crowded. _____________ (5), I decided to walk instead. _____________ (6), I arrived at the museum and enjoyed the exhibits!</p>
+                    <p style="margin-top: 20px; color: #6b7280;"><em>Answers: (1) First, (2) because, (3) Then, (4) but, (5) So, (6) Finally</em></p>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 4: Write Your Own Sentences (Individual Creation)</h3>
+                <p>Now it's your turn! Write complete sentences about YOUR life:</p>
+                
+                <div class="question">
+                    <p><strong>Present Perfect (3 sentences):</strong></p>
+                    <p>1. I have _____________________________________________</p>
+                    <p>2. I have _____________________________________________</p>
+                    <p>3. I have _____________________________________________</p>
+                </div>
+                
+                <div class="question">
+                    <p><strong>Past Simple (3 sentences with time markers):</strong></p>
+                    <p>1. Last ____________, I _____________________________________________</p>
+                    <p>2. Yesterday, I _____________________________________________</p>
+                    <p>3. In ____________, I _____________________________________________</p>
+                </div>
+
+                <div class="question">
+                    <p><strong>Story with connectors (use at least 3):</strong></p>
+                    <p>_________________________________________________________________</p>
+                    <p>_________________________________________________________________</p>
+                    <p>_________________________________________________________________</p>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button onclick="changeSection(2)">⬅️ Anterior</button>
+                <button onclick="changeSection(4)">Siguiente ➡️</button>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 4: PRESENTACIÓN DEL PROYECTO FINAL -->
+        <div class="section" id="section4">
+            <h1>🎨 Final Project Presentation</h1>
+            <div class="timer">⏱️ Time: 15 minutes</div>
+            
+            <h2>Your Final Project: Choose Your Format!</h2>
+            <p>You will create ONE of these two options to show your experiences and tell a story:</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0;">
+                <div style="background: #fef3c7; padding: 30px; border-radius: 15px; border: 4px solid #f59e0b;">
+                    <h3 style="text-align: center; color: #92400e; font-size: 2em;">Option 1: Comic Strip 📖</h3>
+                    <p style="text-align: center;">Historieta de 6 paneles</p>
+                </div>
+                <div style="background: #e0e7ff; padding: 30px; border-radius: 15px; border: 4px solid #667eea;">
+                    <h3 style="text-align: center; color: #3730a3; font-size: 2em;">Option 2: Brochure 📄</h3>
+                    <p style="text-align: center;">Folleto informativo</p>
+                </div>
+            </div>
+
+            <h2>Example 1: Comic Strip (Historieta)</h2>
+            <div class="project-example">
+                <img src="https://cdn.abacus.ai/images/be9755ce-ef9a-4cc4-9006-dda06956cc8e.png" alt="Comic Strip Example">
+                <div class="example-box" style="text-align: left; margin-top: 20px;">
+                    <h3>What you should include in your comic:</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 15px 0;">✅ <strong>Present Perfect:</strong> "I have visited...", "I have learned...", "I have made..." (3 sentences)</li>
+                        <li style="margin: 15px 0;">✅ <strong>Past Simple:</strong> "I went...", "I tried...", "I returned..." (3 sentences)</li>
+                        <li style="margin: 15px 0;">✅ <strong>Time markers for Past Simple:</strong> yesterday, last week, in 2020, two days ago, etc.</li>
+                        <li style="margin: 15px 0;">✅ <strong>Connectors:</strong> First, Then, After that, Finally, Because, So, But</li>
+                        <li style="margin: 15px 0;">✅ <strong>Clear drawings</strong> with speech bubbles or captions</li>
+                        <li style="margin: 15px 0;">✅ <strong>Creative title</strong> and well-organized panels (at least 6 panels)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Example 2: Brochure (Folleto)</h2>
+            <div class="project-example">
+                <img src="https://cdn.abacus.ai/images/c6da22e1-2e95-43d5-9f14-7bc19623783c.png" alt="Brochure Example">
+                <div class="example-box" style="text-align: left; margin-top: 20px;">
+                    <h3>What you should include in your brochure:</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 15px 0;">✅ <strong>Present Perfect:</strong> "I have learned...", "I have discovered...", "I have become..." (at least 6)</li>
+                        <li style="margin: 15px 0;">✅ <strong>Past Simple:</strong> "I traveled...", "I hiked...", "I met..." (at least 6)</li>
+                        <li style="margin: 15px 0;">✅ <strong>Time markers for Past Simple:</strong> in 2019, last month, three years ago, etc.</li>
+                        <li style="margin: 15px 0;">✅ <strong>Connectors:</strong> First, Then, After that, Finally, Because, So, But</li>
+                        <li style="margin: 15px 0;">✅ <strong>Images and text boxes</strong> with clear, organized layout</li>
+                        <li style="margin: 15px 0;">✅ <strong>Professional design</strong> with distinct sections and a creative title</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button onclick="changeSection(3)">⬅️ Anterior</button>
+                <button onclick="changeSection(6)">Siguiente ➡️</button>
+            </div>
+        </div>
+        
+        <!-- SECCIÓN 6: PLANTILLAS Y TIEMPO DE TRABAJO -->
+        <div class="section" id="section6">
+            <h1>🚀 Let's Start Planning!</h1>
+            <div class="timer">⏱️ Time: 10 minutes</div>
+            
+            <h2>Planning Template / Plantilla de Planificación</h2>
+            <p>Use this template to organize your ideas before creating your project:</p>
+
+            <div class="exercise">
+                <h3>Step 1: Choose Your Format</h3>
+                <div class="question">
+                    <p>I will create a: ☐ Comic Strip &nbsp;&nbsp;&nbsp; ☐ Brochure</p>
+                </div>
+
+                <h3>Step 2: Choose Your Topic</h3>
+                <div class="question">
+                    <p>My project will be about:</p>
+                    <ul style="list-style: none; margin-left: 20px;">
+                        <li>☐ A trip / vacation</li>
+                        <li>☐ My hobbies and experiences</li>
+                        <li>☐ Learning something new</li>
+                        <li>☐ Meeting new people</li>
+                        <li>☐ Other: _________________</li>
+                    </ul>
+                </div>
+
+                <h3>Step 3: List Your Experiences (Present Perfect)</h3>
+                <div class="question">
+                    <p>Write at least 3 things you have done (no specific time):</p>
+                    <p>1. I have ___________________________</p>
+                    <p>2. I have ___________________________</p>
+                    <p>3. I have ___________________________</p>
+                </div>
+
+                <h3>Step 4: Write Specific Events (Past Simple)</h3>
+                <div class="question">
+                    <p>Write at least 3 specific events with time references:</p>
+                    <p>1. (When?) ____________ I ___________________________</p>
+                    <p>2. (When?) ____________ I ___________________________</p>
+                    <p>3. (When?) ____________ I ___________________________</p>
+                </div>
+
+                <h3>Step 5: Plan Your Story Flow</h3>
+                <div class="question">
+                    <p>Organize your story using connectors:</p>
+                    <p><strong>First,</strong> ___________________________</p>
+                    <p><strong>Then,</strong> ___________________________</p>
+                    <p><strong>After that,</strong> ___________________________</p>
+                    <p><strong>Finally,</strong> ___________________________</p>
+                </div>
+
+                <h3>Step 6: Review Your Work</h3>
+                <div class="question">
+                    <p><strong>Check:</strong> Did I use both Present Perfect AND Past Simple?</p>
+                    <p><strong>Check:</strong> Did I include time markers for Past Simple? (yesterday, last week, in 2020, etc.)</p>
+                    <p><strong>Check:</strong> Did I use connectors to organize my story?</p>
+                </div>
+            </div>
+
+            <div style="background: #dcfce7; border: 3px solid #10b981; padding: 30px; border-radius: 15px; margin: 30px 0;">
+                <h2>✅ Checklist Before You Start:</h2>
+                <ul style="font-size: 1.2em; line-height: 2;">
+                    <li>☐ I have chosen my format (comic or brochure)</li>
+                    <li>☐ I have chosen my topic</li>
+                    <li>☐ I have listed at least 3 Present Perfect sentences (experiences)</li>
+                    <li>☐ I have listed at least 3 Past Simple sentences (with time markers)</li>
+                    <li>☐ I have planned my connectors (first, then, after that, finally, because, so, but)</li>
+                    <li>☐ I understand the difference between Present Perfect and Past Simple</li>
+                    <li>☐ I have ideas for images/drawings</li>
+                    <li>☐ I have my materials (paper, colors, etc.)</li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; margin: 40px 0;">
+                <h2 style="color: #667eea; font-size: 2.5em;">🎉 Now You're Ready to Create!</h2>
+                <p style="font-size: 1.2em; color: #6b7280; margin-top: 20px;">Need help? Ask your teacher! 🙋‍♂️🙋‍♀️</p>
+            </div>
+
+            <div class="navigation">
+                <button onclick="changeSection(4)">⬅️ Anterior</button>
+                <button onclick="location.reload()">🔄 Restart Class</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSection = 1;
+        const totalSections = 6;
+
+        function changeSection(newSection) {
+            if (newSection < 1 || newSection > totalSections) return;
+            
+            // Hide current section
+            document.getElementById('section' + currentSection).classList.remove('active');
+            
+            // Show new section
+            currentSection = newSection;
+            document.getElementById('section' + currentSection).classList.add('active');
+            
+            // Update progress bar
+            const progress = (currentSection / totalSections) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            
+            // Update section indicator
+            document.getElementById('sectionIndicator').textContent = 'Sección ' + currentSection + ' de ' + totalSections;
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight') {
+                changeSection(currentSection + 1);
+            } else if (event.key === 'ArrowLeft') {
+                changeSection(currentSection - 1);
+            }
+        });
+    </script>
+</body>
+</html>

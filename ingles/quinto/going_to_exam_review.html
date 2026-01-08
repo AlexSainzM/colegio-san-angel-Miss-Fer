@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Going To - Exam Review Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: white;
+            padding: 0;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            padding: 35px 40px;
+            color: white;
+            text-align: center;
+            page-break-after: avoid;
+        }
+        
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.3em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.15em;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .info-bar {
+            background: #e8f4fc;
+            padding: 15px 40px;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            font-weight: 600;
+            color: #2980b9;
+            font-size: 1.05em;
+            page-break-after: avoid;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+            background: #ffff;
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid #e9ecef;
+            page-break-inside: avoid;
+        }
+        
+        .section h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #3498db;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .section h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #555;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .grammar-box {
+            background: linear-gradient(135deg, #e8f4fc 0%, #d4e9f7 100%);
+            border-left: 5px solid #3498db;
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .formula {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .example-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .example-box strong {
+            color: #155724;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            color: #856404;
+        }
+        
+        .warning-box strong {
+            color: #856404;
+        }
+        
+        .audio-box {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .audio-box h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .audio-box audio {
+            width: 100%;
+            max-width: 400px;
+            margin: 15px 0;
+        }
+        
+        .audio-box a {
+            color: #f1c40f;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .audio-box a:hover {
+            text-decoration: underline;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        .activity-section {
+            background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        .activity-section h2 {
+            color: white;
+            border-bottom: 3px solid white;
+            font-size: 1.6em;
+        }
+        
+        .activity-box {
+            background: white;
+            color: #2c3e50;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .exam-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+            page-break-before: always;
+        }
+        
+        .exam-section h2 {
+            color: white;
+            border-bottom: 3px solid white;
+            font-size: 2em;
+        }
+        
+        .question {
+            background: white;
+            color: #2c3e50;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 5px solid #667eea;
+        }
+        
+        .question-number {
+            background: #667eea;
+            color: white;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        
+        .points {
+            float: right;
+            background: #ffc107;
+            color: #856404;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        .time-box {
+            background: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        
+        .timeline {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .timeline-time {
+            background: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            min-width: 100px;
+            text-align: center;
+            margin-right: 20px;
+        }
+        
+        @media print {
+            .exam-section {
+                page-break-before: always;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✈️ Going To - Exam Review</h1>
+            <div class="subtitle">Plans, Intentions & Predictions - Future Tense</div>
+        </div>
+        
+        <div class="info-bar">
+            ⏱️ Duración de clase: 80 minutos | Nivel: A2 (5° Semestre Bachillerato)
+        </div>
+            
+            <!-- Section 1: Grammar Review -->
+            <div class="section">
+                <h2>1️⃣ Grammar Review: "GOING TO" for Future</h2>
+                
+                <div class="grammar-box">
+                    <h3>📌 When do we use GOING TO?</h3>
+                    <ul>
+                        <li><strong>Plans and Intentions:</strong> Decisions made BEFORE speaking</li>
+                        <li><strong>Predictions based on evidence:</strong> We can SEE something is about to happen</li>
+                    </ul>
+                </div>
+                
+                <h3>✅ Affirmative Form</h3>
+                <div class="formula">
+                    Subject + AM/IS/ARE + GOING TO + Base Verb
+                </div>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    • I <strong>am going to visit</strong> my grandmother tomorrow.<br>
+                    • She <strong>is going to study</strong> medicine.<br>
+                    • They <strong>are going to travel</strong> to Spain next summer.<br>
+                    • We <strong>are going to celebrate</strong> my birthday.
+                </div>
+                
+                <h3>❌ Negative Form</h3>
+                <div class="formula">
+                    Subject + AM/IS/ARE + NOT + GOING TO + Base Verb
+                </div>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    • I <strong>'m not going to work</strong> this weekend.<br>
+                    • He <strong>isn't going to come</strong> to the party.<br>
+                    • They <strong>aren't going to watch</strong> the movie.<br>
+                    • She <strong>is not going to attend</strong> the meeting.
+                </div>
+                
+                <h3>❓ Question Form</h3>
+                <div class="formula">
+                    AM/IS/ARE + Subject + GOING TO + Base Verb + ?
+                </div>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    • <strong>Are you going to study</strong> tonight?<br>
+                    • <strong>Is she going to travel</strong> next week?<br>
+                    • <strong>Are they going to come</strong> to the party?<br>
+                    • What <strong>are you going to do</strong> this weekend?
+                </div>
+                
+                <h3>💬 Short Answers</h3>
+                <table>
+                    <tr>
+                        <th>Question</th>
+                        <th>Affirmative</th>
+                        <th>Negative</th>
+                    </tr>
+                    <tr>
+                        <td>Are you going to study?</td>
+                        <td>Yes, I am.</td>
+                        <td>No, I'm not.</td>
+                    </tr>
+                    <tr>
+                        <td>Is she going to come?</td>
+                        <td>Yes, she is.</td>
+                        <td>No, she isn't.</td>
+                    </tr>
+                    <tr>
+                        <td>Are they going to travel?</td>
+                        <td>Yes, they are.</td>
+                        <td>No, they aren't.</td>
+                    </tr>
+                </table>
+                
+                <div class="warning-box">
+                    <strong>⚠️ Important Notes:</strong><br>
+                    • Use <strong>AM</strong> with I<br>
+                    • Use <strong>IS</strong> with he, she, it<br>
+                    • Use <strong>ARE</strong> with you, we, they<br>
+                    • Common contractions: I'm, he's, she's, it's, we're, they're, you're<br>
+                    • Negative contractions: isn't, aren't
+                </div>
+            </div>
+            
+            <!-- Section 2: Plans vs Predictions -->
+            <div class="section">
+                <h2>2️⃣ Plans vs. Predictions</h2>
+                
+                <table>
+                    <tr>
+                        <th style="width: 50%;">🎯 PLANS / INTENTIONS</th>
+                        <th style="width: 50%;">🔮 PREDICTIONS (with evidence)</th>
+                    </tr>
+                    <tr>
+                        <td>Decisions made BEFORE speaking</td>
+                        <td>We SEE something is about to happen</td>
+                    </tr>
+                    <tr>
+                        <td>I'm going to start a new job next week.</td>
+                        <td>Look at those clouds. It's going to rain.</td>
+                    </tr>
+                    <tr>
+                        <td>We're going to visit Paris in July.</td>
+                        <td>She's yawning. She's going to fall asleep.</td>
+                    </tr>
+                    <tr>
+                        <td>They're going to buy a new car.</td>
+                        <td>Be careful! You're going to fall!</td>
+                    </tr>
+                    <tr>
+                        <td>I'm going to study English this year.</td>
+                        <td>The baby is crying. He's going to wake up everyone.</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Section 3: Listening Activity -->
+            <div class="section">
+                <h2>3️⃣ 🎧 Listening Activity</h2>
+                
+                <div class="audio-box">
+                    <h3>🎵 Audio: "Going To - Tonight"</h3>
+                    <audio controls>
+                        <source src="https://www.elllo.org/Audio/SoundGrammar/A2-Audio4x/A2-05-1-Going-To-Tonight.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                
+                <div class="activity-box" style="background: #f8f9fa; border-left: 4px solid #9b59b6;">
+                    <h3 style="color: #9b59b6;">📝 Listening Tasks:</h3>
+                    <p><strong>First Listen:</strong> Listen for the general idea. What is the conversation about?</p>
+                    <br>
+                    <p><strong>Second Listen:</strong> Write down ALL the "going to" phrases you hear:</p>
+                    <ol>
+                        <li>____________________________________</li>
+                        <li>____________________________________</li>
+                        <li>____________________________________</li>
+                        <li>____________________________________</li>
+                        <li>____________________________________</li>
+                    </ol>
+                    <br>
+                    <p><strong>Third Listen:</strong> Answer these questions:</p>
+                    <ol>
+                        <li>What are the speakers planning to do tonight? ____________________________________</li>
+                        <li>Are the plans definite or uncertain? ____________________________________</li>
+                        <li>What time expressions do you hear? ____________________________________</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Section 4: Common Mistakes -->
+            <div class="section">
+                <h2>4️⃣ Common Mistakes to Avoid</h2>
+                
+                <table>
+                    <tr>
+                        <th style="width: 50%; background: #dc3545;">❌ Wrong</th>
+                        <th style="width: 50%; background: #28a745;">✅ Correct</th>
+                    </tr>
+                    <tr>
+                        <td>We <strong>is going to</strong> have a conference.</td>
+                        <td>We <strong>are going to</strong> have a conference.</td>
+                    </tr>
+                    <tr>
+                        <td>They are <strong>go to</strong> start the project.</td>
+                        <td>They are <strong>going to</strong> start the project.</td>
+                    </tr>
+                    <tr>
+                        <td>Are you going to <strong>attends</strong> the event?</td>
+                        <td>Are you going to <strong>attend</strong> the event?</td>
+                    </tr>
+                    <tr>
+                        <td>They <strong>going to</strong> move to a new city.</td>
+                        <td>They <strong>are going to</strong> move to a new city.</td>
+                    </tr>
+                    <tr>
+                        <td>She is <strong>going not to</strong> watch the match.</td>
+                        <td>She is <strong>not going to</strong> watch the match.</td>
+                    </tr>
+                    <tr>
+                        <td>I'm <strong>going to not</strong> take the test.</td>
+                        <td>I'm <strong>not going to</strong> take the test.</td>
+                    </tr>
+                </table>
+                
+                <div class="warning-box">
+                    <strong>🎯 Remember:</strong><br>
+                    • Don't forget the verb BE (am/is/are)!<br>
+                    • Always use BASE VERB after "going to" (no -s, no -ed, no -ing)<br>
+                    • Negation goes AFTER the verb BE: am not / is not / are not
+                </div>
+            </div>
+            
+            <!-- Section 5: Quick Reference -->
+            <div class="section">
+                <h2>5️⃣ Quick Reference Chart</h2>
+                
+                <table>
+                    <tr>
+                        <th>Subject</th>
+                        <th>BE</th>
+                        <th>Affirmative</th>
+                        <th>Negative</th>
+                    </tr>
+                    <tr>
+                        <td><strong>I</strong></td>
+                        <td>am</td>
+                        <td>I'm going to study</td>
+                        <td>I'm not going to study</td>
+                    </tr>
+                    <tr>
+                        <td><strong>You</strong></td>
+                        <td>are</td>
+                        <td>You're going to study</td>
+                        <td>You aren't going to study</td>
+                    </tr>
+                    <tr>
+                        <td><strong>He/She/It</strong></td>
+                        <td>is</td>
+                        <td>He's going to study</td>
+                        <td>He isn't going to study</td>
+                    </tr>
+                    <tr>
+                        <td><strong>We</strong></td>
+                        <td>are</td>
+                        <td>We're going to study</td>
+                        <td>We aren't going to study</td>
+                    </tr>
+                    <tr>
+                        <td><strong>They</strong></td>
+                        <td>are</td>
+                        <td>They're going to study</td>
+                        <td>They aren't going to study</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Section 6: Study Tips -->
+            <div class="section">
+                <h2>6️⃣ Exam Tips / Consejos para el Examen</h2>
+                
+                <div class="example-box">
+                    <strong>✨ Before the Exam:</strong>
+                    <ol>
+                        <li><strong>Memoriza la estructura:</strong> Subject + BE + going to + base verb</li>
+                        <li><strong>Practica las contracciones:</strong> I'm, you're, he's, she's, we're, they're</li>
+                        <li><strong>Distingue:</strong> Plans (decisions already made) vs. Predictions (with evidence)</li>
+                        <li><strong>Revisa los errores comunes</strong> de la sección 4</li>
+                        <li><strong>Practica escribir</strong> tus propios planes para el futuro</li>
+                    </ol>
+                </div>
+                
+                <div class="warning-box">
+                    <strong>🎯 En el examen, enfócate en:</strong>
+                    <ul>
+                        <li>Elegir el verbo BE correcto (am/is/are)</li>
+                        <li>Usar el verbo en forma BASE después de "going to"</li>
+                        <li>Colocar "not" en el lugar correcto para negativos</li>
+                        <li>Formar preguntas invirtiendo BE + Subject</li>
+                        <li>Dar respuestas cortas correctas (Yes, I am / No, she isn't)</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- PRACTICE ACTIVITIES SECTION -->
+        <div class="activity-section">
+            <h2>📝 Practice Activities / Actividades de Práctica</h2>
+            
+            <div class="activity-box">
+                <h3>Activity A: Complete the sentences</h3>
+                <p>Use the correct form of "going to" with the verb in brackets:</p>
+                <ol>
+                    <li>She __________________ (visit) her grandmother next weekend.</li>
+                    <li>I __________________ (not / eat) fast food this week.</li>
+                    <li>They __________________ (travel) to Spain next summer.</li>
+                    <li>__________________ you __________________ (attend) the meeting tomorrow?</li>
+                    <li>The sky is dark. It __________________ (rain).</li>
+                    <li>We __________________ (not / celebrate) his birthday this year.</li>
+                    <li>He __________________ (start) a new project next month.</li>
+                    <li>__________________ she __________________ (study) abroad?</li>
+                </ol>
+            </div>
+            
+            <div class="activity-box">
+                <h3>Activity B: Make predictions</h3>
+                <p>Look at the situations and write predictions using "going to":</p>
+                <ol>
+                    <li>The baby is crying. → He __________________</li>
+                    <li>She's putting on her running shoes. → She __________________</li>
+                    <li>He has packed his suitcase. → He __________________</li>
+                    <li>They are setting the table. → They __________________</li>
+                    <li>She's yawning. → She __________________</li>
+                </ol>
+            </div>
+            
+            <div class="activity-box">
+                <h3>Activity C: Fix the mistakes</h3>
+                <p>Find and correct the errors:</p>
+                <ol>
+                    <li>We is going to have a party. → __________________</li>
+                    <li>She going to study medicine. → __________________</li>
+                    <li>Are they going to comes tomorrow? → __________________</li>
+                    <li>I'm going to not work this weekend. → __________________</li>
+                    <li>He is go to travel to Paris. → __________________</li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- EXAM QUESTIONS SECTION -->
+        <div class="exam-section">
+            <h2>📝 Suggested Exam Questions (100 points)</h2>
+            <p style="margin-top: 15px; font-size: 1.05em;">Preguntas modelo para el examen sobre "Going To"</p>
+            
+            <div class="question">
+                <span class="question-number">1</span>
+                <span class="points">15 pts</span>
+                <strong>Complete with the correct form of "going to":</strong><br><br>
+                a) She ______________ (visit) her cousin next weekend.<br>
+                b) They ______________ (not/come) to the concert.<br>
+                c) I ______________ (study) for the exam tonight.<br>
+                d) We ______________ (not/travel) this summer.<br>
+                e) He ______________ (start) university in September.
+            </div>
+            
+            <div class="question">
+                <span class="question-number">2</span>
+                <span class="points">15 pts</span>
+                <strong>Make QUESTIONS with these words:</strong><br><br>
+                a) you / going to / study / tonight / are / ?<br>
+                → ____<br><br>
+                b) is / she / to visit / going / her parents / ?<br>
+                → ____<br><br>
+                c) they / are / going to / what / do / tomorrow / ?<br>
+                → ____
+            </div>
+            
+            <div class="question">
+                <span class="question-number">3</span>
+                <span class="points">15 pts</span>
+                <strong>Write SHORT ANSWERS:</strong><br><br>
+                a) Are you going to study tonight? (Yes) → ____<br>
+                b) Is she going to travel? (No) → ____<br>
+                c) Are they going to come to class? (Yes) → ____<br>
+                d) Is he going to work tomorrow? (No) → ____<br>
+                e) Are we going to have an exam? (Yes) → ____
+            </div>
+            
+            <div class="question">
+                <span class="question-number">4</span>
+                <span class="points">15 pts</span>
+                <strong>Find and CORRECT the mistakes:</strong><br><br>
+                a) They is going to visit us tomorrow.<br>
+                → ____<br><br>
+                b) She going to study French.<br>
+                → ____<br><br>
+                c) Are you going to watches the movie?<br>
+                → ____<br><br>
+                d) I'm going to not eat junk food.<br>
+                → ____<br><br>
+                e) We are go to travel to Canada.<br>
+                → ____
+            </div>
+            
+            <div class="question">
+                <span class="question-number">5</span>
+                <span class="points">15 pts</span>
+                <strong>Write PREDICTIONS using "going to" based on the evidence:</strong><br><br>
+                a) The sky is very dark. (rain)<br>
+                → ____<br><br>
+                b) She's putting on her coat. (go out)<br>
+                → ____<br><br>
+                c) He's yawning. (fall asleep)<br>
+                → ____<br><br>
+                d) They're packing their bags. (travel)<br>
+                → ____<br><br>
+                e) The phone is ringing. (answer)<br>
+                → ____
+            </div>
+            
+            <div class="question">
+                <span class="question-number">6</span>
+                <span class="points">10 pts</span>
+                <strong>Choose the correct option:</strong><br><br>
+                a) I ____ going to study tonight. (am / is / are)<br>
+                b) She ____ going to travel next week. (am / is / are)<br>
+                c) They ____ going to come to the party. (am / is / aren't)<br>
+                d) ____ you going to help me? (Am / Is / Are)<br>
+                e) He ____ going to work tomorrow. (isn't / aren't / am not)
+            </div>
+            
+            <div class="question">
+                <span class="question-number">7</span>
+                <span class="points">15 pts</span>
+                <strong>Write 5 sentences about YOUR PLANS for this month using "going to":</strong><br>
+                <em>(Escribe 5 oraciones sobre tus planes para este mes)</em><br><br>
+                1. ____<br>
+                2. ____<br>
+                3. ____<br>
+                4. ____<br>
+                5. ____
+            </div>
+            
+        </div>

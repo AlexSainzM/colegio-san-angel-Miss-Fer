@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes & Preferences - Exam Review Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: white;
+            padding: 0;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            padding: 35px 40px;
+            color: white;
+            text-align: center;
+            page-break-after: avoid;
+        }
+        
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.3em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.15em;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .info-bar {
+            background: #fef5e7;
+            padding: 15px 40px;
+            text-align: center;
+            border-bottom: 3px solid #f39c12;
+            font-weight: 600;
+            color: #d68910;
+            font-size: 1.05em;
+            page-break-after: avoid;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+            background: #ffff;
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid #e9ecef;
+            page-break-inside: avoid;
+        }
+        
+        .section h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #e67e22;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #e67e22;
+            padding-bottom: 10px;
+        }
+        
+        .section h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #555;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .grammar-box {
+            background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
+            border-left: 5px solid #f39c12;
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .formula {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .example-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .example-box strong {
+            color: #155724;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            color: #856404;
+        }
+        
+        .warning-box strong {
+            color: #856404;
+        }
+        
+        .love-box {
+            background: linear-gradient(135deg, #ffe6e6 0%, #ffcccc 100%);
+            border: 3px solid #e74c3c;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin: 10px 0;
+        }
+        
+        .like-box {
+            background: linear-gradient(135deg, #e8f8f5 0%, #d1f2eb 100%);
+            border: 3px solid #1abc9c;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin: 10px 0;
+        }
+        
+        .hate-box {
+            background: linear-gradient(135deg, #f5eef8 0%, #ebdef0 100%);
+            border: 3px solid #9b59b6;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin: 10px 0;
+        }
+        
+        .neutral-box {
+            background: linear-gradient(135deg, #eaf2f8 0%, #d4e6f1 100%);
+            border: 3px solid #3498db;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin: 10px 0;
+        }
+        
+        .emoji-scale {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #27ae60 0%, #f1c40f 50%, #e74c3c 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .emoji-item {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .emoji-item .emoji {
+            font-size: 2em;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        .activity-section {
+            background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        .activity-section h2 {
+            color: white;
+            border-bottom: 3px solid white;
+            font-size: 1.6em;
+        }
+        
+        .activity-box {
+            background: white;
+            color: #2c3e50;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .exam-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+            page-break-before: always;
+        }
+        
+        .exam-section h2 {
+            color: white;
+            border-bottom: 3px solid white;
+            font-size: 2em;
+        }
+        
+        .question {
+            background: white;
+            color: #2c3e50;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 5px solid #667eea;
+        }
+        
+        .question-number {
+            background: #667eea;
+            color: white;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        
+        .points {
+            float: right;
+            background: #ffc107;
+            color: #856404;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        .timeline {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .timeline-time {
+            background: #f39c12;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            min-width: 100px;
+            text-align: center;
+            margin-right: 20px;
+        }
+        
+        .verb-card {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin: 5px;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .verb-love { background: #e74c3c; }
+        .verb-like { background: #27ae60; }
+        .verb-enjoy { background: #3498db; }
+        .verb-hate { background: #9b59b6; }
+        .verb-mind { background: #f39c12; }
+        .verb-stand { background: #e91e63; }
+        
+        .ing-highlight {
+            background: #f39c12;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+        
+        @media print {
+            .exam-section {
+                page-break-before: always;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>❤️ Likes & Preferences 💛</h1>
+            <div class="subtitle">Verbs of Preference + Gerund (-ING) - Exam Review</div>
+        </div>
+        
+        <div class="info-bar">
+            ⏱️ Duración de clase: 80 minutos | Nivel: A2 (3er Semestre Bachillerato)
+        </div>
+        
+        <div class="content">
+            
+            <!-- Timeline de la clase -->
+            <div class="section">
+                <h2>📋 Class Timeline / Estructura de la Clase</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-time">0-10 min</span>
+                        <span>Warm-up: Preference Scale Activity</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">10-20 min</span>
+                        <span>Grammar Review: Verbs of Preference + Gerund</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">20-35 min</span>
+                        <span>🎧 Listening Activity: "Likes and Favorites"</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">35-50 min</span>
+                        <span>Vocabulary & Spelling Rules</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">50-60 min</span>
+                        <span>🎮 Interactive Games Practice</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">60-70 min</span>
+                        <span>Practice: Fill in the blanks & Sentence Writing</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">70-80 min</span>
+                        <span>Common Mistakes & Exam Tips</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 1: The Preference Scale -->
+            <div class="section">
+                <h2>1️⃣ The Preference Scale / Escala de Preferencias</h2>
+                
+                <div class="emoji-scale">
+                    <div class="emoji-item">
+                        <span class="emoji">😍</span>
+                        <span>LOVE</span>
+                    </div>
+                    <div class="emoji-item">
+                        <span class="emoji">🙂</span>
+                        <span>LIKE</span>
+                    </div>
+                    <div class="emoji-item">
+                        <span class="emoji">😊</span>
+                        <span>ENJOY</span>
+                    </div>
+                    <div class="emoji-item">
+                        <span class="emoji">😐</span>
+                        <span>DON'T MIND</span>
+                    </div>
+                    <div class="emoji-item">
+                        <span class="emoji">😕</span>
+                        <span>DON'T LIKE</span>
+                    </div>
+                    <div class="emoji-item">
+                        <span class="emoji">😤</span>
+                        <span>HATE</span>
+                    </div>
+                    <div class="emoji-item">
+                        <span class="emoji">🤬</span>
+                        <span>CAN'T STAND</span>
+                    </div>
+                </div>
+                
+                <div class="grammar-box">
+                    <h3>📌 Verbs of Preference (Verbos de Preferencia)</h3>
+                    <p>
+                        <span class="verb-card verb-love">LOVE</span>
+                        <span class="verb-card verb-like">LIKE</span>
+                        <span class="verb-card verb-like">REALLY LIKE</span>
+                        <span class="verb-card verb-enjoy">ENJOY</span>
+                        <span class="verb-card verb-mind">DON'T MIND</span>
+                        <span class="verb-card verb-hate">DON'T LIKE</span>
+                        <span class="verb-card verb-hate">HATE</span>
+                        <span class="verb-card verb-stand">CAN'T STAND</span>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Section 2: Grammar Structure -->
+            <div class="section">
+                <h2>2️⃣ Grammar Structure: Verb + GERUND (-ING)</h2>
+                
+                <div class="formula">
+                    Subject + VERB OF PREFERENCE + Verb<span class="ing-highlight">-ING</span>
+                </div>
+                
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    • I <strong>love watch<span class="ing-highlight">ing</span></strong> movies on Netflix.<br>
+                    • She <strong>hates do<span class="ing-highlight">ing</span></strong> homework on Sundays.<br>
+                    • We <strong>enjoy play<span class="ing-highlight">ing</span></strong> basketball after school.<br>
+                    • They <strong>don't mind walk<span class="ing-highlight">ing</span></strong> to school every day.<br>
+                    • He <strong>can't stand wak<span class="ing-highlight">ing</span></strong> up early.
+                </div>
+                
+                <h3>✅ Affirmative Form</h3>
+                <div class="love-box">
+                    <strong>Positive preferences:</strong><br>
+                    • I <strong>love</strong> playing video games.<br>
+                    • She <strong>really likes</strong> dancing salsa.<br>
+                    • We <strong>enjoy</strong> reading books.
+                </div>
+                
+                <h3>❌ Negative Form</h3>
+                <div class="hate-box">
+                    <strong>Negative preferences:</strong><br>
+                    • I <strong>don't like</strong> waking up early.<br>
+                    • He <strong>hates</strong> doing chores.<br>
+                    • They <strong>can't stand</strong> waiting in line.
+                </div>
+                
+                <h3>😐 Neutral</h3>
+                <div class="neutral-box">
+                    <strong>Neutral / It's OK:</strong><br>
+                    • I <strong>don't mind</strong> walking to school.<br>
+                    • She <strong>doesn't mind</strong> helping with homework.
+                </div>
+                
+                <h3>❓ Question Form</h3>
+                <div class="formula">
+                    DO/DOES + Subject + LIKE/LOVE/ENJOY + Verb-ING + ?
+                </div>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    • <strong>Do you like</strong> playing soccer?<br>
+                    • <strong>Does she enjoy</strong> reading books?<br>
+                    • <strong>Do they love</strong> listening to music?<br>
+                    • What <strong>do you like doing</strong> on weekends?
+                </div>
+                
+                <div class="warning-box">
+                    <strong>⚠️ Important: ALWAYS use -ING!</strong><br>
+                    • ❌ I like <em>play</em> soccer. → ✅ I like <strong>playing</strong> soccer.<br>
+                    • ❌ She loves <em>dance</em>. → ✅ She loves <strong>dancing</strong>.<br>
+                    • ❌ They enjoy <em>read</em> books. → ✅ They enjoy <strong>reading</strong> books.
+                </div>
+            </div>
+            
+            <!-- Section 3: Spelling Rules for -ING -->
+            <div class="section">
+                <h2>3️⃣ Spelling Rules for -ING</h2>
+                
+                <table>
+                    <tr>
+                        <th>Rule</th>
+                        <th>Base Verb</th>
+                        <th>+ ING</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Most verbs:</strong> add -ING</td>
+                        <td>play, watch, read, listen</td>
+                        <td>play<strong>ing</strong>, watch<strong>ing</strong>, read<strong>ing</strong>, listen<strong>ing</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Verbs ending in -E:</strong> remove E, add -ING</td>
+                        <td>dance, make, write, take</td>
+                        <td>danc<strong>ing</strong>, mak<strong>ing</strong>, writ<strong>ing</strong>, tak<strong>ing</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Short verbs (CVC):</strong> double last consonant + ING</td>
+                        <td>run, swim, sit, shop</td>
+                        <td>run<strong>ning</strong>, swim<strong>ming</strong>, sit<strong>ting</strong>, shop<strong>ping</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Verbs ending in -IE:</strong> change IE to Y + ING</td>
+                        <td>lie, die</td>
+                        <td>l<strong>ying</strong>, d<strong>ying</strong></td>
+                    </tr>
+                </table>
+                
+                <div class="warning-box">
+                    <strong>🎯 Common -ING forms to memorize:</strong><br>
+                    • wake → wak<strong>ing</strong> (remove E)<br>
+                    • have → hav<strong>ing</strong> (remove E)<br>
+                    • get → get<strong>ting</strong> (double T)<br>
+                    • begin → begin<strong>ning</strong> (double N)<br>
+                    • travel → travel<strong>ling</strong> / travel<strong>ing</strong> (both OK)
+                </div>
+            </div>
+            
+            <!-- Section 4: Vocabulary - Activities -->
+            <div class="section">
+                <h2>4️⃣ Vocabulary: Activities & Hobbies</h2>
+                
+                <table>
+                    <tr>
+                        <th>🎮 Entertainment</th>
+                        <th>⚽ Sports</th>
+                        <th>📚 Other Activities</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            • watching movies/TV<br>
+                            • playing video games<br>
+                            • listening to music<br>
+                            • going to concerts<br>
+                            • going to the cinema
+                        </td>
+                        <td>
+                            • playing soccer/basketball<br>
+                            • swimming<br>
+                            • running<br>
+                            • cycling<br>
+                            • doing exercise
+                        </td>
+                        <td>
+                            • reading books<br>
+                            • cooking<br>
+                            • shopping<br>
+                            • traveling<br>
+                            • taking photos
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>🏠 Daily Activities</th>
+                        <th>👥 Social</th>
+                        <th>📱 Modern</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            • waking up early<br>
+                            • doing homework<br>
+                            • cleaning the house<br>
+                            • washing dishes<br>
+                            • walking to school
+                        </td>
+                        <td>
+                            • going out with friends<br>
+                            • talking on the phone<br>
+                            • meeting new people<br>
+                            • having parties<br>
+                            • dancing
+                        </td>
+                        <td>
+                            • texting<br>
+                            • watching YouTube<br>
+                            • using social media<br>
+                            • taking selfies<br>
+                            • streaming
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Section 5: Listening Activity -->
+            <div class="section">
+                <h2>5️⃣ 🎧 Listening Activity</h2>
+                
+                <div style="background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); color: white; padding: 25px; border-radius: 15px; margin: 20px 0; text-align: center;">
+                    <h3 style="color: white; margin-bottom: 15px;">🎵 Audio: "Likes and Favorites"</h3>
+                    <p style="margin-bottom: 15px;"><em>Two people discuss their favorite things: colors, food, seasons, sports, and movies.</em></p>
+                    <audio controls style="width: 100%; max-width: 400px; margin: 15px 0;">
+                        <source src="https://www.elllo.org/Audio/AGTK/A1-03-NatTodd-Farorites.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p style="margin-top: 15px;">
+                        📎 <strong>Link de consulta:</strong><br>
+                        <a href="https://www.elllo.org/english/begin/L1-02-NatTodd-Farorites.htm" target="_blank" style="color: #f1c40f; text-decoration: none; font-weight: 600;">
+                            https://www.elllo.org/english/begin/L1-02-NatTodd-Farorites.htm
+                        </a>
+                    </p>
+                </div>
+                
+                <div style="background: #f8f9fa; border-left: 4px solid #9b59b6; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h3 style="color: #9b59b6;">📝 Listening Task 1: First Listen</h3>
+                    <p><strong>Listen for the general idea.</strong> What topics do they talk about?</p>
+                    <p>Check (✓) the topics you hear:</p>
+                    <table style="width: 100%; margin-top: 10px;">
+                        <tr>
+                            <td>☐ Favorite color</td>
+                            <td>☐ Favorite animal</td>
+                            <td>☐ Favorite food</td>
+                        </tr>
+                        <tr>
+                            <td>☐ Favorite season</td>
+                            <td>☐ Favorite sport</td>
+                            <td>☐ Favorite movie</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div style="background: #f8f9fa; border-left: 4px solid #9b59b6; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h3 style="color: #9b59b6;">📝 Listening Task 2: Second Listen - Details</h3>
+                    <p><strong>Listen again and complete the information:</strong></p>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Question</th>
+                            <th>Speaker 1 (Todd)</th>
+                            <th>Speaker 2 (Nat)</th>
+                        </tr>
+                        <tr>
+                            <td>Favorite color?</td>
+                            <td>________________</td>
+                            <td>________________</td>
+                        </tr>
+                        <tr>
+                            <td>Favorite food?</td>
+                            <td>________________</td>
+                            <td>________________</td>
+                        </tr>
+                        <tr>
+                            <td>Favorite season?</td>
+                            <td>________________</td>
+                            <td>________________</td>
+                        </tr>
+                        <tr>
+                            <td>Favorite sport?</td>
+                            <td>________________</td>
+                            <td>________________</td>
+                        </tr>
+                        <tr>
+                            <td>Favorite movie?</td>
+                            <td>________________</td>
+                            <td>________________</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div style="background: #f8f9fa; border-left: 4px solid #9b59b6; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h3 style="color: #9b59b6;">📝 Listening Task 3: Third Listen - Grammar Focus</h3>
+                    <p><strong>Write the questions you hear:</strong></p>
+                    <ol>
+                        <li>"What ______________ do you like?" (color)</li>
+                        <li>"What ______________ do you like?"</li>
+                        <li>"Do you like ______________?"</li>
+                        <li>"What is your favorite ______________?"</li>
+                    </ol>
+                    <br>
+                    <p><strong>Write the expressions of preference you hear:</strong></p>
+                    <ol>
+                        <li>I like ________________</li>
+                        <li>I love ________________</li>
+                        <li>I really like ________________</li>
+                        <li>My favorite ______________ is ________________</li>
+                    </ol>
+                </div>
+                
+                <div style="background: #d4edda; border-left: 4px solid #28a745; padding: 15px 20px; border-radius: 8px; margin: 15px 0;">
+                    <strong style="color: #155724;">🎯 Speaking Extension:</strong><br>
+                    After listening, practice with a partner! Ask and answer:<br>
+                    • "What's your favorite color?" → "I like... / My favorite color is..."<br>
+                    • "What food do you like?" → "I love eating... / I really enjoy..."<br>
+                    • "Do you like sports?" → "Yes, I love playing... / No, I don't really like..."
+                </div>
+            </div>
+            
+            <!-- Section 6: Interactive Games -->
+            <div class="section" style="border: 3px solid #f39c12;">
+                <h2 style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); color: white; padding: 15px; margin: -30px -30px 20px -30px; border-radius: 12px 12px 0 0;">🎮 Interactive Games / Juegos Interactivos</h2>
+                
+                <p style="text-align: center; margin-bottom: 25px; color: #666;">
+                    <strong>Practice what you've learned with these fun games!</strong><br>
+                    <em>¡Practica lo que has aprendido con estos juegos divertidos!</em>
+                </p>
+                
+                <!-- Game 1: Wordwall Quiz -->
+                <div style="background: linear-gradient(135deg, #fff8e7 0%, #fef5e7 100%); border-left: 5px solid #f39c12; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <h3 style="color: #e67e22; margin-bottom: 15px;">🎯 Game 1: Like/Love/Hate + ING Quiz</h3>
+                    <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; border: 2px solid #e67e22;">
+                        <iframe src="https://wordwall.net/embed/91f634bc110540b4802d58545df9a8f9?themeId=53&templateId=5&fontStackId=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #888;">
+                        🔗 <a href="https://wordwall.net/resource/31860950/like-love-hate-ing" target="_blank" style="color: #e67e22;">Open in Wordwall</a>
+                    </p>
+                </div>
+                
+                <!-- Game 2: Educaplay Fill in Blanks -->
+                <div style="background: linear-gradient(135deg, #e8f8f5 0%, #d1f2eb 100%); border-left: 5px solid #1abc9c; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <h3 style="color: #1abc9c; margin-bottom: 15px;">📝 Game 2: Likes & Dislikes - Fill in the Blanks</h3>
+                    <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; border: 2px solid #1abc9c;">
+                        <iframe src="https://www.educaplay.com/game/4164235-likes_and_dislikes.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #888;">
+                        🔗 <a href="https://www.educaplay.com/learning-resources/4164235-likes_and_dislikes.html" target="_blank" style="color: #1abc9c;">Open in Educaplay</a>
+                    </p>
+                </div>
+                
+                <!-- Game 3: Wordwall Group Sort -->
+                <div style="background: linear-gradient(135deg, #f5eef8 0%, #ebdef0 100%); border-left: 5px solid #9b59b6; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <h3 style="color: #9b59b6; margin-bottom: 15px;">🔀 Game 3: Group Sort - Like/Don't Like/Love/Hate</h3>
+                    <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; border: 2px solid #9b59b6;">
+                        <iframe src="https://wordwall.net/embed/50290574bcfd42bda580bc0e0aa9bdde?themeId=1&templateId=2&fontStackId=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #888;">
+                        🔗 <a href="https://wordwall.net/resource/52596436/like-dont-like-love-hate" target="_blank" style="color: #9b59b6;">Open in Wordwall</a>
+                    </p>
+                </div>
+                
+                <!-- Game 4: Educaplay Memory -->
+                <div style="background: linear-gradient(135deg, #eaf2f8 0%, #d4e6f1 100%); border-left: 5px solid #3498db; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <h3 style="color: #3498db; margin-bottom: 15px;">🧠 Game 4: Memory - Likes & Dislikes</h3>
+                    <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; border: 2px solid #3498db;">
+                        <iframe src="https://www.educaplay.com/game/6597868-likes_and_dislikes.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #888;">
+                        🔗 <a href="https://www.educaplay.com/learning-resources/6597868-likes_and_dislikes.html" target="_blank" style="color: #3498db;">Open in Educaplay</a>
+                    </p>
+                </div>
+                
+                <!-- Game 5: Wordwall Spin the Wheel -->
+                <div style="background: linear-gradient(135deg, #ffe6e6 0%, #ffcccc 100%); border-left: 5px solid #e74c3c; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <h3 style="color: #e74c3c; margin-bottom: 15px;">🎡 Game 5: Spin the Wheel - Like/Love/Hate</h3>
+                    <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; border: 2px solid #e74c3c;">
+                        <iframe src="https://wordwall.net/embed/543d8f8311454c09ade1f658000aaf56?themeId=1&templateId=8&fontStackId=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #888;">
+                        🔗 <a href="https://wordwall.net/resource/60025719/like-love-hate" target="_blank" style="color: #e74c3c;">Open in Wordwall</a>
+                    </p>
+                </div>
+                
+                <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px 20px; border-radius: 8px; margin: 20px 0; color: #856404;">
+                    <strong>💡 Tip:</strong> If a game doesn't load, click the backup link to open it in a new tab.
+                    <br><em>Si un juego no carga, haz clic en el enlace de respaldo para abrirlo en una nueva pestaña.</em>
+                </div>
+            </div>
+            
+            <!-- Section 7: Common Mistakes -->
+            <div class="section">
+                <h2>7️⃣ Common Mistakes to Avoid</h2>
+                
+                <table>
+                    <tr>
+                        <th style="width: 50%; background: #dc3545;">❌ Wrong</th>
+                        <th style="width: 50%; background: #28a745;">✅ Correct</th>
+                    </tr>
+                    <tr>
+                        <td>I like <strong>play</strong> soccer.</td>
+                        <td>I like <strong>playing</strong> soccer.</td>
+                    </tr>
+                    <tr>
+                        <td>She enjoys <strong>to read</strong> books.</td>
+                        <td>She enjoys <strong>reading</strong> books.</td>
+                    </tr>
+                    <tr>
+                        <td>They hate <strong>wake</strong> up early.</td>
+                        <td>They hate <strong>waking</strong> up early.</td>
+                    </tr>
+                    <tr>
+                        <td>I love <strong>danceing</strong>.</td>
+                        <td>I love <strong>dancing</strong>. (remove E)</td>
+                    </tr>
+                    <tr>
+                        <td>He enjoys <strong>runing</strong>.</td>
+                        <td>He enjoys <strong>running</strong>. (double N)</td>
+                    </tr>
+                    <tr>
+                        <td>She <strong>don't like</strong> cooking.</td>
+                        <td>She <strong>doesn't like</strong> cooking.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Does you like</strong> swimming?</td>
+                        <td><strong>Do you like</strong> swimming?</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Section 6: Writing a Paragraph -->
+            <div class="section">
+                <h2>8️⃣ Writing About Your Preferences</h2>
+                
+                <div class="grammar-box">
+                    <h3>📝 Useful Connectors:</h3>
+                    <ul>
+                        <li><strong>and</strong> - to add similar ideas</li>
+                        <li><strong>also</strong> - to add more information</li>
+                        <li><strong>but / however</strong> - to show contrast</li>
+                        <li><strong>because</strong> - to give a reason</li>
+                        <li><strong>especially</strong> - to emphasize</li>
+                    </ul>
+                </div>
+                
+                <div class="example-box">
+                    <strong>Example Paragraph:</strong><br><br>
+                    <em>"I <strong>love playing</strong> video games <strong>because</strong> they are exciting and fun. I <strong>also</strong> really <strong>enjoy listening</strong> to music, <strong>especially</strong> pop and rock. I <strong>like going</strong> to the cinema with my friends on weekends. <strong>However</strong>, I <strong>don't like waking</strong> up early on Saturdays. I <strong>hate doing</strong> homework on Sundays <strong>because</strong> I prefer relaxing. I <strong>don't mind walking</strong> to school <strong>because</strong> it's good exercise."</em>
+                </div>
+                
+                <div class="warning-box">
+                    <strong>✨ Paragraph Checklist:</strong><br>
+                    ☐ At least 3 activities you LOVE or REALLY LIKE<br>
+                    ☐ At least 2 activities you DON'T LIKE or HATE<br>
+                    ☐ At least 1 activity you DON'T MIND<br>
+                    ☐ Use connectors (and, but, because, also, however)<br>
+                    ☐ All verbs in -ING form after preference verbs
+                </div>
+            </div>
+            
+            <!-- Section 7: Study Tips -->
+            <div class="section">
+                <h2>9️⃣ Exam Tips / Consejos para el Examen</h2>
+                
+                <div class="example-box">
+                    <strong>✨ Recuerda siempre:</strong>
+                    <ol>
+                        <li><strong>Verbo de preferencia + GERUNDIO (-ING)</strong> ¡Siempre!</li>
+                        <li><strong>Spelling rules:</strong> -E se quita, CVC se dobla</li>
+                        <li><strong>Third person (he/she/it):</strong> likes, loves, enjoys, hates, doesn't like</li>
+                        <li><strong>Questions:</strong> Do you like...? / Does she enjoy...?</li>
+                        <li><strong>Connectors:</strong> and, but, because, also, however</li>
+                    </ol>
+                </div>
+                
+                <div class="warning-box">
+                    <strong>🎯 En el examen, enfócate en:</strong>
+                    <ul>
+                        <li>Escribir correctamente la forma -ING</li>
+                        <li>Usar doesn't (no "don't") con he/she/it</li>
+                        <li>Responder con oraciones completas</li>
+                        <li>Incluir variedad de verbos de preferencia</li>
+                        <li>Dar razones con "because"</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- PRACTICE ACTIVITIES SECTION -->
+        <div class="activity-section">
+            <h2>📝 Practice Activities / Actividades de Práctica</h2>
+            
+            <div class="activity-box">
+                <h3>Activity A: Complete with the correct -ING form</h3>
+                <ol>
+                    <li>I love ______________ (watch) movies on Netflix.</li>
+                    <li>She hates ______________ (do) homework on Sundays.</li>
+                    <li>We enjoy ______________ (play) basketball after school.</li>
+                    <li>My brother likes ______________ (listen) to rock music.</li>
+                    <li>They don't mind ______________ (walk) to school every day.</li>
+                    <li>I can't stand ______________ (wake) up early on weekends.</li>
+                    <li>Maria really likes ______________ (dance) salsa.</li>
+                    <li>Do you enjoy ______________ (read) science fiction books?</li>
+                    <li>He doesn't like ______________ (run) in the morning.</li>
+                    <li>We love ______________ (travel) to new places.</li>
+                </ol>
+            </div>
+            
+            <div class="activity-box">
+                <h3>Activity B: Write TRUE sentences about yourself</h3>
+                <p>Use different verbs of preference:</p>
+                <ol>
+                    <li>I love ______________________________________________</li>
+                    <li>I really like ______________________________________________</li>
+                    <li>I enjoy ______________________________________________</li>
+                    <li>I don't mind ______________________________________________</li>
+                    <li>I don't like ______________________________________________</li>
+                    <li>I hate ______________________________________________</li>
+                    <li>I can't stand ______________________________________________</li>
+                </ol>
+            </div>
+            
+            <div class="activity-box">
+                <h3>Activity C: Make questions for an interview</h3>
+                <p>Write questions using "Do you like/love/enjoy...?"</p>
+                <ol>
+                    <li>______________________________________________ ?</li>
+                    <li>______________________________________________ ?</li>
+                    <li>______________________________________________ ?</li>
+                    <li>______________________________________________ ?</li>
+                    <li>______________________________________________ ?</li>
+                </ol>
+            </div>
+            
+            <div class="activity-box">
+                <h3>Activity D: Fix the mistakes</h3>
+                <ol>
+                    <li>I like play tennis on Saturdays. → ______________</li>
+                    <li>She enjoy reading books. → ______________</li>
+                    <li>They doesn't like waking up early. → ______________</li>
+                    <li>Do she like dancing? → ______________</li>
+                    <li>He loves swiming in the pool. → ______________</li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- EXAM QUESTIONS SECTION -->
+        <div class="exam-section">
+            <h2>📝 Suggested Exam Questions (100 points)</h2>
+            <p style="margin-top: 15px; font-size: 1.05em;">Preguntas modelo: Likes & Preferences</p>
+            
+            <div class="question">
+                <span class="question-number">1</span>
+                <span class="points">15 pts</span>
+                <strong>Complete with the correct -ING form of the verb:</strong><br><br>
+                a) I love ______________ (play) video games with my friends.<br>
+                b) She doesn't like ______________ (cook) dinner.<br>
+                c) They enjoy ______________ (go) to the beach in summer.<br>
+                d) He can't stand ______________ (wait) in long lines.<br>
+                e) We don't mind ______________ (help) with the housework.
+            </div>
+            
+            <div class="question">
+                <span class="question-number">2</span>
+                <span class="points">15 pts</span>
+                <strong>Make QUESTIONS with these words:</strong><br><br>
+                a) you / like / watch / horror movies / do / ?<br>
+                → ____<br><br>
+                b) she / enjoy / does / travel / to new places / ?<br>
+                → ____<br><br>
+                c) your friends / do / playing / love / soccer / ?<br>
+                → ____
+            </div>
+            
+            <div class="question">
+                <span class="question-number">3</span>
+                <span class="points">15 pts</span>
+                <strong>Answer the questions about YOUR preferences:</strong><br><br>
+                a) What do you love doing on weekends?<br>
+                → I love ____<br><br>
+                b) What do you hate doing?<br>
+                → I hate ____<br><br>
+                c) What don't you mind doing?<br>
+                → I don't mind ____
+            </div>
+            
+            <div class="question">
+                <span class="question-number">4</span>
+                <span class="points">15 pts</span>
+                <strong>Find and CORRECT the mistakes:</strong><br><br>
+                a) She love dancing salsa.<br>
+                → ____<br><br>
+                b) I enjoy to read comic books.<br>
+                → ____<br><br>
+                c) They doesn't like waking up early.<br>
+                → ____<br><br>
+                d) Do she enjoy swimming?<br>
+                → ____<br><br>
+                e) He hates runing in the morning.<br>
+                → ____
+            </div>
+            
+            <div class="question">
+                <span class="question-number">5</span>
+                <span class="points">15 pts</span>
+                <strong>Choose the correct option:</strong><br><br>
+                a) I really enjoy (listen / listening / to listen) to music.<br>
+                b) She (don't / doesn't / isn't) like cooking.<br>
+                c) (Do / Does / Is) your brother like playing video games?<br>
+                d) They can't stand (wait / waiting / to wait) for the bus.<br>
+                e) We love (go / going / to go) to the cinema on Fridays.
+            </div>
+            
+            <div class="question">
+                <span class="question-number">6</span>
+                <span class="points">10 pts</span>
+                <strong>Complete the dialogue:</strong><br><br>
+                A: What do you like ______________ (do) in your free time?<br><br>
+                B: I love ______________ (play) basketball. What about you?<br><br>
+                A: I prefer ______________ (watch) movies. I hate ______________ (do) sports!<br><br>
+                B: Really? I can't stand ______________ (sit) at home all day!
+            </div>
+            
+            <div class="question">
+                <span class="question-number">7</span>
+                <span class="points">15 pts</span>
+                <strong>Write a paragraph (60-80 words) about YOUR preferences:</strong><br>
+                <em>Include: 3 things you love/like, 2 things you don't like/hate, 1 thing you don't mind. Use connectors!</em><br><br>
+                ____<br>
+                ____<br>
+                ____<br>
+                ____<br>
+                ____<br>
+                ____
+            </div>
+            
+        </div>

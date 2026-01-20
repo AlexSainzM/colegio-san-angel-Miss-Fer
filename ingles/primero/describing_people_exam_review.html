@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Describing People - Exam Review Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: white;
+            padding: 0;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+            padding: 35px 40px;
+            color: white;
+            text-align: center;
+            page-break-after: avoid;
+        }
+        
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.3em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.15em;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .info-bar {
+            background: #e0f7fa;
+            padding: 15px 40px;
+            text-align: center;
+            border-bottom: 3px solid #00b4d8;
+            font-weight: 600;
+            color: #006064;
+            font-size: 1.05em;
+            page-break-after: avoid;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+            background: #ffff;
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid #e9ecef;
+            page-break-inside: avoid;
+        }
+        
+        .section h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #0077b6;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #00b4d8;
+            padding-bottom: 10px;
+        }
+        
+        .section h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #555;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .grammar-box {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            border-left: 5px solid #00b4d8;
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .formula {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .example-box {
+            background: #d4f4dd;
+            border-left: 4px solid #28a745;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .example-box strong {
+            color: #155724;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            color: #856404;
+        }
+        
+        .warning-box strong {
+            color: #856404;
+        }
+        
+        .audio-box {
+            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .audio-box h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .audio-box audio {
+            width: 100%;
+            max-width: 400px;
+            margin: 15px 0;
+        }
+        
+        .audio-box a {
+            color: #ffeb3b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .audio-box a:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight-pp {
+            background: #00b4d8;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+        
+        .keyword-box {
+            display: inline-block;
+            background: #e91e63;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-weight: 600;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        .timeline {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            border-left: 4px solid #00b4d8;
+        }
+        
+        .timeline-time {
+            background: #00b4d8;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            min-width: 100px;
+            text-align: center;
+            margin-right: 20px;
+        }
+        
+        .activity-section {
+            background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        .activity-section h2 {
+            color: white;
+            border-bottom: 3px solid white;
+            font-size: 1.6em;
+        }
+        
+        .activity-box {
+            background: white;
+            color: #2c3e50;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .exam-section {
+            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+            page-break-before: always;
+        }
+        
+        .exam-section h2 {
+            color: white;
+            border-bottom: 3px solid white;
+            font-size: 2em;
+        }
+        
+        .question {
+            background: white;
+            color: #2c3e50;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 5px solid #e91e63;
+        }
+        
+        .question-number {
+            background: #e91e63;
+            color: white;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        
+        .points {
+            float: right;
+            background: #ffc107;
+            color: #856404;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        .vocab-category {
+            background: linear-gradient(135deg, #f8bbd9 0%, #f48fb1 100%);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .vocab-category h4 {
+            color: #880e4f;
+            margin-bottom: 10px;
+        }
+        
+        @media print {
+            .exam-section {
+                page-break-before: always;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .timeline-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .timeline-time {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>👤 Describing People</h1>
+            <div class="subtitle">Physical Appearance & Personality - Exam Review</div>
+        </div>
+        
+        <div class="info-bar">
+            ⏱️ Duración de clase: 80 minutos | Nivel: A2 (1° Semestre Bachillerato)
+        </div>
+        
+        <div class="content">
+            
+            <!-- Timeline de la clase -->
+            <div class="section">
+                <h2>📋 Class Timeline / Estructura de la Clase</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-time">0-10 min</span>
+                        <span>Warm-up: Describe your partner activity</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">10-25 min</span>
+                        <span>Grammar Review: IS vs HAS/HAS GOT</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">25-40 min</span>
+                        <span>🎧 Listening Activity</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">40-55 min</span>
+                        <span>🎮 Interactive Games Practice</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">55-70 min</span>
+                        <span>Vocabulary & Common Mistakes</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">70-80 min</span>
+                        <span>Practice Exercises & Exam Tips</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 1: Verb TO BE -->
+            <div class="section">
+                <h2>1️⃣ Verb TO BE for Descriptions</h2>
+                
+                <div class="grammar-box">
+                    <h3>📌 When do we use IS/ARE?</h3>
+                    <p>We use the verb <strong>TO BE (is/are)</strong> to describe:</p>
+                    <ul>
+                        <li><strong>Height:</strong> She <strong>is</strong> tall. / He <strong>is</strong> short.</li>
+                        <li><strong>Age:</strong> He <strong>is</strong> young. / She <strong>is</strong> old.</li>
+                        <li><strong>Body build:</strong> They <strong>are</strong> muscular. / He <strong>is</strong> thin.</li>
+                    </ul>
+                </div>
+                
+                <h3>✅ Structure: Subject + BE + Adjective</h3>
+                <div class="formula">
+                    Subject + <span class="highlight-pp">IS / ARE</span> + <span class="highlight-pp">ADJECTIVE</span>
+                </div>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    • She <strong>is</strong> tall and athletic.<br>
+                    • He <strong>is</strong> medium height.<br>
+                    • They <strong>are</strong> young and thin.<br>
+                    • My grandfather <strong>is</strong> old and short.
+                </div>
+                
+                <h3>📏 Height Adjectives</h3>
+                <p>
+                    <span class="keyword-box">tall</span>
+                    <span class="keyword-box">short</span>
+                    <span class="keyword-box">medium height</span>
+                    <span class="keyword-box">of average height</span>
+                </p>
+                
+                <h3>🏋️ Body Build Adjectives</h3>
+                <p>
+                    <span class="keyword-box">thin</span>
+                    <span class="keyword-box">slim</span>
+                    <span class="keyword-box">fat</span>
+                    <span class="keyword-box">overweight</span>
+                    <span class="keyword-box">muscular</span>
+                    <span class="keyword-box">athletic</span>
+                    <span class="keyword-box">well-built</span>
+                    <span class="keyword-box">of average build</span>
+                </p>
+                
+                <h3>👴 Age Expressions</h3>
+                <p>
+                    <span class="keyword-box">young</span>
+                    <span class="keyword-box">old</span>
+                    <span class="keyword-box">middle-aged</span>
+                    <span class="keyword-box">in his/her twenties</span>
+                    <span class="keyword-box">in his/her thirties</span>
+                    <span class="keyword-box">an adolescent</span>
+                </p>
+            </div>
+            
+            <!-- Section 2: HAS/HAVE -->
+            <div class="section">
+                <h2>2️⃣ HAS/HAVE for Physical Features</h2>
+                
+                <div class="grammar-box">
+                    <h3>📌 When do we use HAS/HAVE (GOT)?</h3>
+                    <p>We use <strong>HAS/HAVE (GOT)</strong> to describe:</p>
+                    <ul>
+                        <li><strong>Hair:</strong> She <strong>has</strong> long blonde hair.</li>
+                        <li><strong>Eyes:</strong> He <strong>has got</strong> blue eyes.</li>
+                        <li><strong>Facial features:</strong> She <strong>has</strong> freckles.</li>
+                        <li><strong>Skin:</strong> He <strong>has</strong> dark skin.</li>
+                    </ul>
+                </div>
+                
+                <h3>✅ Structure</h3>
+                <div class="formula">
+                    Subject + <span class="highlight-pp">HAS / HAVE (GOT)</span> + <span class="highlight-pp">NOUN</span>
+                </div>
+                
+                <div class="warning-box">
+                    <strong>🎯 Hair Description Order:</strong><br>
+                    <strong>LENGTH + TYPE + COLOUR</strong><br><br>
+                    ✅ She has <strong>long, curly, brown</strong> hair.<br>
+                    ✅ He has <strong>short, straight, black</strong> hair.<br>
+                    ❌ She has brown long curly hair.
+                </div>
+                
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    • She <strong>has</strong> long, straight, blonde hair.<br>
+                    • He <strong>has got</strong> short, wavy, brown hair.<br>
+                    • My sister <strong>has</strong> green eyes and freckles.<br>
+                    • My father <strong>has</strong> a beard and a moustache.
+                </div>
+                
+                <h3>💇 Hair Vocabulary</h3>
+                <table>
+                    <tr>
+                        <th>Length</th>
+                        <th>Type</th>
+                        <th>Colour</th>
+                    </tr>
+                    <tr>
+                        <td>long</td>
+                        <td>straight</td>
+                        <td>blonde / blond</td>
+                    </tr>
+                    <tr>
+                        <td>short</td>
+                        <td>curly</td>
+                        <td>brown</td>
+                    </tr>
+                    <tr>
+                        <td>medium-length</td>
+                        <td>wavy</td>
+                        <td>black</td>
+                    </tr>
+                    <tr>
+                        <td>shoulder-length</td>
+                        <td>spiky</td>
+                        <td>red / ginger</td>
+                    </tr>
+                    <tr>
+                        <td>bald (no hair)</td>
+                        <td>frizzy</td>
+                        <td>grey / white</td>
+                    </tr>
+                </table>
+                
+                <h3>👁️ Eyes & Face</h3>
+                <table>
+                    <tr>
+                        <th>Eyes</th>
+                        <th>Face Shape</th>
+                        <th>Other Features</th>
+                    </tr>
+                    <tr>
+                        <td>blue eyes</td>
+                        <td>oval face</td>
+                        <td>beard</td>
+                    </tr>
+                    <tr>
+                        <td>brown eyes</td>
+                        <td>round face</td>
+                        <td>moustache</td>
+                    </tr>
+                    <tr>
+                        <td>green eyes</td>
+                        <td>square face</td>
+                        <td>freckles</td>
+                    </tr>
+                    <tr>
+                        <td>black eyes</td>
+                        <td>long face</td>
+                        <td>glasses</td>
+                    </tr>
+                    <tr>
+                        <td>almond-shaped eyes</td>
+                        <td>button nose</td>
+                        <td>dimples</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Section 3: Personality Adjectives -->
+            <div class="section">
+                <h2>3️⃣ Personality Adjectives</h2>
+                
+                <div class="grammar-box">
+                    <h3>📌 Structure for Personality</h3>
+                    <p>We use <strong>IS/ARE</strong> + adjective to describe personality:</p>
+                    <p>She <strong>is</strong> friendly. / They <strong>are</strong> kind.</p>
+                </div>
+                
+                <table>
+                    <tr>
+                        <th style="background: #4caf50;">😊 Positive</th>
+                        <th style="background: #f44336;">😠 Negative</th>
+                    </tr>
+                    <tr>
+                        <td>friendly, kind, nice</td>
+                        <td>unfriendly, mean, rude</td>
+                    </tr>
+                    <tr>
+                        <td>funny, cheerful, bubbly</td>
+                        <td>boring, serious, grumpy</td>
+                    </tr>
+                    <tr>
+                        <td>smart, intelligent, clever</td>
+                        <td>lazy, careless</td>
+                    </tr>
+                    <tr>
+                        <td>hardworking, driven</td>
+                        <td>impatient, anxious</td>
+                    </tr>
+                    <tr>
+                        <td>outgoing, sociable</td>
+                        <td>shy, quiet</td>
+                    </tr>
+                    <tr>
+                        <td>generous, helpful</td>
+                        <td>selfish, insensitive</td>
+                    </tr>
+                    <tr>
+                        <td>creative, imaginative</td>
+                        <td>unambitious</td>
+                    </tr>
+                    <tr>
+                        <td>polite, warm-hearted</td>
+                        <td>messy, noisy</td>
+                    </tr>
+                </table>
+                
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    • My mother <strong>is</strong> very kind and generous.<br>
+                    • He <strong>is</strong> funny and always makes me laugh.<br>
+                    • My best friend <strong>is</strong> outgoing and friendly.<br>
+                    • She <strong>is</strong> hardworking and intelligent.
+                </div>
+            </div>
+            
+            <!-- Section 4: Listening Activity -->
+            <div class="section">
+                <h2>4️⃣ 🎧 Listening Activity</h2>
+                
+                <div class="audio-box">
+                    <h3>🎵 Video: "Family Appearance"</h3>
+                    <p style="margin-bottom: 15px;"><em>John describes his family's physical appearance.</em></p>
+                <iframe title="vimeo-player" src="https://player.vimeo.com/video/266810326?h=0d06748344" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+            
+                </div>
+                
+                <div style="background: #fce4ec; border-left: 4px solid #e91e63; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h3 style="color: #c2185b;">📝 Listening Task 1: First Listen</h3>
+                    <p><strong>Listen and check (✓) the topics you hear:</strong></p>
+                    <table style="width: 100%; margin-top: 10px;">
+                    <tr><td>☐ Hair color</td><td>☐ Eye color</td></tr>
+                    <tr><td>☐ Height</td><td>☐ Body type</td></tr>
+                    <tr><td>☐ Glasses</td><td>☐ Age</td></tr>
+                    </table>
+                </div>
+                
+                <div style="background: #fce4ec; border-left: 4px solid #e91e63; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h3 style="color: #c2185b;">📝 Listening Task 2: Details</h3>
+                    <p><strong>Listen again and complete:</strong></p>
+                    <ol>
+                        <li>John's father has ____ hair.</li>
+                        <li>John's mother has ____ hair.</li>
+                        <li>John and his father are ____ cm tall.</li>
+                        <li>His younger brother is about ____ cm.</li>
+                        <li>All five family members wear ____.</li>
+                    </ol>
+                </div>
+                
+                <div style="background: #e8f5e9; border-left: 4px solid #4caf50; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h3 style="color: #2e7d32;">📝 Listening Task 3: Personality</h3>
+                    <p><strong>Listen and match each family member with their personality:</strong></p>
+                    <ol>
+                        <li>John's mother is ____.</li>
+                        <li>John's father is ____.</li>
+                        <li>John describes himself as ____.</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Section 5: Interactive Games -->
+            <div class="section">
+                <h2>5️⃣ 🎮 Interactive Games / Juegos Interactivos</h2>
+                
+                <div class="grammar-box">
+                    <h3>🕹️ ¡Practica con estos juegos directamente aquí!</h3>
+                    <p>Juega sin salir de esta página.</p>
+                </div>
+                
+                <!-- Game 1: Educaplay Word Search - Describing People -->
+                <div style="margin: 25px 0;">
+                    <h3 style="background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%); color: white; padding: 15px 20px; border-radius: 10px 10px 0 0; margin: 0;">
+                    📝 Game 1: Educaplay - Describing People Word Search
+                    </h3>
+                    <div style="border: 3px solid #00b4d8; border-top: none; border-radius: 0 0 10px 10px; overflow: hidden;">
+                    <iframe src="https://www.educaplay.com/game/4773442-describing_people.html" style="width: 100%; height: 500px; border: none;" allowfullscreen></iframe>
+                    </div>
+                    <p style="text-align: center; margin-top: 8px; font-size: 0.9em;">
+                    <a href="https://www.educaplay.com/learning-resources/4773442-describing_people.html" target="_blank" style="color: #00b4d8;">🔗 Abrir en nueva pestaña</a>
+                    </p>
+                </div>
+                
+                <!-- Game 2: Educaplay Memory - Describing People -->
+                <div style="margin: 25px 0;">
+                    <h3 style="background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%); color: white; padding: 15px 20px; border-radius: 10px 10px 0 0; margin: 0;">
+                    🎯 Game 2: Educaplay - Memory: Describing Appearance
+                    </h3>
+                    <div style="border: 3px solid #e91e63; border-top: none; border-radius: 0 0 10px 10px; overflow: hidden;">
+                    <iframe src="https://www.educaplay.com/game/5809217-describing_people.html" style="width: 100%; height: 500px; border: none;" allowfullscreen></iframe>
+                    </div>
+                    <p style="text-align: center; margin-top: 8px; font-size: 0.9em;">
+                    <a href="https://www.educaplay.com/learning-resources/5809217-describing_people.html" target="_blank" style="color: #e91e63;">🔗 Abrir en nueva pestaña</a>
+                    </p>
+                </div>
+    
+                
+                <!-- Game 3: Educaplay Matching -->
+                <div style="margin: 25px 0;">
+                    <h3 style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); color: white; padding: 15px 20px; border-radius: 10px 10px 0 0; margin: 0;">
+                    🔗 Game 3: Educaplay - Match Appearance Descriptions
+                    </h3>
+                    <div style="border: 3px solid #ff9800; border-top: none; border-radius: 0 0 10px 10px; overflow: hidden;">
+                    <iframe src="https://www.educaplay.com/game/5250879-describing_people.html" style="width: 100%; height: 500px; border: none;" allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <!-- Game 4: Personality Adjectives -->
+                <div style="margin: 25px 0;">
+                    <h3 style="background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%); color: white; padding: 15px 20px; border-radius: 10px 10px 0 0; margin: 0;">
+                    😊 Game 4: Educaplay - Personality Adjectives
+                    </h3>
+                    <div style="border: 3px solid #4caf50; border-top: none; border-radius: 0 0 10px 10px; overflow: hidden;">
+                    <iframe src="https://www.educaplay.com/game/3000719-personality_adjectives.html" style="width: 100%; height: 500px; border: none;" allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <div class="warning-box">
+                    <strong>🎯 Recomendación para clase:</strong><br>
+                    • Proyecta esta página y juega con toda la clase<br>
+                    • Divide en equipos y compite por puntos
+                </div>
+            </div>
+            
+            <!-- Section 6: Common Mistakes -->
+            <div class="section">
+                <h2>6️⃣ Common Mistakes to Avoid</h2>
+                
+                <table>
+                    <tr>
+                        <th style="width: 50%; background: #dc3545;">❌ Wrong</th>
+                        <th style="width: 50%; background: #28a745;">✅ Correct</th>
+                    </tr>
+                    <tr>
+                        <td>She <strong>has</strong> tall.</td>
+                        <td>She <strong>is</strong> tall.</td>
+                    </tr>
+                    <tr>
+                        <td>He <strong>is</strong> blue eyes.</td>
+                        <td>He <strong>has</strong> blue eyes.</td>
+                    </tr>
+                    <tr>
+                        <td>She has <strong>brown long curly</strong> hair.</td>
+                        <td>She has <strong>long, curly, brown</strong> hair.</td>
+                    </tr>
+                    <tr>
+                        <td>They <strong>are have</strong> muscular.</td>
+                        <td>They <strong>are</strong> muscular.</td>
+                    </tr>
+                    <tr>
+                        <td>My friends <strong>is</strong> in their twenties.</td>
+                        <td>My friends <strong>are</strong> in their twenties.</td>
+                    </tr>
+                    <tr>
+                        <td>He <strong>is</strong> a beard.</td>
+                        <td>He <strong>has</strong> a beard.</td>
+                    </tr>
+                    <tr>
+                        <td>She <strong>has</strong> medium height.</td>
+                        <td>She <strong>is</strong> medium height.</td>
+                    </tr>
+                </table>
+                
+                <div class="warning-box">
+                    <strong>⚠️ Remember the Rule:</strong><br>
+                    • <strong>IS/ARE</strong> → for height, age, body build (adjectives)<br>
+                    • <strong>HAS/HAVE (GOT)</strong> → for hair, eyes, facial features (nouns)<br><br>
+                    🎯 Ask yourself: Is it an <em>adjective</em> or a <em>noun</em>?
+                </div>
+            </div>
+            
+            <!-- Section 7: Study Tips -->
+            <div class="section">
+                <h2>7️⃣ Exam Tips / Consejos para el Examen</h2>
+                
+                <div class="example-box">
+                    <strong>✨ Recuerda siempre:</strong>
+                    <ol>
+                        <li><strong>IS/ARE</strong> para: height, age, body build</li>
+                        <li><strong>HAS/HAVE</strong> para: hair, eyes, face, skin</li>
+                        <li><strong>Orden del cabello:</strong> Length + Type + Colour</li>
+                        <li><strong>HAS</strong> con he, she, it / <strong>HAVE</strong> con I, you, we, they</li>
+                        <li>Los adjetivos de personalidad usan <strong>IS/ARE</strong></li>
+                        <li>Aprende vocabulario de apariencia física Y personalidad</li>
+                    </ol>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- PRACTICE ACTIVITIES SECTION -->
+        <div class="activity-section">
+            <h2>📝 Practice Activities / Actividades de Práctica</h2>
+            
+            <div class="activity-box">
+                <h3>Activity A: Choose IS or HAS</h3>
+                <ol>
+                    <li>She _______ (is/has) tall and thin.</li>
+                    <li>He _______ (is/has) blue eyes.</li>
+                    <li>My mother _______ (is/has) long brown hair.</li>
+                    <li>They _______ (are/have) young and athletic.</li>
+                    <li>Maria _______ (is/has) a round face.</li>
+                    <li>My grandfather _______ (is/has) old and short.</li>
+                    <li>She _______ (is/has) freckles and glasses.</li>
+                    <li>The model _______ (is/has) medium height.</li>
+                </ol>
+            </div>
+            
+            <div class="activity-box">
+                <h3>Activity C: Complete the Description</h3>
+                <p>Use IS, ARE, HAS, or HAVE:</p>
+                <ol>
+                    <li>My sister _______ 25 years old. She _______ tall and slim.</li>
+                    <li>She _______ long, straight, black hair and brown eyes.</li>
+                    <li>My brothers _______ both athletic. They _______ short brown hair.</li>
+                    <li>My father _______ a beard and _______ in his fifties.</li>
+                </ol>
+            </div>
+            
+            <div class="activity-box">
+                <h3>Activity D: Describe a Celebrity</h3>
+                <p>Write 5 sentences describing your favorite celebrity using IS and HAS:</p>
+                <ol>
+                    <li>____________________________________</li>
+                    <li>____________________________________</li>
+                    <li>____________________________________</li>
+                    <li>____________________________________</li>
+                    <li>____________________________________</li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- EXAM QUESTIONS SECTION -->
+        <div class="exam-section">
+            <h2>📝 Suggested Exam Questions (100 points)</h2>
+            <p style="margin-top: 15px; font-size: 1.05em;">Preguntas modelo: Describing People</p>
+            
+            <div class="question">
+                <span class="question-number">1</span>
+                <span class="points">15 pts</span>
+                <strong>Choose IS, ARE, HAS, or HAVE:</strong><br><br>
+                a) She _______ tall and thin.<br>
+                b) He _______ blue eyes and brown hair.<br>
+                c) They _______ young and athletic.<br>
+                d) My mother _______ long, curly, black hair.<br>
+                e) The children _______ freckles.
+            </div>
+            
+            <div class="question">
+                <span class="question-number">3</span>
+                <span class="points">15 pts</span>
+                <strong>Find and CORRECT the mistakes:</strong><br><br>
+                a) She has tall and young.<br>
+                → ____<br><br>
+                b) He is blue eyes.<br>
+                → ____<br><br>
+                c) My friends is in their twenties.<br>
+                → ____<br><br>
+                d) She has brown long straight hair.<br>
+                → ____<br><br>
+                e) They are have muscular.<br>
+                → ____
+            </div>
+            
+            <div class="question">
+                <span class="question-number">4</span>
+                <span class="points">15 pts</span>
+                <strong>Match the description with the correct category:</strong><br>
+                <em>(Write IS or HAS next to each)</em><br><br>
+                a) tall _______ <br>
+                b) blue eyes _______ <br>
+                c) medium height _______ <br>
+                d) a beard _______ <br>
+                e) athletic _______ <br>
+                f) freckles _______ <br>
+                g) young _______ <br>
+                h) long hair _______
+            </div>
+            
+            <div class="question">
+                <span class="question-number">5</span>
+                <span class="points">15 pts</span>
+                <strong>Complete the description using IS/ARE/HAS/HAVE:</strong><br><br>
+                <strong>Maria</strong> _______ 28 years old. She _______ medium height and thin. She _______ long, straight, black hair and brown eyes. She _______ an oval face and _______ very beautiful.
+            </div>
+            
+            <div class="question">
+                <span class="question-number">6</span>
+                <span class="points">10 pts</span>
+                <strong>Classify these personality adjectives as POSITIVE (+) or NEGATIVE (-):</strong><br><br>
+                a) friendly _______ <br>
+                b) lazy _______ <br>
+                c) generous _______ <br>
+                d) selfish _______ <br>
+                e) hardworking _______
+            </div>
+            
+            <div class="question">
+                <span class="question-number">7</span>
+                <span class="points">15 pts</span>
+                <strong>Write a complete description of a family member:</strong><br>
+                <em>Include: name, age, height, body type, hair, eyes, and personality (at least 5 sentences)</em><br><br>
+                1. ____<br>
+                2. ____<br>
+                3. ____<br>
+                4. ____<br>
+                5. ____
+            </div>
+        </div>
+        

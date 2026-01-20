@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will and Won't - Exam Review Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: white;
+            padding: 0;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            padding: 35px 40px;
+            color: white;
+            text-align: center;
+            page-break-after: avoid;
+        }
+        
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.3em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.15em;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .info-bar {
+            background: #ffe5e5;
+            padding: 15px 40px;
+            text-align: center;
+            border-bottom: 3px solid #e74c3c;
+            font-weight: 600;
+            color: #c0392b;
+            font-size: 1.05em;
+            page-break-after: avoid;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid #e9ecef;
+            page-break-inside: avoid;
+        }
+        
+        .section h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #e74c3c;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        
+        .section h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #555;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .grammar-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+            border-left: 5px solid #e74c3c;
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .formula {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .example-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .example-box strong {
+            color: #155724;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            color: #856404;
+        }
+        
+        .warning-box strong {
+            color: #856404;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        .exam-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+            page-break-before: always;
+        }
+        
+        .exam-section h2 {
+            color: white;
+            border-bottom: 3px solid white;
+            font-size: 2em;
+        }
+        
+        .question {
+            background: white;
+            color: #2c3e50;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 5px solid #667eea;
+        }
+        
+        .question-number {
+            background: #667eea;
+            color: white;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        
+        .points {
+            float: right;
+            background: #ffc107;
+            color: #856404;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        @media print {
+            .exam-section {
+                page-break-before: always;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Will and Won't</h1>
+            <div class="subtitle">Exam Review Guide - Future Simple Tense</div>
+        </div>
+        
+        <div class="info-bar">
+            ⏱️ Class Duration: 80 minutes | Level: A2 (5th Semester)
+        </div>
+        
+        <div class="content">
+            
+            <!-- Section 1: Grammar Review -->
+            <div class="section">
+                <h2>1️⃣ Grammar Review: Future Simple with WILL</h2>
+                
+                <div class="grammar-box">
+                    <h3>📌 When do we use WILL?</h3>
+                    <ul>
+                        <li><strong>Predictions about the future:</strong> I think it will rain tomorrow.</li>
+                        <li><strong>Future plans and intentions:</strong> I will study abroad next year.</li>
+                        <li><strong>Spontaneous decisions:</strong> I'm thirsty. I will drink some water.</li>
+                        <li><strong>Promises:</strong> I will help you with your homework.</li>
+                        <li><strong>Offers:</strong> I will carry your bag.</li>
+                    </ul>
+                </div>
+                
+                <h3>✅ Affirmative Form (Will)</h3>
+                <div class="formula">
+                    Subject + WILL + Base Verb
+                </div>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    • I <strong>will travel</strong> to Europe next summer.<br>
+                    • She <strong>will study</strong> medicine at university.<br>
+                    • They <strong>will visit</strong> us next month.<br>
+                    • We <strong>will go</strong> to the beach tomorrow.
+                </div>
+                
+                <h3>❌ Negative Form (Won't / Will Not)</h3>
+                <div class="formula">
+                    Subject + WILL NOT (WON'T) + Base Verb
+                </div>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    • I <strong>won't forget</strong> your birthday.<br>
+                    • He <strong>won't come</strong> to the party.<br>
+                    • They <strong>won't know</strong> the answer.<br>
+                    • We <strong>will not accept</strong> late assignments.
+                </div>
+                
+                <h3>❓ Question Form</h3>
+                <div class="formula">
+                    WILL + Subject + Base Verb + ?
+                </div>
+                <div class="example-box">
+                    <strong>Examples:</strong><br>
+                    • <strong>Will you help</strong> me with this?<br>
+                    • <strong>Will she arrive</strong> on time?<br>
+                    • <strong>Will they come</strong> to the meeting?<br>
+                    • What <strong>will you do</strong> tomorrow?
+                </div>
+                
+                <h3>💬 Short Answers</h3>
+                <table>
+                    <tr>
+                        <th>Question</th>
+                        <th>Affirmative</th>
+                        <th>Negative</th>
+                    </tr>
+                    <tr>
+                        <td>Will you come?</td>
+                        <td>Yes, I will.</td>
+                        <td>No, I won't.</td>
+                    </tr>
+                    <tr>
+                        <td>Will she help us?</td>
+                        <td>Yes, she will.</td>
+                        <td>No, she won't.</td>
+                    </tr>
+                    <tr>
+                        <td>Will they study?</td>
+                        <td>Yes, they will.</td>
+                        <td>No, they won't.</td>
+                    </tr>
+                </table>
+                
+                <div class="warning-box">
+                    <strong>⚠️ Important Notes:</strong><br>
+                    • WILL is the same for all subjects (I, you, he, she, it, we, they)<br>
+                    • Use the BASE FORM of the verb (no -s, no -ed, no -ing)<br>
+                    • WON'T is the contraction of WILL NOT<br>
+                    • DON'T use "to" after will: ❌ <em>will to go</em> → ✅ <em>will go</em>
+                </div>
+            </div>
+            
+            <!-- Section 2: Time Expressions -->
+            <div class="section">
+                <h2>2️⃣ Time Expressions with WILL</h2>
+                
+                <div class="grammar-box">
+                    <p><strong>Common time expressions used with future simple:</strong></p>
+                    <ul>
+                        <li><strong>tomorrow</strong> → I will call you tomorrow.</li>
+                        <li><strong>next week/month/year</strong> → She will graduate next year.</li>
+                        <li><strong>in + time period</strong> → They will arrive in two hours.</li>
+                        <li><strong>soon</strong> → We will see each other soon.</li>
+                        <li><strong>later</strong> → I will do it later.</li>
+                        <li><strong>in the future</strong> → People will live on Mars in the future.</li>
+                        <li><strong>someday</strong> → I will visit Japan someday.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Section 3: Common Mistakes -->
+            <div class="section">
+                <h2>3️⃣ Common Mistakes to Avoid</h2>
+                
+                <table>
+                    <tr>
+                        <th style="width: 50%; background: #dc3545;">❌ Wrong</th>
+                        <th style="width: 50%; background: #28a745;">✅ Correct</th>
+                    </tr>
+                    <tr>
+                        <td>I will to study tomorrow.</td>
+                        <td>I will study tomorrow.</td>
+                    </tr>
+                    <tr>
+                        <td>She will studies French.</td>
+                        <td>She will study French.</td>
+                    </tr>
+                    <tr>
+                        <td>They will going to Spain.</td>
+                        <td>They will go to Spain.</td>
+                    </tr>
+                    <tr>
+                        <td>I will not to come.</td>
+                        <td>I will not come. / I won't come.</td>
+                    </tr>
+                    <tr>
+                        <td>Will she comes tomorrow?</td>
+                        <td>Will she come tomorrow?</td>
+                    </tr>
+                    <tr>
+                        <td>He won't goes there.</td>
+                        <td>He won't go there.</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Section 4: Practice Tips -->
+            <div class="section">
+                <h2>4️⃣ Study Tips for the Exam</h2>
+                
+                <div class="example-box">
+                    <strong>✨ Before the Exam:</strong>
+                    <ol>
+                        <li><strong>Memorize the structure:</strong> Subject + will + base verb</li>
+                        <li><strong>Practice contractions:</strong> I'll, you'll, he'll, she'll, we'll, they'll, won't</li>
+                        <li><strong>Review the "Study Abroad" text</strong> and identify all will/won't sentences</li>
+                        <li><strong>Write your own predictions</strong> about the future</li>
+                        <li><strong>Do practice exercises</strong> from your worksheet</li>
+                    </ol>
+                </div>
+                
+                <div class="warning-box">
+                    <strong>🎯 Focus Areas:</strong>
+                    <ul>
+                        <li>Identify will/won't in reading texts</li>
+                        <li>Complete sentences with correct form</li>
+                        <li>Transform affirmative → negative → questions</li>
+                        <li>Answer questions using short answers</li>
+                        <li>Write predictions and future plans</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Section 5: Quick Reference -->
+            <div class="section">
+                <h2>5️⃣ Quick Reference Chart</h2>
+                
+                <table>
+                    <tr>
+                        <th>Type</th>
+                        <th>Structure</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Affirmative</strong></td>
+                        <td>S + will + V</td>
+                        <td>I will travel.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Negative</strong></td>
+                        <td>S + won't + V</td>
+                        <td>I won't travel.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Question</strong></td>
+                        <td>Will + S + V?</td>
+                        <td>Will I travel?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Short Answer (+)</strong></td>
+                        <td>Yes, S + will</td>
+                        <td>Yes, I will.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Short Answer (−)</strong></td>
+                        <td>No, S + won't</td>
+                        <td>No, I won't.</td>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+        
+        <!-- EXAM QUESTIONS SECTION -->
+        <div class="exam-section">
+            <h2>📝 Suggested Exam Questions (10 Questions - 100 points)</h2>
+            <p style="margin-top: 15px; font-size: 1.05em;">These questions cover all aspects of Will/Won't and can be directly used in your exam.</p>
+            
+            <div class="question">
+                <span class="question-number">1</span>
+                <span class="points">10 pts</span>
+                <strong>Complete the sentences with WILL or WON'T:</strong><br><br>
+                a) She __________ (visit) her grandmother next weekend.<br>
+                b) They __________ (not/come) to the party because they are busy.<br>
+                c) I think it __________ (rain) tomorrow.<br>
+                d) We __________ (not/forget) your birthday.<br>
+                e) He __________ (study) medicine at university.
+            </div>
+            
+            <div class="question">
+                <span class="question-number">2</span>
+                <span class="points">10 pts</span>
+                <strong>Transform the sentences into NEGATIVE form:</strong><br><br>
+                a) I will travel to Spain next summer.<br>
+                → _________________________________<br><br>
+                b) She will study French at university.<br>
+                → _________________________________<br><br>
+                c) They will come to the meeting.<br>
+                → _________________________________
+            </div>
+            
+            <div class="question">
+                <span class="question-number">3</span>
+                <span class="points">10 pts</span>
+                <strong>Make QUESTIONS with these words:</strong><br><br>
+                a) you / help / me / will / ?<br>
+                → _________________________________<br><br>
+                b) arrive / will / what time / she / ?<br>
+                → _________________________________<br><br>
+                c) they / will / tomorrow / come / ?<br>
+                → _________________________________
+            </div>
+            
+            <div class="question">
+                <span class="question-number">4</span>
+                <span class="points">10 pts</span>
+                <strong>Answer the questions with SHORT ANSWERS:</strong><br><br>
+                a) Will you study tonight? (Yes)<br>
+                → _________________________________<br><br>
+                b) Will she come to class? (No)<br>
+                → _________________________________<br><br>
+                c) Will they travel next month? (Yes)<br>
+                → _________________________________<br><br>
+                d) Will it rain tomorrow? (No)<br>
+                → _________________________________
+            </div>
+            
+            <div class="question">
+                <span class="question-number">5</span>
+                <span class="points">10 pts</span>
+                <strong>Find and CORRECT the mistakes:</strong><br><br>
+                a) She will to go to university next year.<br>
+                → _________________________________<br><br>
+                b) They will studies English tomorrow.<br>
+                → _________________________________<br><br>
+                c) I won't to come to the party.<br>
+                → _________________________________<br><br>
+                d) Will she comes to the meeting?<br>
+                → _________________________________<br><br>
+                e) He will going to Spain.<br>
+                → _________________________________
+            </div>
+            
+            <div class="question">
+                <span class="question-number">6</span>
+                <span class="points">10 pts</span>
+                <strong>Choose the correct option:</strong><br><br>
+                a) I think she _____ pass the exam. (will / won't / is)<br>
+                b) They _____ come because they are sick. (will / won't / don't)<br>
+                c) _____ you help me with this? (Do / Will / Are)<br>
+                d) We _____ be late for class. (will not / don't / aren't)<br>
+                e) What _____ you do tomorrow? (do / are / will)
+            </div>
+            
+            <div class="question">
+                <span class="question-number">7</span>
+                <span class="points">10 pts</span>
+                <strong>Read and answer TRUE (T) or FALSE (F):</strong><br><br>
+                <em>"Maria will study abroad next year. She will live in France for six months. She won't live with her family. Her parents will visit her in December. She will study French at a university. She thinks she will make new friends, but she won't forget her old friends."</em><br><br>
+                a) Maria will study abroad. ___<br>
+                b) She will live in France for one year. ___<br>
+                c) Her parents won't visit her. ___<br>
+                d) She will study French. ___<br>
+                e) She will forget her old friends. ___
+            </div>
+            
+            <div class="question">
+                <span class="question-number">8</span>
+                <span class="points">10 pts</span>
+                <strong>Complete the conversation:</strong><br><br>
+                A: What __________ you __________ (do) this weekend?<br>
+                B: I __________ (visit) my grandparents. What about you?<br>
+                A: I __________ (not/do) anything special. Maybe I __________ (watch) a movie.<br>
+                B: __________ you __________ (come) to the party on Saturday?<br>
+                A: No, I __________. I'm very busy.
+            </div>
+            
+            <div class="question">
+                <span class="question-number">9</span>
+                <span class="points">10 pts</span>
+                <strong>Write 5 PREDICTIONS about the future using WILL or WON'T:</strong><br>
+                <em>(Example: People will travel to Mars in the future.)</em><br><br>
+                1. _________________________________<br>
+                2. _________________________________<br>
+                3. _________________________________<br>
+                4. _________________________________<br>
+                5. _________________________________
+            </div>
+            
+            <div class="question">
+                <span class="question-number">10</span>
+                <span class="points">10 pts</span>
+                <strong>Write a short paragraph (5-6 sentences) about YOUR FUTURE PLANS using WILL and WON'T:</strong><br>
+                <em>(Talk about your studies, work, travel, family, etc.)</em><br><br>
+                _____________________________________________<br>
+                _____________________________________________<br>
+                _____________________________________________<br>
+                _____________________________________________<br>
+                _____________________________________________<br>
+                _____________________________________________
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+</html>

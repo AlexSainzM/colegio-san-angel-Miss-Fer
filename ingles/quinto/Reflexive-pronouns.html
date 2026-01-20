@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflexive Pronouns Course - English Grammar A2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue-50: #eff6ff;
+            --blue-100: #dbeafe;
+            --blue-200: #bfdbfe;
+            --blue-300: #93c5fd;
+            --blue-400: #60a5fa;
+            --blue-500: #3b82f6;
+            --blue-600: #2563eb;
+            --blue-700: #1d4ed8;
+            --blue-800: #1e40af;
+            --blue-900: #1e3a8a;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --green-500: #22c55e;
+            --green-100: #dcfce7;
+            --red-500: #ef4444;
+            --red-100: #fee2e2;
+            --yellow-500: #eab308;
+            --yellow-100: #fef9c3;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--blue-50) 0%, var(--blue-100) 100%);
+            min-height: 100vh;
+            color: var(--gray-800);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--blue-700) 0%, var(--blue-800) 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: var(--blue-500);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-tab {
+            padding: 12px 24px;
+            background: white;
+            border: 2px solid var(--blue-300);
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--blue-700);
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .nav-tab:hover {
+            background: var(--blue-100);
+            transform: translateY(-2px);
+        }
+        
+        .nav-tab.active {
+            background: var(--blue-600);
+            color: white;
+            border-color: var(--blue-600);
+        }
+        
+        .class-content {
+            display: none;
+        }
+        
+        .class-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--blue-500);
+        }
+        
+        .section h2 {
+            color: var(--blue-800);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h3 {
+            color: var(--blue-700);
+            font-size: 1.2rem;
+            margin: 20px 0 12px 0;
+        }
+        
+        .section p {
+            color: var(--gray-700);
+            margin-bottom: 12px;
+        }
+        
+        .time-badge {
+            background: var(--blue-100);
+            color: var(--blue-700);
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .pronoun-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .pronoun-table th {
+            background: var(--blue-600);
+            color: white;
+            padding: 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .pronoun-table td {
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .pronoun-table tr:nth-child(even) {
+            background: var(--blue-50);
+        }
+        
+        .pronoun-table tr:hover {
+            background: var(--blue-100);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .exercise-box {
+            background: var(--gray-50);
+            border: 2px solid var(--blue-200);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .exercise-box h4 {
+            color: var(--blue-700);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .question {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .question p {
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        
+        .options {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .option-btn {
+            padding: 12px 16px;
+            background: white;
+            border: 2px solid var(--blue-300);
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+        
+        .option-btn:hover {
+            background: var(--blue-50);
+            border-color: var(--blue-500);
+        }
+        
+        .option-btn.correct {
+            background: var(--green-100);
+            border-color: var(--green-500);
+            color: #166534;
+        }
+        
+        .option-btn.incorrect {
+            background: var(--red-100);
+            border-color: var(--red-500);
+            color: #991b1b;
+        }
+        
+        .option-btn.selected {
+            border-color: var(--blue-600);
+            background: var(--blue-100);
+        }
+        
+        .option-btn:disabled {
+            cursor: not-allowed;
+            opacity: 0.8;
+        }
+        
+        .fill-input {
+            padding: 8px 14px;
+            border: 2px solid var(--blue-300);
+            border-radius: 8px;
+            font-size: 1rem;
+            width: 140px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        
+        .fill-input:focus {
+            outline: none;
+            border-color: var(--blue-500);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+        
+        .fill-input.correct {
+            background: var(--green-100);
+            border-color: var(--green-500);
+        }
+        
+        .fill-input.incorrect {
+            background: var(--red-100);
+            border-color: var(--red-500);
+        }
+        
+        .check-btn {
+            background: var(--blue-600);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            margin-top: 15px;
+        }
+        
+        .check-btn:hover {
+            background: var(--blue-700);
+            transform: translateY(-2px);
+        }
+        
+        .reset-btn {
+            background: var(--gray-200);
+            color: var(--gray-700);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+        
+        .reset-btn:hover {
+            background: var(--gray-300);
+        }
+        
+        .feedback {
+            padding: 12px 16px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+        
+        .feedback.success {
+            background: var(--green-100);
+            color: #166534;
+            border: 1px solid var(--green-500);
+        }
+        
+        .feedback.error {
+            background: var(--red-100);
+            color: #991b1b;
+            border: 1px solid var(--red-500);
+        }
+        
+        .score-display {
+            background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-700) 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .score-display h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        
+        .score-display .score {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .drag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+            min-height: 50px;
+            padding: 15px;
+            background: var(--gray-100);
+            border-radius: 10px;
+            border: 2px dashed var(--blue-300);
+        }
+        
+        .drag-item {
+            padding: 10px 16px;
+            background: var(--blue-500);
+            color: white;
+            border-radius: 8px;
+            cursor: grab;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+        
+        .drag-item:hover {
+            background: var(--blue-600);
+            transform: scale(1.05);
+        }
+        
+        .drag-item.dragging {
+            opacity: 0.5;
+        }
+        
+        .drop-zone {
+            min-width: 120px;
+            min-height: 44px;
+            padding: 10px;
+            background: white;
+            border: 2px dashed var(--blue-400);
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            transition: all 0.2s ease;
+        }
+        
+        .drop-zone.drag-over {
+            background: var(--blue-100);
+            border-color: var(--blue-600);
+        }
+        
+        .drop-zone.filled {
+            border-style: solid;
+            background: var(--blue-100);
+        }
+        
+        .drop-zone.correct {
+            background: var(--green-100);
+            border-color: var(--green-500);
+        }
+        
+        .drop-zone.incorrect {
+            background: var(--red-100);
+            border-color: var(--red-500);
+        }
+        
+        .match-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            padding: 12px;
+            background: white;
+            border-radius: 10px;
+        }
+        
+        .match-subject {
+            font-weight: 600;
+            min-width: 80px;
+            color: var(--blue-800);
+        }
+        
+        .arrow {
+            color: var(--blue-400);
+            font-size: 1.2rem;
+        }
+        
+        .example-box {
+            background: linear-gradient(135deg, var(--blue-50) 0%, var(--blue-100) 100%);
+            border-left: 4px solid var(--blue-500);
+            padding: 15px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 15px 0;
+        }
+        
+        .example-box strong {
+            color: var(--blue-700);
+        }
+        
+        .tip-box {
+            background: var(--yellow-100);
+            border-left: 4px solid var(--yellow-500);
+            padding: 15px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 15px 0;
+        }
+        
+        .reading-text {
+            background: var(--gray-50);
+            padding: 20px;
+            border-radius: 12px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .reading-text .highlight {
+            background: var(--yellow-100);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: var(--blue-700);
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--gray-200);
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--blue-500), var(--blue-600));
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        
+        .emoji {
+            font-size: 1.3rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+            
+            .nav-tab {
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+            
+            .section {
+                padding: 18px;
+            }
+            
+            .pronoun-table {
+                font-size: 0.9rem;
+            }
+            
+            .match-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📘 Reflexive Pronouns & Reflexive Verbs</h1>
+        <p>Interactive Course for A2 Level English Students</p>
+        <span class="badge">3 Classes • 100 min each</span>
+    </header>
+    
+    <div class="container">
+        <nav class="nav-tabs">
+            <button class="nav-tab active" onclick="showClass(1)">📚 Class 1: Introduction</button>
+            <button class="nav-tab" onclick="showClass(2)">🎧 Class 2: Practice</button>
+            <button class="nav-tab" onclick="showClass(3)">🏆 Class 3: Assessment</button>
+        </nav>
+        
+        <!-- CLASS 1 -->
+        <div id="class1" class="class-content active">
+            <div class="section">
+                <h2><span class="emoji">👋</span> Warm-Up <span class="time-badge">0-10 min</span></h2>
+                <p>Think about your daily routine and answer these questions in your mind:</p>
+                <div class="example-box">
+                    <p>• What do you do <strong>by yourself</strong> every morning?</p>
+                    <p>• Can you name 3 things you do alone before coming to school?</p>
+                    <p>• Do you brush your teeth <strong>by yourself</strong>? Do you make breakfast <strong>by yourself</strong>?</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📖</span> Grammar Presentation <span class="time-badge">10-30 min</span></h2>
+                <h3>What are Reflexive Pronouns?</h3>
+                <p>Reflexive pronouns are used when the <strong>subject</strong> and <strong>object</strong> of a verb are the <strong>same person</strong>.</p>
+                
+                <div class="example-box">
+                    <p><strong>Example:</strong> I see <strong>myself</strong> in the mirror.</p>
+                    <p>("I" is doing the action AND receiving it = same person)</p>
+                </div>
+                
+                <h3>The Complete List of Reflexive Pronouns</h3>
+                <table class="pronoun-table">
+                    <thead>
+                        <tr>
+                            <th>Subject Pronoun</th>
+                            <th>Reflexive Pronoun</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>I</td><td><strong>myself</strong></td><td>I taught myself to play guitar.</td></tr>
+                        <tr><td>You (singular)</td><td><strong>yourself</strong></td><td>Did you hurt yourself?</td></tr>
+                        <tr><td>He</td><td><strong>himself</strong></td><td>He introduced himself to the class.</td></tr>
+                        <tr><td>She</td><td><strong>herself</strong></td><td>She bought herself a new dress.</td></tr>
+                        <tr><td>It</td><td><strong>itself</strong></td><td>The cat cleaned itself.</td></tr>
+                        <tr><td>We</td><td><strong>ourselves</strong></td><td>We enjoyed ourselves at the party.</td></tr>
+                        <tr><td>You (plural)</td><td><strong>yourselves</strong></td><td>Did you all prepare yourselves?</td></tr>
+                        <tr><td>They</td><td><strong>themselves</strong></td><td>They blamed themselves for the mistake.</td></tr>
+                    </tbody>
+                </table>
+                
+                <div class="tip-box">
+                    <p><strong>💡 "By myself/ourselves" = alone, without help</strong></p>
+                    <p>Example: "I did my homework <strong>by myself</strong>." (= I did it alone, nobody helped me)</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🎬</span> Watch & Learn <span class="time-badge">30-45 min</span></h2>
+                <p>Watch this video about reflexive pronouns and take notes:</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/bCrIBEhOX9c" allowfullscreen></iframe>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>📝 Video Comprehension Check</h4>
+                    <div id="video-quiz-1">
+                        <div class="question">
+                            <p>1. According to the video, when do we use reflexive pronouns?</p>
+                            <div class="options">
+                                <button class="option-btn" onclick="checkVideoQ1(this, false)">When the subject is plural</button>
+                                <button class="option-btn" onclick="checkVideoQ1(this, true)">When the subject and object are the same person</button>
+                                <button class="option-btn" onclick="checkVideoQ1(this, false)">When we talk about animals</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">✏️</span> Interactive Quiz <span class="time-badge">45-60 min</span></h2>
+                <div class="exercise-box">
+                    <h4>Choose the correct reflexive pronoun:</h4>
+                    <div id="mc-quiz-1"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📝</span> Fill in the Blanks <span class="time-badge">60-75 min</span></h2>
+                <div class="exercise-box">
+                    <h4>Complete the sentences with the correct reflexive pronoun:</h4>
+                    <div id="fill-exercise-1"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🎯</span> Drag & Drop Matching <span class="time-badge">75-90 min</span></h2>
+                <div class="exercise-box">
+                    <h4>Match each subject with its reflexive pronoun:</h4>
+                    <p>Drag the pronouns to the correct box:</p>
+                    <div class="drag-container" id="drag-source-1">
+                        <div class="drag-item" draggable="true" data-value="myself">myself</div>
+                        <div class="drag-item" draggable="true" data-value="yourself">yourself</div>
+                        <div class="drag-item" draggable="true" data-value="himself">himself</div>
+                        <div class="drag-item" draggable="true" data-value="herself">herself</div>
+                        <div class="drag-item" draggable="true" data-value="ourselves">ourselves</div>
+                        <div class="drag-item" draggable="true" data-value="themselves">themselves</div>
+                    </div>
+                    <div id="match-exercise-1"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📋</span> Exit Ticket <span class="time-badge">95-100 min</span></h2>
+                <p>Before finishing Class 1, write down:</p>
+                <div class="example-box">
+                    <p>✅ One new thing you learned today about reflexive pronouns</p>
+                    <p>✅ One sentence using a reflexive pronoun</p>
+                    <p>✅ One question you still have</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CLASS 2 -->
+        <div id="class2" class="class-content">
+            <div class="section">
+                <h2><span class="emoji">💬</span> Speaking Warm-Up <span class="time-badge">0-15 min</span></h2>
+                <p>Practice saying these sentences out loud. Record yourself if possible!</p>
+                <div class="example-box">
+                    <p>🎤 "I brush my teeth <strong>by myself</strong> every morning."</p>
+                    <p>🎤 "My sister taught <strong>herself</strong> how to cook."</p>
+                    <p>🎤 "We enjoyed <strong>ourselves</strong> at the beach last summer."</p>
+                    <p>🎤 "Did you make this <strong>by yourself</strong>? It's amazing!"</p>
+                </div>
+                <p>Now create 3 sentences about things you do <strong>by yourself</strong>:</p>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📚</span> Reading Comprehension <span class="time-badge">15-35 min</span></h2>
+                <h3>Julia's Independent Day</h3>
+                <div class="reading-text">
+                    <p>Last Saturday, Julia decided to spend the day <span class="highlight">by herself</span>. She woke up early and made breakfast <span class="highlight">by herself</span>. She cooked eggs and toast, and she was proud of <span class="highlight">herself</span>.</p>
+                    <p>After breakfast, Julia looked at <span class="highlight">herself</span> in the mirror and decided to try a new hairstyle. She styled her hair <span class="highlight">by herself</span>, without asking her mom for help.</p>
+                    <p>In the afternoon, Julia taught <span class="highlight">herself</span> some new dance moves by watching videos online. She practiced until she was tired, but she enjoyed <span class="highlight">herself</span> a lot.</p>
+                    <p>At night, Julia thought to <span class="highlight">herself</span>: "I can do many things on my own!" She felt really happy with <span class="highlight">herself</span>.</p>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>📝 Reading Questions</h4>
+                    <div id="reading-quiz"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🎧</span> Listening Gap Fill <span class="time-badge">35-55 min</span></h2>
+                <p>Read the sentences and fill in the missing reflexive pronouns:</p>
+                <div class="exercise-box">
+                    <h4>Complete the sentences you would hear in a conversation:</h4>
+                    <div id="listening-fill"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🏃</span> Reflexive Race Challenge <span class="time-badge">55-70 min</span></h2>
+                <div class="exercise-box">
+                    <h4>⏱️ Quick! Fill in all the blanks as fast as you can!</h4>
+                    <p>Timer: <span id="timer">0</span> seconds</p>
+                    <div id="race-exercise"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🎤</span> Speaking Practice <span class="time-badge">70-90 min</span></h2>
+                <p>Answer these questions out loud using reflexive pronouns:</p>
+                <div class="example-box">
+                    <p>1. What did you learn to do <strong>by yourself</strong>?</p>
+                    <p>2. Do you talk to <strong>yourself</strong> sometimes? When?</p>
+                    <p>3. What can you do to help <strong>yourself</strong> study better?</p>
+                    <p>4. Have you ever hurt <strong>yourself</strong>? How?</p>
+                    <p>5. What do your friends do <strong>by themselves</strong> on weekends?</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📊</span> Self-Assessment <span class="time-badge">90-100 min</span></h2>
+                <p>Rate your understanding (be honest with yourself!):</p>
+                <div class="example-box">
+                    <p>⭐ I can identify all 8 reflexive pronouns: <strong>1 2 3 4 5</strong></p>
+                    <p>⭐ I understand when to use reflexive pronouns: <strong>1 2 3 4 5</strong></p>
+                    <p>⭐ I can use "by myself/ourselves" correctly: <strong>1 2 3 4 5</strong></p>
+                    <p>⭐ I feel confident using reflexive pronouns in sentences: <strong>1 2 3 4 5</strong></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CLASS 3 -->
+        <div id="class3" class="class-content">
+            <div class="section">
+                <h2><span class="emoji">🔄</span> Quick Review <span class="time-badge">0-10 min</span></h2>
+                <p>Let's review what we've learned before the final assessment:</p>
+                <table class="pronoun-table">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Reflexive Pronoun</th>
+                            <th>"By..." Expression</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>I</td><td>myself</td><td>by myself</td></tr>
+                        <tr><td>You</td><td>yourself</td><td>by yourself</td></tr>
+                        <tr><td>He</td><td>himself</td><td>by himself</td></tr>
+                        <tr><td>She</td><td>herself</td><td>by herself</td></tr>
+                        <tr><td>It</td><td>itself</td><td>by itself</td></tr>
+                        <tr><td>We</td><td>ourselves</td><td>by ourselves</td></tr>
+                        <tr><td>You (pl)</td><td>yourselves</td><td>by yourselves</td></tr>
+                        <tr><td>They</td><td>themselves</td><td>by themselves</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🎬</span> Video Review <span class="time-badge">10-30 min</span></h2>
+                <p>Watch this video for a final review:</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/uEoD8lJVlRE" allowfullscreen></iframe>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>📝 Video Questions</h4>
+                    <div id="video-quiz-2"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📝</span> Practice Before Assessment <span class="time-badge">30-50 min</span></h2>
+                <div class="exercise-box">
+                    <h4>Complete these practice sentences:</h4>
+                    <div id="practice-fill"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🏆</span> FINAL ASSESSMENT <span class="time-badge">50-85 min</span></h2>
+                <div class="progress-bar"><div class="progress-fill" id="assessment-progress" style="width: 0%"></div></div>
+                
+                <div class="exercise-box">
+                    <h4>Part 1: Multiple Choice (10 points)</h4>
+                    <div id="assessment-mc"></div>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>Part 2: Fill in the Blanks (10 points)</h4>
+                    <div id="assessment-fill"></div>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>Part 3: Matching (10 points)</h4>
+                    <p>Match the sentences with the correct reflexive pronoun:</p>
+                    <div id="assessment-match"></div>
+                </div>
+                
+                <div id="final-score" style="display: none;"></div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📓</span> Portfolio Entry <span class="time-badge">85-100 min</span></h2>
+                <p>Write in your notebook:</p>
+                <div class="example-box">
+                    <p>📌 <strong>"I improved my understanding of reflexive pronouns because..."</strong></p>
+                    <p>📌 Write 5 original sentences using different reflexive pronouns</p>
+                    <p>📌 Explain when to use "by myself" vs just "myself"</p>
+                </div>
+                <p><strong>Congratulations on completing the course! 🎉</strong></p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Reflexive Pronouns Course • English Grammar A2 • Colegio San Ángel</p>
+    </footer>
+
+    <script>
+        // Navigation
+        function showClass(num) {
+            document.querySelectorAll('.class-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+            document.getElementById('class' + num).classList.add('active');
+            document.querySelectorAll('.nav-tab')[num - 1].classList.add('active');
+            window.scrollTo(0, 0);
+        }
+        
+        // Video Quiz 1
+        function checkVideoQ1(btn, correct) {
+            const btns = btn.parentElement.querySelectorAll('.option-btn');
+            btns.forEach(b => {
+                b.disabled = true;
+                b.classList.remove('correct', 'incorrect');
+            });
+            if (correct) {
+                btn.classList.add('correct');
+            } else {
+                btn.classList.add('incorrect');
+                btns[1].classList.add('correct');
+            }
+        }
+        
+        // Multiple Choice Quiz 1
+        const mcQuestions1 = [
+            { q: "She looked at ___ in the mirror.", options: ["herself", "himself", "myself", "yourself"], answer: 0 },
+            { q: "We introduced ___ to the new teacher.", options: ["themselves", "ourselves", "myself", "yourself"], answer: 1 },
+            { q: "The children dressed ___ for school.", options: ["itself", "ourselves", "themselves", "yourself"], answer: 2 },
+            { q: "I taught ___ to play the piano.", options: ["yourself", "myself", "himself", "herself"], answer: 1 },
+            { q: "He hurt ___ playing football.", options: ["herself", "myself", "himself", "yourself"], answer: 2 }
+        ];
+        
+        function createMCQuiz(containerId, questions) {
+            const container = document.getElementById(containerId);
+            let html = '';
+            let score = 0;
+            
+            questions.forEach((q, i) => {
+                html += `<div class="question" id="${containerId}-q${i}">
+                    <p>${i + 1}. ${q.q}</p>
+                    <div class="options">`;
+                q.options.forEach((opt, j) => {
+                    html += `<button class="option-btn" onclick="checkMC('${containerId}', ${i}, ${j}, ${q.answer})">${opt}</button>`;
+                });
+                html += `</div></div>`;
+            });
+            html += `<div id="${containerId}-score" class="score-display" style="display:none;"></div>`;
+            container.innerHTML = html;
+        }
+        
+        const mcScores = {};
+        function checkMC(quizId, qIndex, selected, correct) {
+            const qDiv = document.getElementById(`${quizId}-q${qIndex}`);
+            const btns = qDiv.querySelectorAll('.option-btn');
+            btns.forEach((b, i) => {
+                b.disabled = true;
+                if (i === correct) b.classList.add('correct');
+                else if (i === selected && i !== correct) b.classList.add('incorrect');
+            });
+            
+            if (!mcScores[quizId]) mcScores[quizId] = { correct: 0, total: 0 };
+            if (selected === correct) mcScores[quizId].correct++;
+            mcScores[quizId].total++;
+            
+            // Check if all answered
+            const allBtns = document.querySelectorAll(`#${quizId} .option-btn`);
+            const allDisabled = Array.from(allBtns).every(b => b.disabled);
+            if (allDisabled) {
+                const scoreDiv = document.getElementById(`${quizId}-score`);
+                scoreDiv.style.display = 'block';
+                scoreDiv.innerHTML = `<h3>Quiz Complete!</h3><div class="score">${mcScores[quizId].correct}/${mcScores[quizId].total}</div>`;
+            }
+        }
+        
+        // Fill in the blanks
+        const fillExercises1 = [
+            { sentence: "Be careful! Don't cut ___.", answer: "yourself" },
+            { sentence: "The baby can feed ___ now.", answer: "itself" },
+            { sentence: "We enjoyed ___ at the concert.", answer: "ourselves" },
+            { sentence: "She bought ___ a new phone.", answer: "herself" },
+            { sentence: "They prepared ___ for the exam.", answer: "themselves" }
+        ];
+        
+        function createFillExercise(containerId, exercises) {
+            const container = document.getElementById(containerId);
+            let html = '';
+            exercises.forEach((ex, i) => {
+                const parts = ex.sentence.split('___');
+                html += `<div class="question">
+                    <p>${i + 1}. ${parts[0]}<input type="text" class="fill-input" id="${containerId}-input${i}" data-answer="${ex.answer}">${parts[1] || ''}</p>
+                </div>`;
+            });
+            html += `<button class="check-btn" onclick="checkFill('${containerId}', ${exercises.length})">Check Answers</button>
+                     <button class="reset-btn" onclick="resetFill('${containerId}', ${exercises.length})">Reset</button>
+                     <div id="${containerId}-feedback" class="feedback" style="display:none;"></div>`;
+            container.innerHTML = html;
+        }
+        
+        function checkFill(containerId, count) {
+            let correct = 0;
+            for (let i = 0; i < count; i++) {
+                const input = document.getElementById(`${containerId}-input${i}`);
+                const answer = input.dataset.answer.toLowerCase();
+                const userAnswer = input.value.trim().toLowerCase();
+                input.classList.remove('correct', 'incorrect');
+                if (userAnswer === answer) {
+                    input.classList.add('correct');
+                    correct++;
+                } else {
+                    input.classList.add('incorrect');
+                }
+            }
+            const feedback = document.getElementById(`${containerId}-feedback`);
+            feedback.style.display = 'block';
+            feedback.className = 'feedback ' + (correct === count ? 'success' : 'error');
+            feedback.textContent = `You got ${correct} out of ${count} correct!` + (correct < count ? ' Try again!' : ' Excellent!');
+        }
+        
+        function resetFill(containerId, count) {
+            for (let i = 0; i < count; i++) {
+                const input = document.getElementById(`${containerId}-input${i}`);
+                input.value = '';
+                input.classList.remove('correct', 'incorrect');
+            }
+            document.getElementById(`${containerId}-feedback`).style.display = 'none';
+        }
+        
+        // Matching Exercise
+        const matchItems1 = [
+            { subject: "I", answer: "myself" },
+            { subject: "You", answer: "yourself" },
+            { subject: "He", answer: "himself" },
+            { subject: "She", answer: "herself" },
+            { subject: "We", answer: "ourselves" },
+            { subject: "They", answer: "themselves" }
+        ];
+        
+        function createMatchExercise(containerId, items) {
+            const container = document.getElementById(containerId);
+            let html = '';
+            items.forEach((item, i) => {
+                html += `<div class="match-row">
+                    <span class="match-subject">${item.subject}</span>
+                    <span class="arrow">→</span>
+                    <div class="drop-zone" id="${containerId}-drop${i}" data-answer="${item.answer}" 
+                         ondrop="dropItem(event, '${containerId}', ${i})" 
+                         ondragover="allowDrop(event)" 
+                         ondragleave="leaveDrop(event)"></div>
+                </div>`;
+            });
+            html += `<button class="check-btn" onclick="checkMatch('${containerId}', ${items.length})">Check Answers</button>
+                     <div id="${containerId}-feedback" class="feedback" style="display:none;"></div>`;
+            container.innerHTML = html;
+        }
+        
+        function allowDrop(ev) {
+            ev.preventDefault();
+            ev.target.classList.add('drag-over');
+        }
+        
+        function leaveDrop(ev) {
+            ev.target.classList.remove('drag-over');
+        }
+        
+        let draggedItem = null;
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.classList.contains('drag-item')) {
+                draggedItem = e.target;
+                e.target.classList.add('dragging');
+            }
+        });
+        
+        document.addEventListener('dragend', function(e) {
+            if (e.target.classList.contains('drag-item')) {
+                e.target.classList.remove('dragging');
+            }
+        });
+        
+        function dropItem(ev, containerId, index) {
+            ev.preventDefault();
+            const dropZone = document.getElementById(`${containerId}-drop${index}`);
+            dropZone.classList.remove('drag-over');
+            
+            if (draggedItem) {
+                // If there's already something in the drop zone, move it back
+                if (dropZone.children.length > 0) {
+                    const existingItem = dropZone.children[0];
+                    document.getElementById('drag-source-1').appendChild(existingItem);
+                }
+                dropZone.appendChild(draggedItem);
+                dropZone.classList.add('filled');
+            }
+        }
+        
+        function checkMatch(containerId, count) {
+            let correct = 0;
+            for (let i = 0; i < count; i++) {
+                const dropZone = document.getElementById(`${containerId}-drop${i}`);
+                dropZone.classList.remove('correct', 'incorrect');
+                const answer = dropZone.dataset.answer;
+                if (dropZone.children.length > 0 && dropZone.children[0].dataset.value === answer) {
+                    dropZone.classList.add('correct');
+                    correct++;
+                } else {
+                    dropZone.classList.add('incorrect');
+                }
+            }
+            const feedback = document.getElementById(`${containerId}-feedback`);
+            feedback.style.display = 'block';
+            feedback.className = 'feedback ' + (correct === count ? 'success' : 'error');
+            feedback.textContent = `You got ${correct} out of ${count} correct!`;
+        }
+        
+        // Reading Quiz
+        const readingQuestions = [
+            { q: "How did Julia spend her Saturday?", options: ["With her friends", "By herself", "With her family"], answer: 1 },
+            { q: "What did Julia teach herself?", options: ["Cooking", "Dance moves", "Playing guitar"], answer: 1 },
+            { q: "How did Julia feel at the end of the day?", options: ["Tired and sad", "Happy with herself", "Bored"], answer: 1 }
+        ];
+        
+        // Listening Fill
+        const listeningFill = [
+            { sentence: "I cleaned the house by ___.", answer: "myself" },
+            { sentence: "Can you do this by ___?", answer: "yourself" },
+            { sentence: "They finished the project by ___.", answer: "themselves" },
+            { sentence: "She made dinner by ___.", answer: "herself" }
+        ];
+        
+        // Race Exercise
+        const raceExercises = [
+            { sentence: "He bought ___ a new car.", answer: "himself" },
+            { sentence: "We helped ___ to some food.", answer: "ourselves" },
+            { sentence: "The dog scratched ___.", answer: "itself" },
+            { sentence: "You should believe in ___.", answer: "yourself" },
+            { sentence: "I promised ___ to study harder.", answer: "myself" },
+            { sentence: "They introduced ___ to the neighbors.", answer: "themselves" }
+        ];
+        
+        // Timer for race
+        let raceTimer;
+        let raceSeconds = 0;
+        
+        function startRaceTimer() {
+            raceTimer = setInterval(() => {
+                raceSeconds++;
+                document.getElementById('timer').textContent = raceSeconds;
+            }, 1000);
+        }
+        
+        function stopRaceTimer() {
+            clearInterval(raceTimer);
+        }
+        
+        // Video Quiz 2
+        const videoQuiz2 = [
+            { q: "What's the difference between 'myself' and 'by myself'?", options: ["There's no difference", "'By myself' means 'alone'", "They are opposite meanings"], answer: 1 },
+            { q: "Which sentence is correct?", options: ["I myself did it", "I did it myself", "Both are correct"], answer: 2 }
+        ];
+        
+        // Practice Fill
+        const practiceFill = [
+            { sentence: "Don't worry, I'll do it by ___.", answer: "myself" },
+            { sentence: "They enjoyed ___ at the party.", answer: "themselves" },
+            { sentence: "Be proud of ___!", answer: "yourself" },
+            { sentence: "The machine turns ___ off automatically.", answer: "itself" },
+            { sentence: "We cooked dinner by ___.", answer: "ourselves" }
+        ];
+        
+        // Assessment
+        const assessmentMC = [
+            { q: "The children behaved ___ very well.", options: ["themselves", "ourselves", "itself"], answer: 0 },
+            { q: "I always talk to ___ when I'm nervous.", options: ["yourself", "myself", "himself"], answer: 1 },
+            { q: "Did you hurt ___?", options: ["himself", "itself", "yourself"], answer: 2 },
+            { q: "She lives by ___ in a small apartment.", options: ["myself", "herself", "themselves"], answer: 1 },
+            { q: "We should be proud of ___.", options: ["ourselves", "themselves", "yourself"], answer: 0 }
+        ];
+        
+        const assessmentFill = [
+            { sentence: "He taught ___ to swim.", answer: "himself" },
+            { sentence: "Did they enjoy ___?", answer: "themselves" },
+            { sentence: "I made this cake by ___.", answer: "myself" },
+            { sentence: "The cat cleaned ___ carefully.", answer: "itself" },
+            { sentence: "You should take care of ___.", answer: "yourself" }
+        ];
+        
+        const assessmentMatch = [
+            { subject: "We cook dinner", answer: "ourselves" },
+            { subject: "She looks at", answer: "herself" },
+            { subject: "They help", answer: "themselves" },
+            { subject: "I believe in", answer: "myself" }
+        ];
+        
+        // Initialize all exercises
+        document.addEventListener('DOMContentLoaded', function() {
+            createMCQuiz('mc-quiz-1', mcQuestions1);
+            createFillExercise('fill-exercise-1', fillExercises1);
+            createMatchExercise('match-exercise-1', matchItems1);
+            createMCQuiz('reading-quiz', readingQuestions);
+            createFillExercise('listening-fill', listeningFill);
+            createFillExercise('race-exercise', raceExercises);
+            createMCQuiz('video-quiz-2', videoQuiz2);
+            createFillExercise('practice-fill', practiceFill);
+            createMCQuiz('assessment-mc', assessmentMC);
+            createFillExercise('assessment-fill', assessmentFill);
+            
+            // Assessment matching with different drag source
+            createAssessmentMatch();
+            
+            // Start timer when user starts typing in race
+            const raceInputs = document.querySelectorAll('#race-exercise input');
+            let timerStarted = false;
+            raceInputs.forEach(input => {
+                input.addEventListener('focus', () => {
+                    if (!timerStarted) {
+                        timerStarted = true;
+                        startRaceTimer();
+                    }
+                });
+            });
+        });
+        
+        function createAssessmentMatch() {
+            const container = document.getElementById('assessment-match');
+            let html = `<div class="drag-container" id="drag-source-assessment">
+                <div class="drag-item" draggable="true" data-value="myself">myself</div>
+                <div class="drag-item" draggable="true" data-value="herself">herself</div>
+                <div class="drag-item" draggable="true" data-value="ourselves">ourselves</div>
+                <div class="drag-item" draggable="true" data-value="themselves">themselves</div>
+            </div>`;
+            
+            assessmentMatch.forEach((item, i) => {
+                html += `<div class="match-row">
+                    <span class="match-subject">${item.subject}</span>
+                    <span class="arrow">→</span>
+                    <div class="drop-zone" id="assessment-match-drop${i}" data-answer="${item.answer}" 
+                         ondrop="dropAssessment(event, ${i})" 
+                         ondragover="allowDrop(event)" 
+                         ondragleave="leaveDrop(event)"></div>
+                </div>`;
+            });
+            html += `<button class="check-btn" onclick="calculateFinalScore()">Submit Final Assessment</button>`;
+            container.innerHTML = html;
+        }
+        
+        function dropAssessment(ev, index) {
+            ev.preventDefault();
+            const dropZone = document.getElementById(`assessment-match-drop${index}`);
+            dropZone.classList.remove('drag-over');
+            
+            if (draggedItem) {
+                if (dropZone.children.length > 0) {
+                    const existingItem = dropZone.children[0];
+                    document.getElementById('drag-source-assessment').appendChild(existingItem);
+                }
+                dropZone.appendChild(draggedItem);
+                dropZone.classList.add('filled');
+            }
+        }
+        
+        function calculateFinalScore() {
+            let totalScore = 0;
+            
+            // MC Score
+            const mcScore = mcScores['assessment-mc'] ? mcScores['assessment-mc'].correct * 2 : 0;
+            totalScore += mcScore;
+            
+            // Fill Score
+            let fillScore = 0;
+            for (let i = 0; i < assessmentFill.length; i++) {
+                const input = document.getElementById(`assessment-fill-input${i}`);
+                if (input && input.value.trim().toLowerCase() === assessmentFill[i].answer.toLowerCase()) {
+                    fillScore += 2;
+                }
+            }
+            totalScore += fillScore;
+            
+            // Match Score
+            let matchScore = 0;
+            for (let i = 0; i < assessmentMatch.length; i++) {
+                const dropZone = document.getElementById(`assessment-match-drop${i}`);
+                if (dropZone.children.length > 0 && dropZone.children[0].dataset.value === assessmentMatch[i].answer) {
+                    matchScore += 2.5;
+                    dropZone.classList.add('correct');
+                } else {
+                    dropZone.classList.add('incorrect');
+                }
+            }
+            totalScore += matchScore;
+            
+            // Update progress
+            document.getElementById('assessment-progress').style.width = '100%';
+            
+            // Show final score
+            const scoreDiv = document.getElementById('final-score');
+            scoreDiv.style.display = 'block';
+            
+            let emoji = totalScore >= 25 ? '🏆' : totalScore >= 20 ? '🌟' : totalScore >= 15 ? '👍' : '📚';
+            let message = totalScore >= 25 ? 'Excellent! You mastered reflexive pronouns!' : 
+                         totalScore >= 20 ? 'Great job! You understand reflexive pronouns well!' :
+                         totalScore >= 15 ? 'Good effort! Keep practicing!' : 'Keep studying! You can do it!';
+            
+            scoreDiv.innerHTML = `<div class="score-display">
+                <h3>${emoji} Final Score ${emoji}</h3>
+                <div class="score">${totalScore}/30</div>
+                <p style="margin-top: 10px; opacity: 0.9;">${message}</p>
+                <p style="margin-top: 5px; font-size: 0.9rem;">MC: ${mcScore}/10 | Fill: ${fillScore}/10 | Match: ${matchScore}/10</p>
+            </div>`;
+        }
+    </script>
+</body>
+</html>

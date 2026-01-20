@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Possessive Pronouns & Whose - English Grammar A2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue-50: #eff6ff;
+            --blue-100: #dbeafe;
+            --blue-200: #bfdbfe;
+            --blue-300: #93c5fd;
+            --blue-400: #60a5fa;
+            --blue-500: #3b82f6;
+            --blue-600: #2563eb;
+            --blue-700: #1d4ed8;
+            --blue-800: #1e40af;
+            --blue-900: #1e3a8a;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --green-500: #22c55e;
+            --green-100: #dcfce7;
+            --red-500: #ef4444;
+            --red-100: #fee2e2;
+            --yellow-500: #eab308;
+            --yellow-100: #fef9c3;
+            --purple-500: #a855f7;
+            --purple-100: #f3e8ff;
+            --orange-500: #f97316;
+            --pink-500: #ec4899;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--blue-50) 0%, var(--blue-100) 100%);
+            min-height: 100vh;
+            color: var(--gray-800);
+            line-height: 1.6;
+        }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+        
+        header {
+            background: linear-gradient(135deg, var(--blue-700) 0%, var(--blue-800) 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
+        }
+        
+        header h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+        
+        .badge {
+            display: inline-block;
+            background: var(--blue-500);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-tab {
+            padding: 12px 24px;
+            background: white;
+            border: 2px solid var(--blue-300);
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--blue-700);
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .nav-tab:hover { background: var(--blue-100); transform: translateY(-2px); }
+        .nav-tab.active { background: var(--blue-600); color: white; border-color: var(--blue-600); }
+        
+        .class-content { display: none; }
+        .class-content.active { display: block; animation: fadeIn 0.4s ease; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--blue-500);
+        }
+        
+        .section h2 {
+            color: var(--blue-800);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h3 { color: var(--blue-700); font-size: 1.2rem; margin: 20px 0 12px 0; }
+        .section p { color: var(--gray-700); margin-bottom: 12px; }
+        
+        .time-badge {
+            background: var(--blue-100);
+            color: var(--blue-700);
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .grammar-table th {
+            background: var(--blue-600);
+            color: white;
+            padding: 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .grammar-table td { padding: 12px 14px; border-bottom: 1px solid var(--gray-200); }
+        .grammar-table tr:nth-child(even) { background: var(--blue-50); }
+        .grammar-table tr:hover { background: var(--blue-100); }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: none;
+        }
+        
+        .exercise-box {
+            background: var(--gray-50);
+            border: 2px solid var(--blue-200);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .exercise-box h4 { color: var(--blue-700); margin-bottom: 15px; font-size: 1.1rem; }
+        
+        .question {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .question p { font-weight: 500; margin-bottom: 12px; }
+        .options { display: grid; gap: 10px; }
+        
+        .option-btn {
+            padding: 12px 16px;
+            background: white;
+            border: 2px solid var(--blue-300);
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+        
+        .option-btn:hover { background: var(--blue-50); border-color: var(--blue-500); }
+        .option-btn.correct { background: var(--green-100); border-color: var(--green-500); color: #166534; }
+        .option-btn.incorrect { background: var(--red-100); border-color: var(--red-500); color: #991b1b; }
+        .option-btn:disabled { cursor: not-allowed; opacity: 0.8; }
+        
+        .fill-input {
+            padding: 8px 14px;
+            border: 2px solid var(--blue-300);
+            border-radius: 8px;
+            font-size: 1rem;
+            width: 140px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        
+        .fill-input:focus { outline: none; border-color: var(--blue-500); box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); }
+        .fill-input.correct { background: var(--green-100); border-color: var(--green-500); }
+        .fill-input.incorrect { background: var(--red-100); border-color: var(--red-500); }
+        
+        .check-btn {
+            background: var(--blue-600);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            margin-top: 15px;
+        }
+        
+        .check-btn:hover { background: var(--blue-700); transform: translateY(-2px); }
+        
+        .reset-btn {
+            background: var(--gray-200);
+            color: var(--gray-700);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+        
+        .reset-btn:hover { background: var(--gray-300); }
+        
+        .feedback {
+            padding: 12px 16px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+        
+        .feedback.success { background: var(--green-100); color: #166534; border: 1px solid var(--green-500); }
+        .feedback.error { background: var(--red-100); color: #991b1b; border: 1px solid var(--red-500); }
+        
+        .score-display {
+            background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-700) 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .score-display h3 { color: white; font-size: 1.3rem; margin-bottom: 5px; }
+        .score-display .score { font-size: 2.5rem; font-weight: 700; }
+        
+        .drag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+            min-height: 50px;
+            padding: 15px;
+            background: var(--gray-100);
+            border-radius: 10px;
+            border: 2px dashed var(--blue-300);
+        }
+        
+        .drag-item {
+            padding: 10px 16px;
+            background: var(--blue-500);
+            color: white;
+            border-radius: 8px;
+            cursor: grab;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+        
+        .drag-item:hover { background: var(--blue-600); transform: scale(1.05); }
+        .drag-item.dragging { opacity: 0.5; }
+        
+        .drop-zone {
+            min-width: 120px;
+            min-height: 44px;
+            padding: 10px;
+            background: white;
+            border: 2px dashed var(--blue-400);
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            transition: all 0.2s ease;
+        }
+        
+        .drop-zone.drag-over { background: var(--blue-100); border-color: var(--blue-600); }
+        .drop-zone.filled { border-style: solid; background: var(--blue-100); }
+        .drop-zone.correct { background: var(--green-100); border-color: var(--green-500); }
+        .drop-zone.incorrect { background: var(--red-100); border-color: var(--red-500); }
+        
+        .match-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            padding: 12px;
+            background: white;
+            border-radius: 10px;
+        }
+        
+        .match-subject { font-weight: 600; min-width: 100px; color: var(--blue-800); }
+        .arrow { color: var(--blue-400); font-size: 1.2rem; }
+        
+        .example-box {
+            background: linear-gradient(135deg, var(--blue-50) 0%, var(--blue-100) 100%);
+            border-left: 4px solid var(--blue-500);
+            padding: 15px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 15px 0;
+        }
+        
+        .example-box strong { color: var(--blue-700); }
+        
+        .tip-box {
+            background: var(--yellow-100);
+            border-left: 4px solid var(--yellow-500);
+            padding: 15px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 15px 0;
+        }
+        
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .color-card {
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+        
+        .color-card:hover { transform: scale(1.05); }
+        
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .material-card {
+            padding: 15px;
+            background: var(--gray-100);
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid var(--gray-200);
+        }
+        
+        .material-card .emoji { font-size: 2rem; display: block; margin-bottom: 8px; }
+        
+        .vocab-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .vocab-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 15px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .vocab-item .icon { font-size: 1.5rem; }
+        
+        .emoji { font-size: 1.3rem; }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.6rem; }
+            .nav-tab { padding: 10px 16px; font-size: 0.9rem; }
+            .section { padding: 18px; }
+            .match-row { flex-direction: column; align-items: flex-start; }
+            .color-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📦 Possessive Pronouns & Whose</h1>
+        <p>Interactive Course for A2 Level English Students</p>
+        <span class="badge">2 Classes • 100 min each</span>
+    </header>
+    
+    <div class="container">
+        <nav class="nav-tabs">
+            <button class="nav-tab active" onclick="showClass(1)">📚 Class 1: Possessives & Colors</button>
+            <button class="nav-tab" onclick="showClass(2)">❓ Class 2: Whose & Belonging</button>
+        </nav>
+        
+        <!-- CLASS 1 -->
+        <div id="class1" class="class-content active">
+            <div class="section">
+                <h2><span class="emoji">👋</span> Warm-Up: School Objects <span class="time-badge">0-10 min</span></h2>
+                <p>Look at these common school and personal objects. Say: "This is my ___"</p>
+                <div class="vocab-list">
+                    <div class="vocab-item"><span class="icon">✏️</span> pencil</div>
+                    <div class="vocab-item"><span class="icon">🖊️</span> pen</div>
+                    <div class="vocab-item"><span class="icon">📓</span> notebook</div>
+                    <div class="vocab-item"><span class="icon">📚</span> book</div>
+                    <div class="vocab-item"><span class="icon">🎒</span> backpack</div>
+                    <div class="vocab-item"><span class="icon">📱</span> phone</div>
+                    <div class="vocab-item"><span class="icon">📏</span> ruler</div>
+                    <div class="vocab-item"><span class="icon">✂️</span> scissors</div>
+                    <div class="vocab-item"><span class="icon">🧴</span> eraser</div>
+                    <div class="vocab-item"><span class="icon">💼</span> pencil case</div>
+                </div>
+                <div class="example-box">
+                    <p>Practice saying: <strong>"This is my pen. This is my notebook. This is my backpack."</strong></p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📖</span> Possessive Pronouns <span class="time-badge">10-25 min</span></h2>
+                <h3>What are Possessive Pronouns?</h3>
+                <p>Possessive pronouns <strong>replace</strong> a noun. They show who owns something <strong>without repeating the noun</strong>.</p>
+                
+                <div class="example-box">
+                    <p><strong>With possessive adjective:</strong> This is <strong>my</strong> book.</p>
+                    <p><strong>With possessive pronoun:</strong> This book is <strong>mine</strong>. (We don't repeat "book")</p>
+                </div>
+                
+                <h3>Possessive Adjectives vs Possessive Pronouns</h3>
+                <table class="grammar-table">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Possessive Adjective</th>
+                            <th>Possessive Pronoun</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>I</td><td>my</td><td><strong>mine</strong></td><td>This pen is mine.</td></tr>
+                        <tr><td>You</td><td>your</td><td><strong>yours</strong></td><td>Is this book yours?</td></tr>
+                        <tr><td>He</td><td>his</td><td><strong>his</strong></td><td>The backpack is his.</td></tr>
+                        <tr><td>She</td><td>her</td><td><strong>hers</strong></td><td>That phone is hers.</td></tr>
+                        <tr><td>It</td><td>its</td><td><strong>its</strong></td><td>(rarely used)</td></tr>
+                        <tr><td>We</td><td>our</td><td><strong>ours</strong></td><td>This classroom is ours.</td></tr>
+                        <tr><td>They</td><td>their</td><td><strong>theirs</strong></td><td>Those books are theirs.</td></tr>
+                    </tbody>
+                </table>
+                
+                <div class="tip-box">
+                    <p><strong>💡 Remember:</strong> Possessive pronouns NEVER use an apostrophe! It's "yours" not "your's"!</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">✏️</span> Practice: Possessive Pronouns <span class="time-badge">25-40 min</span></h2>
+                <div class="exercise-box">
+                    <h4>Choose the correct possessive pronoun:</h4>
+                    <div id="mc-quiz-1"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">👤</span> Genitive 's (Possessive 's) <span class="time-badge">40-55 min</span></h2>
+                <h3>Using 's to Show Possession</h3>
+                <p>We add <strong>'s</strong> to a person's name to show they own something.</p>
+                
+                <div class="example-box">
+                    <p><strong>Maria's</strong> pencil = The pencil belongs to Maria</p>
+                    <p><strong>John's</strong> backpack = The backpack belongs to John</p>
+                    <p><strong>The teacher's</strong> book = The book belongs to the teacher</p>
+                </div>
+                
+                <h3>Structure</h3>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Owner</th><th>+ 's</th><th>+ Object</th><th>Full Phrase</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Carlos</td><td>'s</td><td>phone</td><td>Carlos's phone</td></tr>
+                        <tr><td>Ana</td><td>'s</td><td>notebook</td><td>Ana's notebook</td></tr>
+                        <tr><td>My friend</td><td>'s</td><td>pen</td><td>My friend's pen</td></tr>
+                        <tr><td>The student</td><td>'s</td><td>book</td><td>The student's book</td></tr>
+                    </tbody>
+                </table>
+                
+                <div class="exercise-box">
+                    <h4>Fill in with the correct possessive form:</h4>
+                    <div id="genitive-fill"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🎬</span> Watch & Learn <span class="time-badge">55-70 min</span></h2>
+                <p>Watch this video about possessive 's and "whose":</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/O7mbInwY1Dc" allowfullscreen></iframe>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>📝 After watching, complete these sentences:</h4>
+                    <div id="video-exercise"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🎨</span> Colors Vocabulary <span class="time-badge">70-80 min</span></h2>
+                <p>Learn the colors in English:</p>
+                <div class="color-grid">
+                    <div class="color-card" style="background: #ef4444;">RED</div>
+                    <div class="color-card" style="background: #3b82f6;">BLUE</div>
+                    <div class="color-card" style="background: #eab308;">YELLOW</div>
+                    <div class="color-card" style="background: #22c55e;">GREEN</div>
+                    <div class="color-card" style="background: #000000;">BLACK</div>
+                    <div class="color-card" style="background: #ffffff; color: #333; border: 2px solid #ddd;">WHITE</div>
+                    <div class="color-card" style="background: #92400e;">BROWN</div>
+                    <div class="color-card" style="background: #ec4899;">PINK</div>
+                    <div class="color-card" style="background: #a855f7;">PURPLE</div>
+                    <div class="color-card" style="background: #f97316;">ORANGE</div>
+                    <div class="color-card" style="background: #6b7280;">GRAY</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🔧</span> Materials Vocabulary <span class="time-badge">80-85 min</span></h2>
+                <p>Common materials for describing objects:</p>
+                <div class="material-grid">
+                    <div class="material-card"><span class="emoji">🪵</span> WOOD (wooden)</div>
+                    <div class="material-card"><span class="emoji">🔩</span> METAL</div>
+                    <div class="material-card"><span class="emoji">🧴</span> PLASTIC</div>
+                    <div class="material-card"><span class="emoji">🪟</span> GLASS</div>
+                    <div class="material-card"><span class="emoji">👕</span> FABRIC / CLOTH</div>
+                    <div class="material-card"><span class="emoji">📄</span> PAPER</div>
+                    <div class="material-card"><span class="emoji">🧱</span> RUBBER</div>
+                    <div class="material-card"><span class="emoji">🪨</span> LEATHER</div>
+                </div>
+                
+                <div class="example-box">
+                    <p><strong>Examples:</strong></p>
+                    <p>"My pen is <strong>blue</strong> and made of <strong>plastic</strong>."</p>
+                    <p>"Maria's ruler is <strong>wooden</strong> and <strong>brown</strong>."</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🎯</span> Colors & Materials Quiz <span class="time-badge">85-95 min</span></h2>
+                <div class="exercise-box">
+                    <h4>Match the object with its typical color and material:</h4>
+                    <div id="color-material-quiz"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📋</span> Exit Ticket <span class="time-badge">95-100 min</span></h2>
+                <p>Write one sentence describing your favorite school object:</p>
+                <div class="example-box">
+                    <p><strong>Template:</strong> "My favorite school object is my ___ because it is ___ (color) and it's ___ (owner)'s."</p>
+                    <p><strong>Example:</strong> "My favorite school object is my <strong>pencil case</strong> because it is <strong>blue</strong> and made of <strong>plastic</strong>. It's <strong>mine</strong>!"</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CLASS 2 -->
+        <div id="class2" class="class-content">
+            <div class="section">
+                <h2><span class="emoji">🔄</span> Warm-Up Review <span class="time-badge">0-10 min</span></h2>
+                <p>Let's review possessive pronouns and colors before learning "whose":</p>
+                <div class="exercise-box">
+                    <h4>Quick Review Quiz:</h4>
+                    <div id="review-quiz"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">❓</span> Questions with WHOSE <span class="time-badge">10-30 min</span></h2>
+                <h3>What is "Whose"?</h3>
+                <p><strong>Whose</strong> is a question word we use to ask about <strong>ownership</strong> - who something belongs to.</p>
+                
+                <div class="example-box">
+                    <p><strong>Whose + noun + verb...?</strong></p>
+                    <p>"<strong>Whose</strong> book <strong>is</strong> this?" → "It's Maria's." / "It's mine."</p>
+                    <p>"<strong>Whose</strong> pencils <strong>are</strong> these?" → "They're John's." / "They're his."</p>
+                </div>
+                
+                <h3>Two Ways to Use "Whose"</h3>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Structure</th><th>Example Question</th><th>Example Answer</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Whose + noun</strong></td>
+                            <td>Whose backpack is this?</td>
+                            <td>It's Ana's. / It's hers.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Whose + noun</strong></td>
+                            <td>Whose books are those?</td>
+                            <td>They're Pedro's. / They're his.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Whose (alone)</strong></td>
+                            <td>Whose is this pen?</td>
+                            <td>It's mine.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Whose (alone)</strong></td>
+                            <td>Whose are these?</td>
+                            <td>They're ours.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="tip-box">
+                    <p><strong>💡 Don't confuse:</strong></p>
+                    <p><strong>Whose</strong> = asks about ownership (¿De quién?)</p>
+                    <p><strong>Who's</strong> = who is (¿Quién es?)</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">✏️</span> Practice: Whose Questions <span class="time-badge">30-50 min</span></h2>
+                <div class="exercise-box">
+                    <h4>Write the correct "Whose" question for each answer:</h4>
+                    <div id="whose-practice"></div>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>Choose the correct answer to each "Whose" question:</h4>
+                    <div id="whose-mc"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🔗</span> Phrases for Belonging <span class="time-badge">50-65 min</span></h2>
+                <h3>Different Ways to Show Possession</h3>
+                
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Method</th><th>Example</th><th>Meaning</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>'s (Genitive)</strong></td>
+                            <td>This is <strong>Maria's</strong> pen.</td>
+                            <td>The pen belongs to Maria.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Possessive Pronoun</strong></td>
+                            <td>This pen is <strong>hers</strong>.</td>
+                            <td>The pen belongs to her.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>belong to</strong></td>
+                            <td>This pen <strong>belongs to</strong> Maria.</td>
+                            <td>Maria owns the pen.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>of + noun</strong></td>
+                            <td>The pen <strong>of</strong> Maria (less common)</td>
+                            <td>Maria's pen</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="example-box">
+                    <p><strong>"Belong to" structure:</strong></p>
+                    <p>Subject + <strong>belong(s) to</strong> + owner</p>
+                    <p>"This book <strong>belongs to</strong> Carlos."</p>
+                    <p>"These pencils <strong>belong to</strong> my sister."</p>
+                    <p>"Does this phone <strong>belong to</strong> you?"</p>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>Rewrite using "belong to":</h4>
+                    <div id="belong-exercise"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🎮</span> Interactive Game: Find the Owner <span class="time-badge">65-80 min</span></h2>
+                <p>Read the descriptions and match each object to its owner:</p>
+                <div class="exercise-box">
+                    <h4>🔍 Detective Challenge:</h4>
+                    <div class="example-box">
+                        <p><strong>Clues:</strong></p>
+                        <p>• Ana has a <strong>pink</strong> pencil case made of <strong>plastic</strong>.</p>
+                        <p>• Carlos has a <strong>black</strong> backpack made of <strong>fabric</strong>.</p>
+                        <p>• Sofia has a <strong>wooden</strong> ruler that is <strong>brown</strong>.</p>
+                        <p>• Pedro has a <strong>blue</strong> notebook with a <strong>metal</strong> spiral.</p>
+                    </div>
+                    <div id="detective-game"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">💬</span> Speaking Practice <span class="time-badge">80-90 min</span></h2>
+                <p>Practice asking and answering questions about ownership:</p>
+                <div class="example-box">
+                    <p><strong>Ask these questions out loud:</strong></p>
+                    <p>🎤 "Whose phone is on the table?"</p>
+                    <p>🎤 "Whose backpack is blue?"</p>
+                    <p>🎤 "Does this notebook belong to you?"</p>
+                    <p>🎤 "Whose pencil is this? Is it yours or mine?"</p>
+                    <p>🎤 "Who does this eraser belong to?"</p>
+                </div>
+                <p><strong>Now create 5 of your own "Whose" questions about objects in your classroom!</strong></p>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🏆</span> FINAL ASSESSMENT <span class="time-badge">90-98 min</span></h2>
+                <div class="exercise-box">
+                    <h4>Part 1: Multiple Choice (10 points)</h4>
+                    <div id="final-mc"></div>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>Part 2: Fill in the Blanks (10 points)</h4>
+                    <div id="final-fill"></div>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>Part 3: Match the Question with the Answer (10 points)</h4>
+                    <div id="final-match"></div>
+                </div>
+                
+                <div id="final-score" style="display: none;"></div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📓</span> Exit Reflection <span class="time-badge">98-100 min</span></h2>
+                <p>Write in your notebook:</p>
+                <div class="example-box">
+                    <p>📌 One sentence with "<strong>whose</strong>" as a question</p>
+                    <p>📌 One sentence with "<strong>belong to</strong>"</p>
+                    <p><strong>Example:</strong></p>
+                    <p>"<strong>Whose</strong> ruler is this? It <strong>belongs to</strong> my classmate Ana."</p>
+                </div>
+                <p><strong>🎉 Congratulations on completing the course!</strong></p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Possessive Pronouns & Whose Course • English Grammar A2 • Colegio San Ángel</p>
+    </footer>
+
+    <script>
+        // Navigation
+        function showClass(num) {
+            document.querySelectorAll('.class-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+            document.getElementById('class' + num).classList.add('active');
+            document.querySelectorAll('.nav-tab')[num - 1].classList.add('active');
+            window.scrollTo(0, 0);
+        }
+        
+        // Quiz Data
+        const mcQuiz1 = [
+            { q: "This pen is not yours. It's ___.", options: ["my", "mine", "me"], answer: 1 },
+            { q: "Is this backpack ___? - Yes, it's my backpack.", options: ["your", "yours", "you"], answer: 1 },
+            { q: "That's not her phone. ___ is black.", options: ["Her", "Hers", "She"], answer: 1 },
+            { q: "The blue notebook is ___. (belonging to him)", options: ["him", "he's", "his"], answer: 2 },
+            { q: "These books are not ours. They're ___. (belonging to them)", options: ["their", "theirs", "them"], answer: 1 }
+        ];
+        
+        const genitiveFill = [
+            { sentence: "This is ___ pencil. (Maria)", answer: "Maria's" },
+            { sentence: "___ backpack is very heavy. (Carlos)", answer: "Carlos's" },
+            { sentence: "I like ___ new phone. (my friend)", answer: "my friend's" },
+            { sentence: "___ book is on the table. (The teacher)", answer: "The teacher's" },
+            { sentence: "Is this ___ ruler? (Ana)", answer: "Ana's" }
+        ];
+        
+        const videoExercise = [
+            { sentence: "This is ___'s notebook. (Pedro)", answer: "Pedro's" },
+            { sentence: "The red pen is ___. (belonging to her)", answer: "hers" },
+            { sentence: "___ pencil case is this? (question word)", answer: "Whose" },
+            { sentence: "These erasers belong ___ my sister.", answer: "to" }
+        ];
+        
+        const colorMaterialQuiz = [
+            { q: "A typical pencil is ___ and made of ___.", options: ["yellow / wood", "blue / metal", "white / plastic"], answer: 0 },
+            { q: "A typical eraser is ___ and made of ___.", options: ["brown / wood", "pink / rubber", "green / glass"], answer: 1 },
+            { q: "A typical ruler can be ___ and made of ___.", options: ["purple / fabric", "transparent / plastic", "orange / paper"], answer: 1 },
+            { q: "A notebook usually has a ___ cover and ___ pages.", options: ["colorful / paper", "metal / plastic", "wooden / fabric"], answer: 0 }
+        ];
+        
+        const reviewQuiz = [
+            { q: "The possessive pronoun for 'I' is ___.", options: ["my", "mine", "me"], answer: 1 },
+            { q: "What color is the sky?", options: ["Green", "Blue", "Red"], answer: 1 },
+            { q: "A table is usually made of ___.", options: ["fabric", "glass", "wood"], answer: 2 }
+        ];
+        
+        const whosePractice = [
+            { sentence: "___ book is this? - It's mine.", answer: "Whose" },
+            { sentence: "___ pencils are these? - They're Maria's.", answer: "Whose" },
+            { sentence: "___ is this backpack? - It's Carlos's.", answer: "Whose" }
+        ];
+        
+        const whoseMC = [
+            { q: "Whose phone is this?", options: ["It's red.", "It's Ana's.", "It's on the table."], answer: 1 },
+            { q: "Whose books are those?", options: ["They're interesting.", "There are five.", "They're ours."], answer: 2 },
+            { q: "Whose is this pen?", options: ["It's blue.", "It's mine.", "It's here."], answer: 1 }
+        ];
+        
+        const belongExercise = [
+            { sentence: "This is Pedro's notebook. → This notebook ___ Pedro.", answer: "belongs to" },
+            { sentence: "That's her phone. → That phone ___ her.", answer: "belongs to" },
+            { sentence: "These are Carlos's books. → These books ___ Carlos.", answer: "belong to" }
+        ];
+        
+        const detectiveGame = [
+            { q: "Whose is the pink plastic pencil case?", options: ["Carlos's", "Ana's", "Sofia's", "Pedro's"], answer: 1 },
+            { q: "The black fabric backpack belongs to ___.", options: ["Ana", "Sofia", "Carlos", "Pedro"], answer: 2 },
+            { q: "Whose is the brown wooden ruler?", options: ["Pedro's", "Carlos's", "Ana's", "Sofia's"], answer: 3 },
+            { q: "The blue notebook with metal spiral is ___.", options: ["Ana's", "Sofia's", "Carlos's", "Pedro's"], answer: 3 }
+        ];
+        
+        const finalMC = [
+            { q: "___ backpack is on the floor?", options: ["Who's", "Whose", "Who"], answer: 1 },
+            { q: "This ruler isn't mine. It's ___.", options: ["her", "hers", "she"], answer: 1 },
+            { q: "These pencils ___ to my brother.", options: ["belong", "belongs", "belonging"], answer: 0 },
+            { q: "Is this ___ phone? (you)", options: ["yours", "your", "you're"], answer: 1 },
+            { q: "___ notebook is this? It's Sofia's.", options: ["Who", "Who's", "Whose"], answer: 2 }
+        ];
+        
+        const finalFill = [
+            { sentence: "This is ___'s pencil case. (Ana)", answer: "Ana's" },
+            { sentence: "___ books are these? (question)", answer: "Whose" },
+            { sentence: "The phone belongs ___ Carlos.", answer: "to" },
+            { sentence: "That backpack isn't mine. It's ___. (belonging to him)", answer: "his" },
+            { sentence: "Is this ruler ___? (belonging to you)", answer: "yours" }
+        ];
+        
+        const finalMatch = [
+            { subject: "Whose pen is this?", answer: "mine" },
+            { subject: "Whose books are those?", answer: "theirs" },
+            { subject: "Whose backpack is blue?", answer: "hers" }
+        ];
+        
+        // Helper functions
+        function createMCQuiz(containerId, questions) {
+            const container = document.getElementById(containerId);
+            let html = '';
+            questions.forEach((q, i) => {
+                html += `<div class="question" id="${containerId}-q${i}">
+                    <p>${i + 1}. ${q.q}</p>
+                    <div class="options">`;
+                q.options.forEach((opt, j) => {
+                    html += `<button class="option-btn" onclick="checkMC('${containerId}', ${i}, ${j}, ${q.answer})">${opt}</button>`;
+                });
+                html += `</div></div>`;
+            });
+            html += `<div id="${containerId}-score" class="score-display" style="display:none;"></div>`;
+            container.innerHTML = html;
+        }
+        
+        const mcScores = {};
+        function checkMC(quizId, qIndex, selected, correct) {
+            const qDiv = document.getElementById(`${quizId}-q${qIndex}`);
+            const btns = qDiv.querySelectorAll('.option-btn');
+            btns.forEach((b, i) => {
+                b.disabled = true;
+                if (i === correct) b.classList.add('correct');
+                else if (i === selected && i !== correct) b.classList.add('incorrect');
+            });
+            
+            if (!mcScores[quizId]) mcScores[quizId] = { correct: 0, total: 0 };
+            if (selected === correct) mcScores[quizId].correct++;
+            mcScores[quizId].total++;
+            
+            const allQuestions = document.querySelectorAll(`#${quizId} .question`);
+            const answeredQuestions = document.querySelectorAll(`#${quizId} .option-btn:disabled`);
+            if (answeredQuestions.length >= allQuestions.length * 3) {
+                const scoreDiv = document.getElementById(`${quizId}-score`);
+                scoreDiv.style.display = 'block';
+                scoreDiv.innerHTML = `<h3>Quiz Complete!</h3><div class="score">${mcScores[quizId].correct}/${mcScores[quizId].total}</div>`;
+            }
+        }
+        
+        function createFillExercise(containerId, exercises) {
+            const container = document.getElementById(containerId);
+            let html = '';
+            exercises.forEach((ex, i) => {
+                const parts = ex.sentence.split('___');
+                html += `<div class="question">
+                    <p>${i + 1}. ${parts[0]}<input type="text" class="fill-input" id="${containerId}-input${i}" data-answer="${ex.answer}">${parts[1] || ''}</p>
+                </div>`;
+            });
+            html += `<button class="check-btn" onclick="checkFill('${containerId}', ${exercises.length})">Check Answers</button>
+                     <button class="reset-btn" onclick="resetFill('${containerId}', ${exercises.length})">Reset</button>
+                     <div id="${containerId}-feedback" class="feedback" style="display:none;"></div>`;
+            container.innerHTML = html;
+        }
+        
+        function checkFill(containerId, count) {
+            let correct = 0;
+            for (let i = 0; i < count; i++) {
+                const input = document.getElementById(`${containerId}-input${i}`);
+                const answer = input.dataset.answer.toLowerCase().trim();
+                const userAnswer = input.value.trim().toLowerCase();
+                input.classList.remove('correct', 'incorrect');
+                if (userAnswer === answer) {
+                    input.classList.add('correct');
+                    correct++;
+                } else {
+                    input.classList.add('incorrect');
+                }
+            }
+            const feedback = document.getElementById(`${containerId}-feedback`);
+            feedback.style.display = 'block';
+            feedback.className = 'feedback ' + (correct === count ? 'success' : 'error');
+            feedback.textContent = `You got ${correct} out of ${count} correct!` + (correct < count ? ' Try again!' : ' Excellent!');
+        }
+        
+        function resetFill(containerId, count) {
+            for (let i = 0; i < count; i++) {
+                const input = document.getElementById(`${containerId}-input${i}`);
+                input.value = '';
+                input.classList.remove('correct', 'incorrect');
+            }
+            document.getElementById(`${containerId}-feedback`).style.display = 'none';
+        }
+        
+        // Drag and drop
+        let draggedItem = null;
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.classList.contains('drag-item')) {
+                draggedItem = e.target;
+                e.target.classList.add('dragging');
+            }
+        });
+        
+        document.addEventListener('dragend', function(e) {
+            if (e.target.classList.contains('drag-item')) {
+                e.target.classList.remove('dragging');
+            }
+        });
+        
+        function allowDrop(ev) {
+            ev.preventDefault();
+            ev.target.classList.add('drag-over');
+        }
+        
+        function leaveDrop(ev) {
+            ev.target.classList.remove('drag-over');
+        }
+        
+        function createMatchExercise(containerId, items, sourceId) {
+            const container = document.getElementById(containerId);
+            let html = `<div class="drag-container" id="${sourceId}">
+                <div class="drag-item" draggable="true" data-value="mine">It's mine.</div>
+                <div class="drag-item" draggable="true" data-value="theirs">They're theirs.</div>
+                <div class="drag-item" draggable="true" data-value="hers">It's hers.</div>
+            </div>`;
+            
+            items.forEach((item, i) => {
+                html += `<div class="match-row">
+                    <span class="match-subject">${item.subject}</span>
+                    <span class="arrow">→</span>
+                    <div class="drop-zone" id="${containerId}-drop${i}" data-answer="${item.answer}" 
+                         ondrop="dropMatch(event, '${containerId}', ${i}, '${sourceId}')" 
+                         ondragover="allowDrop(event)" 
+                         ondragleave="leaveDrop(event)"></div>
+                </div>`;
+            });
+            html += `<button class="check-btn" onclick="checkMatch('${containerId}', ${items.length})">Check Answers</button>
+                     <div id="${containerId}-feedback" class="feedback" style="display:none;"></div>`;
+            container.innerHTML = html;
+        }
+        
+        function dropMatch(ev, containerId, index, sourceId) {
+            ev.preventDefault();
+            const dropZone = document.getElementById(`${containerId}-drop${index}`);
+            dropZone.classList.remove('drag-over');
+            
+            if (draggedItem) {
+                if (dropZone.children.length > 0) {
+                    const existingItem = dropZone.children[0];
+                    document.getElementById(sourceId).appendChild(existingItem);
+                }
+                dropZone.appendChild(draggedItem);
+                dropZone.classList.add('filled');
+            }
+        }
+        
+        function checkMatch(containerId, count) {
+            let correct = 0;
+            for (let i = 0; i < count; i++) {
+                const dropZone = document.getElementById(`${containerId}-drop${i}`);
+                dropZone.classList.remove('correct', 'incorrect');
+                const answer = dropZone.dataset.answer;
+                if (dropZone.children.length > 0 && dropZone.children[0].dataset.value === answer) {
+                    dropZone.classList.add('correct');
+                    correct++;
+                } else {
+                    dropZone.classList.add('incorrect');
+                }
+            }
+            const feedback = document.getElementById(`${containerId}-feedback`);
+            feedback.style.display = 'block';
+            feedback.className = 'feedback ' + (correct === count ? 'success' : 'error');
+            feedback.textContent = `You got ${correct} out of ${count} correct!`;
+        }
+        
+        function calculateFinalScore() {
+            let totalScore = 0;
+            const mcScore = mcScores['final-mc'] ? mcScores['final-mc'].correct * 2 : 0;
+            totalScore += mcScore;
+            
+            let fillScore = 0;
+            for (let i = 0; i < finalFill.length; i++) {
+                const input = document.getElementById(`final-fill-input${i}`);
+                if (input && input.value.trim().toLowerCase() === finalFill[i].answer.toLowerCase()) {
+                    fillScore += 2;
+                }
+            }
+            totalScore += fillScore;
+            
+            let matchScore = 0;
+            for (let i = 0; i < finalMatch.length; i++) {
+                const dropZone = document.getElementById(`final-match-drop${i}`);
+                if (dropZone && dropZone.children.length > 0 && dropZone.children[0].dataset.value === finalMatch[i].answer) {
+                    matchScore += 3.33;
+                    dropZone.classList.add('correct');
+                } else if (dropZone) {
+                    dropZone.classList.add('incorrect');
+                }
+            }
+            totalScore += Math.round(matchScore);
+            
+            const scoreDiv = document.getElementById('final-score');
+            scoreDiv.style.display = 'block';
+            
+            let emoji = totalScore >= 25 ? '🏆' : totalScore >= 20 ? '🌟' : totalScore >= 15 ? '👍' : '📚';
+            let message = totalScore >= 25 ? 'Excellent! You mastered possessives!' : 
+                         totalScore >= 20 ? 'Great job! Keep practicing!' :
+                         totalScore >= 15 ? 'Good effort! Review the materials!' : 'Keep studying! You can do it!';
+            
+            scoreDiv.innerHTML = `<div class="score-display">
+                <h3>${emoji} Final Score ${emoji}</h3>
+                <div class="score">${totalScore}/30</div>
+                <p style="margin-top: 10px; opacity: 0.9;">${message}</p>
+            </div>`;
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            createMCQuiz('mc-quiz-1', mcQuiz1);
+            createFillExercise('genitive-fill', genitiveFill);
+            createFillExercise('video-exercise', videoExercise);
+            createMCQuiz('color-material-quiz', colorMaterialQuiz);
+            createMCQuiz('review-quiz', reviewQuiz);
+            createFillExercise('whose-practice', whosePractice);
+            createMCQuiz('whose-mc', whoseMC);
+            createFillExercise('belong-exercise', belongExercise);
+            createMCQuiz('detective-game', detectiveGame);
+            createMCQuiz('final-mc', finalMC);
+            createFillExercise('final-fill', finalFill);
+            createMatchExercise('final-match', finalMatch, 'final-match-source');
+            
+            // Add submit button for final assessment
+            const finalMatchDiv = document.getElementById('final-match');
+            const submitBtn = document.createElement('button');
+            submitBtn.className = 'check-btn';
+            submitBtn.textContent = 'Submit Final Assessment';
+            submitBtn.onclick = calculateFinalScore;
+            submitBtn.style.marginTop = '20px';
+            finalMatchDiv.parentNode.appendChild(submitBtn);
+        });
+    </script>
+</body>
+</html>

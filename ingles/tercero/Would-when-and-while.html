@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Would, When & While - English Grammar A2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue-50: #eff6ff;
+            --blue-100: #dbeafe;
+            --blue-200: #bfdbfe;
+            --blue-300: #93c5fd;
+            --blue-400: #60a5fa;
+            --blue-500: #3b82f6;
+            --blue-600: #2563eb;
+            --blue-700: #1d4ed8;
+            --blue-800: #1e40af;
+            --blue-900: #1e3a8a;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --green-500: #22c55e;
+            --green-100: #dcfce7;
+            --red-500: #ef4444;
+            --red-100: #fee2e2;
+            --yellow-500: #eab308;
+            --yellow-100: #fef9c3;
+            --purple-500: #a855f7;
+            --purple-100: #f3e8ff;
+            --orange-500: #f97316;
+            --pink-500: #ec4899;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--blue-50) 0%, var(--blue-100) 100%);
+            min-height: 100vh;
+            color: var(--gray-800);
+            line-height: 1.6;
+        }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+        
+        header {
+            background: linear-gradient(135deg, var(--blue-700) 0%, var(--blue-800) 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
+        }
+        
+        header h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+        
+        .badge {
+            display: inline-block;
+            background: var(--blue-500);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-tab {
+            padding: 12px 24px;
+            background: white;
+            border: 2px solid var(--blue-300);
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--blue-700);
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .nav-tab:hover { background: var(--blue-100); transform: translateY(-2px); }
+        .nav-tab.active { background: var(--blue-600); color: white; border-color: var(--blue-600); }
+        
+        .class-content { display: none; }
+        .class-content.active { display: block; animation: fadeIn 0.4s ease; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--blue-500);
+        }
+        
+        .section.purple-border { border-left-color: var(--purple-500); }
+        .section.orange-border { border-left-color: var(--orange-500); }
+        .section.green-border { border-left-color: var(--green-500); }
+        
+        .section h2 {
+            color: var(--blue-800);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h3 { color: var(--blue-700); font-size: 1.2rem; margin: 20px 0 12px 0; }
+        .section p { color: var(--gray-700); margin-bottom: 12px; }
+        
+        .time-badge {
+            background: var(--blue-100);
+            color: var(--blue-700);
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .grammar-table th {
+            background: var(--blue-600);
+            color: white;
+            padding: 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .grammar-table td { padding: 12px 14px; border-bottom: 1px solid var(--gray-200); }
+        .grammar-table tr:nth-child(even) { background: var(--blue-50); }
+        .grammar-table tr:hover { background: var(--blue-100); }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: none;
+        }
+        
+        .exercise-box {
+            background: var(--gray-50);
+            border: 2px solid var(--blue-200);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .exercise-box h4 { color: var(--blue-700); margin-bottom: 15px; font-size: 1.1rem; }
+        
+        .question {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .question p { font-weight: 500; margin-bottom: 12px; }
+        .options { display: grid; gap: 10px; }
+        
+        .option-btn {
+            padding: 12px 16px;
+            background: white;
+            border: 2px solid var(--blue-300);
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+        
+        .option-btn:hover { background: var(--blue-50); border-color: var(--blue-500); }
+        .option-btn.correct { background: var(--green-100); border-color: var(--green-500); color: #166534; }
+        .option-btn.incorrect { background: var(--red-100); border-color: var(--red-500); color: #991b1b; }
+        .option-btn:disabled { cursor: not-allowed; opacity: 0.8; }
+        
+        .fill-input {
+            padding: 8px 14px;
+            border: 2px solid var(--blue-300);
+            border-radius: 8px;
+            font-size: 1rem;
+            width: 140px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        
+        .fill-input:focus { outline: none; border-color: var(--blue-500); box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); }
+        .fill-input.correct { background: var(--green-100); border-color: var(--green-500); }
+        .fill-input.incorrect { background: var(--red-100); border-color: var(--red-500); }
+        
+        .check-btn {
+            background: var(--blue-600);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            margin-top: 15px;
+        }
+        
+        .check-btn:hover { background: var(--blue-700); transform: translateY(-2px); }
+        
+        .reset-btn {
+            background: var(--gray-200);
+            color: var(--gray-700);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+        
+        .reset-btn:hover { background: var(--gray-300); }
+        
+        .feedback {
+            padding: 12px 16px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+        
+        .feedback.success { background: var(--green-100); color: #166534; border: 1px solid var(--green-500); }
+        .feedback.error { background: var(--red-100); color: #991b1b; border: 1px solid var(--red-500); }
+        
+        .score-display {
+            background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-700) 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .score-display h3 { color: white; font-size: 1.3rem; margin-bottom: 5px; }
+        .score-display .score { font-size: 2.5rem; font-weight: 700; }
+        
+        .drag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+            min-height: 50px;
+            padding: 15px;
+            background: var(--gray-100);
+            border-radius: 10px;
+            border: 2px dashed var(--blue-300);
+        }
+        
+        .drag-item {
+            padding: 10px 16px;
+            background: var(--blue-500);
+            color: white;
+            border-radius: 8px;
+            cursor: grab;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+        
+        .drag-item:hover { background: var(--blue-600); transform: scale(1.05); }
+        .drag-item.dragging { opacity: 0.5; }
+        
+        .drop-zone {
+            min-width: 100px;
+            min-height: 44px;
+            padding: 10px;
+            background: white;
+            border: 2px dashed var(--blue-400);
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            transition: all 0.2s ease;
+        }
+        
+        .drop-zone.drag-over { background: var(--blue-100); border-color: var(--blue-600); }
+        .drop-zone.filled { border-style: solid; background: var(--blue-100); }
+        .drop-zone.correct { background: var(--green-100); border-color: var(--green-500); }
+        .drop-zone.incorrect { background: var(--red-100); border-color: var(--red-500); }
+        
+        .match-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            padding: 12px;
+            background: white;
+            border-radius: 10px;
+        }
+        
+        .match-subject { font-weight: 600; min-width: 200px; color: var(--blue-800); }
+        .arrow { color: var(--blue-400); font-size: 1.2rem; }
+        
+        .example-box {
+            background: linear-gradient(135deg, var(--blue-50) 0%, var(--blue-100) 100%);
+            border-left: 4px solid var(--blue-500);
+            padding: 15px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 15px 0;
+        }
+        
+        .example-box strong { color: var(--blue-700); }
+        
+        .tip-box {
+            background: var(--yellow-100);
+            border-left: 4px solid var(--yellow-500);
+            padding: 15px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 15px 0;
+        }
+        
+        .conversation-box {
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .speech-bubble {
+            background: white;
+            padding: 12px 16px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .speech-bubble.left {
+            margin-right: auto;
+            border-bottom-left-radius: 5px;
+            background: var(--blue-100);
+        }
+        
+        .speech-bubble.right {
+            margin-left: auto;
+            border-bottom-right-radius: 5px;
+            background: var(--purple-100);
+        }
+        
+        .speaker { font-weight: 600; font-size: 0.85rem; margin-bottom: 5px; color: var(--gray-600); }
+        
+        .story-box {
+            background: linear-gradient(135deg, var(--purple-100) 0%, var(--blue-100) 100%);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .story-box .highlight-when {
+            background: var(--yellow-100);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .story-box .highlight-while {
+            background: var(--green-100);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .roleplay-card {
+            background: white;
+            border: 2px solid var(--blue-200);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .roleplay-card:hover {
+            border-color: var(--blue-400);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+        }
+        
+        .roleplay-card h5 {
+            color: var(--blue-700);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .audio-player {
+            background: var(--gray-100);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .audio-player audio {
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .bingo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        
+        .bingo-cell {
+            background: white;
+            border: 2px solid var(--blue-300);
+            border-radius: 10px;
+            padding: 15px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+        
+        .bingo-cell:hover { background: var(--blue-50); }
+        .bingo-cell.marked { background: var(--green-100); border-color: var(--green-500); }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 20px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--blue-300);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            background: var(--blue-500);
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+        
+        .emoji { font-size: 1.3rem; }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.6rem; }
+            .nav-tab { padding: 10px 16px; font-size: 0.9rem; }
+            .section { padding: 18px; }
+            .match-row { flex-direction: column; align-items: flex-start; }
+            .match-subject { min-width: auto; }
+            .speech-bubble { max-width: 90%; }
+            .bingo-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>💬 Would, When & While</h1>
+        <p>Polite Requests, Invitations & Narratives - A2 Level</p>
+        <span class="badge">3rd Semester • 2 Classes • 100 min each</span>
+    </header>
+    
+    <div class="container">
+        <nav class="nav-tabs">
+            <button class="nav-tab active" onclick="showClass(1)">🎁 Class 1: Would - Requests & Invitations</button>
+            <button class="nav-tab" onclick="showClass(2)">📖 Class 2: When & While - Narratives</button>
+        </nav>
+        
+        <!-- CLASS 1: WOULD -->
+        <div id="class1" class="class-content active">
+            <div class="section">
+                <h2><span class="emoji">👋</span> Warm-Up: Polite Conversations <span class="time-badge">0-10 min</span></h2>
+                <p>Think about polite ways to ask for things or invite someone. How do you ask nicely in English?</p>
+                
+                <div class="conversation-box">
+                    <div class="speech-bubble left">
+                        <div class="speaker">👦 Student A</div>
+                        Hey, want to study together?
+                    </div>
+                    <div class="speech-bubble right">
+                        <div class="speaker">👧 Student B</div>
+                        Hmm, that sounds too direct...
+                    </div>
+                    <div class="speech-bubble left">
+                        <div class="speaker">👦 Student A (polite)</div>
+                        <strong>Would you like to</strong> study together after class?
+                    </div>
+                    <div class="speech-bubble right">
+                        <div class="speaker">👧 Student B</div>
+                        Yes, I'd love to! ✅
+                    </div>
+                </div>
+                
+                <div class="tip-box">
+                    <p><strong>💡 Key Insight:</strong> Using <strong>"would"</strong> makes requests and invitations more polite and friendly!</p>
+                </div>
+            </div>
+            
+            <div class="section purple-border">
+                <h2><span class="emoji">📖</span> Grammar: Would / Would Like <span class="time-badge">10-25 min</span></h2>
+                
+                <h3>Making Polite Requests</h3>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Structure</th><th>Example</th><th>Use</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Would you like + noun?</strong></td>
+                            <td>Would you like some coffee?</td>
+                            <td>Offering something</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Would you like to + verb?</strong></td>
+                            <td>Would you like to come to my party?</td>
+                            <td>Invitations</td>
+                        </tr>
+                        <tr>
+                            <td><strong>I would like + noun</strong></td>
+                            <td>I would like a glass of water, please.</td>
+                            <td>Polite requests</td>
+                        </tr>
+                        <tr>
+                            <td><strong>I would like to + verb</strong></td>
+                            <td>I would like to ask a question.</td>
+                            <td>Expressing wishes</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Short Forms</h3>
+                <div class="example-box">
+                    <p><strong>I would like</strong> = <strong>I'd like</strong></p>
+                    <p><strong>Would you like</strong> = Common in questions (no short form)</p>
+                    <p><strong>Yes, I would</strong> = <strong>Yes, I'd love to</strong></p>
+                </div>
+                
+                <h3>Accepting & Declining Invitations</h3>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>✅ Accepting</th><th>❌ Declining (Politely)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Yes, I'd love to!</td><td>I'm sorry, I can't.</td></tr>
+                        <tr><td>Sure, that sounds great!</td><td>Thanks, but I'm busy.</td></tr>
+                        <tr><td>Yes, please!</td><td>Maybe another time?</td></tr>
+                        <tr><td>That would be nice!</td><td>I'd love to, but I have plans.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">✏️</span> Practice: Would Like <span class="time-badge">25-40 min</span></h2>
+                <div class="exercise-box">
+                    <h4>Complete with "would like" or "would you like":</h4>
+                    <div id="would-fill"></div>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>Choose the correct response:</h4>
+                    <div id="would-mc"></div>
+                </div>
+            </div>
+            
+            <div class="section orange-border">
+                <h2><span class="emoji">🎧</span> Listening: Invitations <span class="time-badge">40-55 min</span></h2>
+                <p>Listen to these conversations and identify if the invitation was <strong>accepted</strong> or <strong>declined</strong>:</p>
+                
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/hUDLw5nLLIU" allowfullscreen></iframe>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>🎧 After watching, answer these questions:</h4>
+                    <div id="listening-quiz"></div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🎬</span> Video Lesson: Polite Requests <span class="time-badge">55-70 min</span></h2>
+                <p>Watch this video about making polite requests with "would you like":</p>
+                
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/rNfUwkD5Ns4" allowfullscreen></iframe>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>📝 Write 3 invitations you heard in the video:</h4>
+                    <div class="question">
+                        <p>1. <input type="text" class="fill-input" style="width: 80%;" placeholder="Write an invitation..."></p>
+                    </div>
+                    <div class="question">
+                        <p>2. <input type="text" class="fill-input" style="width: 80%;" placeholder="Write an invitation..."></p>
+                    </div>
+                    <div class="question">
+                        <p>3. <input type="text" class="fill-input" style="width: 80%;" placeholder="Write an invitation..."></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section green-border">
+                <h2><span class="emoji">🎭</span> Role-Play: Making Invitations <span class="time-badge">70-85 min</span></h2>
+                <p>Practice these situations with a partner. Take turns being Person A and Person B:</p>
+                
+                <div class="roleplay-card">
+                    <h5>🎉 Situation 1: Party Invitation</h5>
+                    <p><strong>Person A:</strong> "Would you like to come to my birthday party on Saturday?"</p>
+                    <p><strong>Person B:</strong> Accept or decline politely.</p>
+                </div>
+                
+                <div class="roleplay-card">
+                    <h5>📚 Situation 2: Study Group</h5>
+                    <p><strong>Person A:</strong> "Would you like to join our study group for the exam?"</p>
+                    <p><strong>Person B:</strong> Accept or decline politely.</p>
+                </div>
+                
+                <div class="roleplay-card">
+                    <h5>☕ Situation 3: Coffee Break</h5>
+                    <p><strong>Person A:</strong> "Would you like some help with your homework?"</p>
+                    <p><strong>Person B:</strong> Accept or decline politely.</p>
+                </div>
+                
+                <div class="roleplay-card">
+                    <h5>🎬 Situation 4: Movie Night</h5>
+                    <p><strong>Person A:</strong> "Would you like to watch a movie together tonight?"</p>
+                    <p><strong>Person B:</strong> Accept or decline politely.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🎲</span> Game: Would You Like...? Bingo <span class="time-badge">85-95 min</span></h2>
+                <p>Walk around the class and ask classmates these questions. When someone says <strong>"Yes"</strong>, mark the box!</p>
+                
+                <div class="bingo-grid" id="bingo-grid">
+                    <div class="bingo-cell" onclick="toggleBingo(this)">...to study English more?</div>
+                    <div class="bingo-cell" onclick="toggleBingo(this)">...some water?</div>
+                    <div class="bingo-cell" onclick="toggleBingo(this)">...to go to the movies?</div>
+                    <div class="bingo-cell" onclick="toggleBingo(this)">...to learn guitar?</div>
+                    <div class="bingo-cell" onclick="toggleBingo(this)">...some chocolate?</div>
+                    <div class="bingo-cell" onclick="toggleBingo(this)">...to travel abroad?</div>
+                    <div class="bingo-cell" onclick="toggleBingo(this)">...to play video games?</div>
+                    <div class="bingo-cell" onclick="toggleBingo(this)">...to be famous?</div>
+                    <div class="bingo-cell" onclick="toggleBingo(this)">...some help?</div>
+                </div>
+                <p style="text-align: center; margin-top: 15px;"><strong>First to get 3 in a row wins!</strong> 🏆</p>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📝</span> Exit Ticket: Invitation Email <span class="time-badge">95-100 min</span></h2>
+                <p>Write a short email inviting a friend to an event. Use <strong>"would like"</strong> correctly:</p>
+                
+                <div class="example-box">
+                    <p><strong>Template:</strong></p>
+                    <p>Hi [Name],</p>
+                    <p>I <strong>would like to</strong> invite you to ___.</p>
+                    <p><strong>Would you like to</strong> come with me?</p>
+                    <p>It will be on ___ at ___.</p>
+                    <p>I hope you can make it!</p>
+                    <p>Best, [Your name]</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CLASS 2: WHEN & WHILE -->
+        <div id="class2" class="class-content">
+            <div class="section">
+                <h2><span class="emoji">🔄</span> Warm-Up: Sharing Stories <span class="time-badge">0-10 min</span></h2>
+                <p>Think of something that happened <strong>when</strong> or <strong>while</strong> you were doing something else:</p>
+                
+                <div class="example-box">
+                    <p><strong>Example:</strong></p>
+                    <p>"I was walking to school <strong>when</strong> I saw my friend."</p>
+                    <p>"<strong>While</strong> I was studying, my phone rang."</p>
+                </div>
+                
+                <div class="tip-box">
+                    <p><strong>🤔 Think about it:</strong> What were you doing when something unexpected happened yesterday?</p>
+                </div>
+            </div>
+            
+            <div class="section purple-border">
+                <h2><span class="emoji">📖</span> Grammar: When vs While <span class="time-badge">10-30 min</span></h2>
+                
+                <h3>Understanding the Difference</h3>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Word</th><th>Use</th><th>Tense Pattern</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>WHEN</strong></td>
+                            <td>Specific moment / Interruption</td>
+                            <td>Past Continuous + <strong>when</strong> + Past Simple</td>
+                        </tr>
+                        <tr>
+                            <td><strong>WHILE</strong></td>
+                            <td>Two actions happening at the same time</td>
+                            <td><strong>While</strong> + Past Continuous, Past Continuous</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Visual Examples</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <strong>WHEN = Interruption ⚡</strong>
+                        <p>I <span style="background: var(--blue-100); padding: 2px 6px; border-radius: 4px;">was sleeping</span> <strong>when</strong> the phone <span style="background: var(--yellow-100); padding: 2px 6px; border-radius: 4px;">rang</span>.</p>
+                        <p><em>(Long action interrupted by short action)</em></p>
+                    </div>
+                    <div class="timeline-item">
+                        <strong>WHILE = Simultaneous ⇄</strong>
+                        <p><strong>While</strong> I <span style="background: var(--blue-100); padding: 2px 6px; border-radius: 4px;">was cooking</span>, my sister <span style="background: var(--green-100); padding: 2px 6px; border-radius: 4px;">was watching</span> TV.</p>
+                        <p><em>(Two long actions at the same time)</em></p>
+                    </div>
+                </div>
+                
+                <h3>More Examples</h3>
+                <div class="story-box">
+                    <p>📖 <strong>Using WHEN:</strong></p>
+                    <p>• I was walking home <span class="highlight-when">when</span> it started to rain.</p>
+                    <p>• She was doing homework <span class="highlight-when">when</span> her mom called.</p>
+                    <p>• They were having dinner <span class="highlight-when">when</span> the lights went out.</p>
+                </div>
+                
+                <div class="story-box">
+                    <p>📖 <strong>Using WHILE:</strong></p>
+                    <p>• <span class="highlight-while">While</span> I was reading, my brother was playing games.</p>
+                    <p>• <span class="highlight-while">While</span> she was talking on the phone, he was making coffee.</p>
+                    <p>• <span class="highlight-while">While</span> the teacher was explaining, the students were taking notes.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">✏️</span> Practice: When or While? <span class="time-badge">30-50 min</span></h2>
+                
+                <div class="exercise-box">
+                    <h4>Choose the correct option: WHEN or WHILE</h4>
+                    <div id="when-while-mc"></div>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>Fill in with "when" or "while":</h4>
+                    <div id="when-while-fill"></div>
+                </div>
+            </div>
+            
+            <div class="section orange-border">
+                <h2><span class="emoji">🎧</span> Listening: A Story <span class="time-badge">50-70 min</span></h2>
+                <p>Watch this video about Past Continuous with when/while and pay attention to the story:</p>
+                
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/liX95VS4a14" allowfullscreen></iframe>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>🎧 Comprehension Questions:</h4>
+                    <div id="story-quiz"></div>
+                </div>
+            </div>
+            
+            <div class="section green-border">
+                <h2><span class="emoji">🎮</span> Story Building Game <span class="time-badge">70-85 min</span></h2>
+                <p>Build sentences using the prompts. Connect the actions with <strong>when</strong> or <strong>while</strong>:</p>
+                
+                <div class="exercise-box">
+                    <h4>🎲 Create sentences from these prompts:</h4>
+                    
+                    <div class="roleplay-card">
+                        <h5>📱 Prompt 1:</h5>
+                        <p><strong>Action A:</strong> I / walk / to school</p>
+                        <p><strong>Action B:</strong> I / see / a cat</p>
+                        <p><em>Your sentence:</em> <input type="text" class="fill-input" style="width: 100%;" placeholder="I was walking to school when..."></p>
+                    </div>
+                    
+                    <div class="roleplay-card">
+                        <h5>🎵 Prompt 2:</h5>
+                        <p><strong>Action A:</strong> She / listen / to music</p>
+                        <p><strong>Action B:</strong> Her friend / call / her</p>
+                        <p><em>Your sentence:</em> <input type="text" class="fill-input" style="width: 100%;" placeholder="She was listening to music when..."></p>
+                    </div>
+                    
+                    <div class="roleplay-card">
+                        <h5>📚 Prompt 3:</h5>
+                        <p><strong>Action A:</strong> The students / study</p>
+                        <p><strong>Action B:</strong> The teacher / explain / the lesson</p>
+                        <p><em>Your sentence:</em> <input type="text" class="fill-input" style="width: 100%;" placeholder="While the teacher was explaining..."></p>
+                    </div>
+                    
+                    <div class="roleplay-card">
+                        <h5>🏕️ Prompt 4:</h5>
+                        <p><strong>Action A:</strong> We / have / a picnic</p>
+                        <p><strong>Action B:</strong> It / start / to rain</p>
+                        <p><em>Your sentence:</em> <input type="text" class="fill-input" style="width: 100%;" placeholder="We were having a picnic when..."></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">📝</span> Narrative Writing <span class="time-badge">85-95 min</span></h2>
+                <p>Write a short paragraph about what happened yesterday. Use <strong>when</strong> and <strong>while</strong>:</p>
+                
+                <div class="example-box">
+                    <p><strong>Example paragraph:</strong></p>
+                    <p>"Yesterday was an interesting day. <strong>While</strong> I was having breakfast, my mom was reading the news. I was walking to school <strong>when</strong> I saw my best friend. <strong>While</strong> we were talking, the bell rang. Later, I was doing my homework <strong>when</strong> my brother came home. <strong>While</strong> I was studying, he was playing video games."</p>
+                </div>
+                
+                <div class="tip-box">
+                    <p><strong>💡 Writing Tips:</strong></p>
+                    <p>• Use <strong>when</strong> for interruptions (short action interrupts long action)</p>
+                    <p>• Use <strong>while</strong> for two actions happening at the same time</p>
+                    <p>• Try to use at least 3 examples of when/while</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">🏆</span> FINAL ASSESSMENT <span class="time-badge">95-100 min</span></h2>
+                
+                <div class="exercise-box">
+                    <h4>Part 1: Multiple Choice (10 points)</h4>
+                    <div id="final-mc"></div>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>Part 2: Fill in the Blanks (10 points)</h4>
+                    <div id="final-fill"></div>
+                </div>
+                
+                <div class="exercise-box">
+                    <h4>Part 3: Match the Sentences (10 points)</h4>
+                    <div id="final-match"></div>
+                </div>
+                
+                <button class="check-btn" onclick="calculateFinalScore()" style="width: 100%; margin-top: 20px;">Submit Final Assessment</button>
+                <div id="final-score" style="display: none;"></div>
+            </div>
+            
+            <div class="section">
+                <h2><span class="emoji">💬</span> Exit Reflection <span class="time-badge">100 min</span></h2>
+                <p>Share one sentence orally with your classmate using <strong>when</strong> and one using <strong>while</strong>:</p>
+                
+                <div class="example-box">
+                    <p>🎤 <strong>Your turn:</strong></p>
+                    <p>"I was ___ <strong>when</strong> ___."</p>
+                    <p>"<strong>While</strong> I was ___, my ___ was ___."</p>
+                </div>
+                
+                <p><strong>🎉 Congratulations on completing the course!</strong></p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Would, When & While Course • English Grammar A2 • 3rd Semester</p>
+    </footer>
+
+    <script>
+        // Navigation
+        function showClass(num) {
+            document.querySelectorAll('.class-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+            document.getElementById('class' + num).classList.add('active');
+            document.querySelectorAll('.nav-tab')[num - 1].classList.add('active');
+            window.scrollTo(0, 0);
+        }
+        
+        // Bingo
+        function toggleBingo(cell) {
+            cell.classList.toggle('marked');
+        }
+        
+        // Quiz Data - Class 1
+        const wouldFill = [
+            { sentence: "___ to come to my party? (question)", answer: "Would you like" },
+            { sentence: "I ___ a cup of tea, please.", answer: "would like" },
+            { sentence: "___ some help with that?", answer: "Would you like" },
+            { sentence: "She ___ to learn Japanese.", answer: "would like" },
+            { sentence: "___ to go to the cinema tonight?", answer: "Would you like" }
+        ];
+        
+        const wouldMC = [
+            { q: "Would you like to come to my party?", options: ["Yes, I'd love to!", "Yes, I would like.", "Yes, I want."], answer: 0 },
+            { q: "Would you like some coffee?", options: ["Yes, I like.", "No, thanks. I'm fine.", "No, I don't want."], answer: 1 },
+            { q: "How do you politely ask for help?", options: ["Help me now!", "I want help.", "Would you like to help me?"], answer: 2 },
+            { q: "Would you like to join us for lunch?", options: ["I'm sorry, I can't. I'm busy.", "No.", "I don't want lunch."], answer: 0 }
+        ];
+        
+        const listeningQuiz = [
+            { q: "\"Would you like\" is used for:", options: ["Commands", "Polite requests and invitations", "Past actions"], answer: 1 },
+            { q: "A polite way to decline an invitation is:", options: ["No!", "I don't want to.", "I'm sorry, I can't."], answer: 2 },
+            { q: "\"I'd like\" is the short form of:", options: ["I would like", "I had like", "I do like"], answer: 0 }
+        ];
+        
+        // Quiz Data - Class 2
+        const whenWhileMC = [
+            { q: "I was walking home ___ it started to rain.", options: ["while", "when"], answer: 1 },
+            { q: "___ I was cooking, my sister was watching TV.", options: ["While", "When"], answer: 0 },
+            { q: "She was reading ___ the phone rang.", options: ["while", "when"], answer: 1 },
+            { q: "___ they were playing, the children were laughing.", options: ["While", "When"], answer: 0 },
+            { q: "I was sleeping ___ I heard a strange noise.", options: ["while", "when"], answer: 1 }
+        ];
+        
+        const whenWhileFill = [
+            { sentence: "I was doing homework ___ my mom called me.", answer: "when" },
+            { sentence: "___ I was studying, my brother was playing games.", answer: "While" },
+            { sentence: "She was walking to school ___ she saw her friend.", answer: "when" },
+            { sentence: "___ we were having dinner, the lights went out.", answer: "While" },
+            { sentence: "They were watching TV ___ the doorbell rang.", answer: "when" }
+        ];
+        
+        const storyQuiz = [
+            { q: "We use 'when' for:", options: ["Two simultaneous actions", "An interruption or specific moment", "Future plans"], answer: 1 },
+            { q: "We use 'while' for:", options: ["Single short actions", "Two actions happening at the same time", "Commands"], answer: 1 },
+            { q: "\"I was sleeping when the alarm rang\" means:", options: ["The alarm interrupted my sleep", "I slept after the alarm", "The alarm and sleep happened together"], answer: 0 }
+        ];
+        
+        // Final Assessment
+        const finalMC = [
+            { q: "___ you like to come to the movies?", options: ["Do", "Would", "Are"], answer: 1 },
+            { q: "I was eating ___ my friend arrived.", options: ["while", "when", "during"], answer: 1 },
+            { q: "___ she was reading, her brother was playing.", options: ["When", "While", "During"], answer: 1 },
+            { q: "I ___ like some water, please.", options: ["would", "will", "do"], answer: 0 },
+            { q: "They were talking ___ the teacher entered.", options: ["while", "when", "during"], answer: 1 }
+        ];
+        
+        const finalFill = [
+            { sentence: "___ you like to join us for dinner? (question)", answer: "Would" },
+            { sentence: "I was walking ___ I saw a rainbow.", answer: "when" },
+            { sentence: "___ I was sleeping, my cat was playing.", answer: "While" },
+            { sentence: "She ___ like to learn French.", answer: "would" },
+            { sentence: "___ they were studying, the music was playing.", answer: "While" }
+        ];
+        
+        const finalMatch = [
+            { subject: "Would you like some help?", answer: "accept" },
+            { subject: "I was reading when...", answer: "interrupt" },
+            { subject: "While I was cooking...", answer: "simultaneous" }
+        ];
+        
+        // Helper functions
+        function createMCQuiz(containerId, questions) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            let html = '';
+            questions.forEach((q, i) => {
+                html += `<div class="question" id="${containerId}-q${i}">
+                    <p>${i + 1}. ${q.q}</p>
+                    <div class="options">`;
+                q.options.forEach((opt, j) => {
+                    html += `<button class="option-btn" onclick="checkMC('${containerId}', ${i}, ${j}, ${q.answer})">${opt}</button>`;
+                });
+                html += `</div></div>`;
+            });
+            html += `<div id="${containerId}-score" class="score-display" style="display:none;"></div>`;
+            container.innerHTML = html;
+        }
+        
+        const mcScores = {};
+        function checkMC(quizId, qIndex, selected, correct) {
+            const qDiv = document.getElementById(`${quizId}-q${qIndex}`);
+            const btns = qDiv.querySelectorAll('.option-btn');
+            btns.forEach((b, i) => {
+                b.disabled = true;
+                if (i === correct) b.classList.add('correct');
+                else if (i === selected && i !== correct) b.classList.add('incorrect');
+            });
+            
+            if (!mcScores[quizId]) mcScores[quizId] = { correct: 0, total: 0 };
+            if (selected === correct) mcScores[quizId].correct++;
+            mcScores[quizId].total++;
+        }
+        
+        function createFillExercise(containerId, exercises) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            let html = '';
+            exercises.forEach((ex, i) => {
+                const parts = ex.sentence.split('___');
+                html += `<div class="question">
+                    <p>${i + 1}. ${parts[0]}<input type="text" class="fill-input" id="${containerId}-input${i}" data-answer="${ex.answer}">${parts[1] || ''}</p>
+                </div>`;
+            });
+            html += `<button class="check-btn" onclick="checkFill('${containerId}', ${exercises.length})">Check Answers</button>
+                     <button class="reset-btn" onclick="resetFill('${containerId}', ${exercises.length})">Reset</button>
+                     <div id="${containerId}-feedback" class="feedback" style="display:none;"></div>`;
+            container.innerHTML = html;
+        }
+        
+        function checkFill(containerId, count) {
+            let correct = 0;
+            for (let i = 0; i < count; i++) {
+                const input = document.getElementById(`${containerId}-input${i}`);
+                const answer = input.dataset.answer.toLowerCase().trim();
+                const userAnswer = input.value.trim().toLowerCase();
+                input.classList.remove('correct', 'incorrect');
+                if (userAnswer === answer) {
+                    input.classList.add('correct');
+                    correct++;
+                } else {
+                    input.classList.add('incorrect');
+                }
+            }
+            const feedback = document.getElementById(`${containerId}-feedback`);
+            feedback.style.display = 'block';
+            feedback.className = 'feedback ' + (correct === count ? 'success' : 'error');
+            feedback.textContent = `You got ${correct} out of ${count} correct!` + (correct < count ? ' Try again!' : ' Excellent!');
+        }
+        
+        function resetFill(containerId, count) {
+            for (let i = 0; i < count; i++) {
+                const input = document.getElementById(`${containerId}-input${i}`);
+                input.value = '';
+                input.classList.remove('correct', 'incorrect');
+            }
+            document.getElementById(`${containerId}-feedback`).style.display = 'none';
+        }
+        
+        // Drag and drop
+        let draggedItem = null;
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.classList.contains('drag-item')) {
+                draggedItem = e.target;
+                e.target.classList.add('dragging');
+            }
+        });
+        
+        document.addEventListener('dragend', function(e) {
+            if (e.target.classList.contains('drag-item')) {
+                e.target.classList.remove('dragging');
+            }
+        });
+        
+        function allowDrop(ev) {
+            ev.preventDefault();
+            ev.target.classList.add('drag-over');
+        }
+        
+        function leaveDrop(ev) {
+            ev.target.classList.remove('drag-over');
+        }
+        
+        function createMatchExercise(containerId, items, sourceId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            let html = `<div class="drag-container" id="${sourceId}">
+                <div class="drag-item" draggable="true" data-value="accept">Yes, please!</div>
+                <div class="drag-item" draggable="true" data-value="interrupt">...the phone rang.</div>
+                <div class="drag-item" draggable="true" data-value="simultaneous">...my sister was singing.</div>
+            </div>`;
+            
+            items.forEach((item, i) => {
+                html += `<div class="match-row">
+                    <span class="match-subject">${item.subject}</span>
+                    <span class="arrow">→</span>
+                    <div class="drop-zone" id="${containerId}-drop${i}" data-answer="${item.answer}" 
+                         ondrop="dropMatch(event, '${containerId}', ${i}, '${sourceId}')" 
+                         ondragover="allowDrop(event)" 
+                         ondragleave="leaveDrop(event)"></div>
+                </div>`;
+            });
+            html += `<div id="${containerId}-feedback" class="feedback" style="display:none;"></div>`;
+            container.innerHTML = html;
+        }
+        
+        function dropMatch(ev, containerId, index, sourceId) {
+            ev.preventDefault();
+            const dropZone = document.getElementById(`${containerId}-drop${index}`);
+            dropZone.classList.remove('drag-over');
+            
+            if (draggedItem) {
+                if (dropZone.children.length > 0) {
+                    const existingItem = dropZone.children[0];
+                    document.getElementById(sourceId).appendChild(existingItem);
+                }
+                dropZone.appendChild(draggedItem);
+                dropZone.classList.add('filled');
+            }
+        }
+        
+        function calculateFinalScore() {
+            let totalScore = 0;
+            
+            // MC Score
+            const mcScore = mcScores['final-mc'] ? mcScores['final-mc'].correct * 2 : 0;
+            totalScore += mcScore;
+            
+            // Fill Score
+            let fillScore = 0;
+            for (let i = 0; i < finalFill.length; i++) {
+                const input = document.getElementById(`final-fill-input${i}`);
+                if (input && input.value.trim().toLowerCase() === finalFill[i].answer.toLowerCase()) {
+                    fillScore += 2;
+                    input.classList.add('correct');
+                } else if (input) {
+                    input.classList.add('incorrect');
+                }
+            }
+            totalScore += fillScore;
+            
+            // Match Score
+            let matchScore = 0;
+            for (let i = 0; i < finalMatch.length; i++) {
+                const dropZone = document.getElementById(`final-match-drop${i}`);
+                if (dropZone && dropZone.children.length > 0 && dropZone.children[0].dataset.value === finalMatch[i].answer) {
+                    matchScore += 3.33;
+                    dropZone.classList.add('correct');
+                } else if (dropZone) {
+                    dropZone.classList.add('incorrect');
+                }
+            }
+            totalScore += Math.round(matchScore);
+            
+            const scoreDiv = document.getElementById('final-score');
+            scoreDiv.style.display = 'block';
+            
+            let emoji = totalScore >= 25 ? '🏆' : totalScore >= 20 ? '🌟' : totalScore >= 15 ? '👍' : '📚';
+            let message = totalScore >= 25 ? 'Excellent! You mastered Would, When & While!' : 
+                         totalScore >= 20 ? 'Great job! Keep practicing!' :
+                         totalScore >= 15 ? 'Good effort! Review the materials!' : 'Keep studying! You can do it!';
+            
+            scoreDiv.innerHTML = `<div class="score-display">
+                <h3>${emoji} Final Score ${emoji}</h3>
+                <div class="score">${totalScore}/30</div>
+                <p style="margin-top: 10px; opacity: 0.9;">${message}</p>
+            </div>`;
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Class 1
+            createFillExercise('would-fill', wouldFill);
+            createMCQuiz('would-mc', wouldMC);
+            createMCQuiz('listening-quiz', listeningQuiz);
+            
+            // Class 2
+            createMCQuiz('when-while-mc', whenWhileMC);
+            createFillExercise('when-while-fill', whenWhileFill);
+            createMCQuiz('story-quiz', storyQuiz);
+            
+            // Final
+            createMCQuiz('final-mc', finalMC);
+            createFillExercise('final-fill', finalFill);
+            createMatchExercise('final-match', finalMatch, 'final-match-source');
+        });
+    </script>
+</body>
+</html>
